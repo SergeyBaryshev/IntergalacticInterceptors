@@ -1,0 +1,937 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+InterInter
+</name>
+</assembly>
+<members>
+<member name="T:Variants.My.Resources.Resources">
+<summary>
+  Класс ресурса со строгой типизацией для поиска локализованных строк и т.д.
+</summary>
+</member>
+<member name="P:Variants.My.Resources.Resources.ResourceManager">
+<summary>
+  Возвращает кэшированный экземпляр ResourceManager, использованный этим классом.
+</summary>
+</member>
+<member name="P:Variants.My.Resources.Resources.Culture">
+<summary>
+  Перезаписывает свойство CurrentUICulture текущего потока для всех
+  обращений к ресурсу с помощью этого класса ресурса со строгой типизацией.
+</summary>
+</member>
+<member name="T:Variants.Imitator.Common.Entity">
+<summary>Базовый супер-класс для всех сущностей в сцене.</summary>
+</member>
+<member name="F:Variants.Imitator.Common.Entity.DelegateClear">
+<summary>Делегат на очистку всех сущностей из сцены.</summary>
+</member>
+<member name="F:Variants.Imitator.Common.Entity.DelegateRemoveOrUpdate">
+<summary>Делегат на удаление или обновление каждой сущности в сцене.</summary>
+</member>
+<member name="M:Variants.Imitator.Common.Entity.Clear(Variants.Imitator.Common.Entity)">
+<summary>Удаляет данную сущность.</summary>
+<remarks><see cref="M:Variants.Imitator.Common.Entity.Dispose"/><para/><see cref="M:Variants.Imitator.Common.Entity.Remove"/></remarks>
+</member>
+<member name="M:Variants.Imitator.Common.Entity.RemoveOrUpdate(Variants.Imitator.Common.Entity)">
+<summary>Обновляет или удаляет сущность.</summary>
+</member>
+<member name="M:Variants.Imitator.Common.Entity.Clear">
+<summary>Удаляет все сущности.</summary>
+<remarks>Library.ForEach(Entity.DelegateClear)<para/>Library.Clear()</remarks>
+</member>
+<member name="F:Variants.Imitator.Common.Entity.SceneObjects">
+<summary>Словарь объектов сцены, извлекаемые по ключу.</summary>
+</member>
+<member name="F:Variants.Imitator.Common.Entity.Library">
+<summary>Коллекция сущностей в сцене с автоматическим обновлением.</summary>
+</member>
+<member name="P:Variants.Imitator.Common.Entity.Attach">
+<summary>Присоединяемый предмет.</summary>
+</member>
+<member name="P:Variants.Imitator.Common.Entity.Emitter">
+<summary>Источник звука, света и частиц.</summary>
+</member>
+<member name="P:Variants.Imitator.Common.Entity.Physic">
+<summary>Физическая модель для контакта с окружением.</summary>
+</member>
+<member name="P:Variants.Imitator.Common.Entity.Render">
+<summary>Внешний вид отображаемой модели.</summary>
+</member>
+<member name="F:Variants.Imitator.Common.Entity.Color">
+<summary>Персональный цвет сущности.</summary>
+</member>
+<member name="F:Variants.Imitator.Common.Entity.Health">
+<summary>Здоровье, при уровне равным 0 или ниже сущность удаляется автоматически.</summary>
+</member>
+<member name="F:Variants.Imitator.Common.Entity.Route">
+<summary>Список точек для навигации.</summary>
+</member>
+<member name="M:Variants.Imitator.Common.Entity.Interact(Variants.Imitator.Common.Entity,System.Object[])">
+<summary>Перегружаемый метод взаимодействия с сущностью.</summary>
+</member>
+<member name="M:Variants.Imitator.Common.Entity.Update">
+<summary>Перегружаемый метод обновления сущности.</summary>
+</member>
+<member name="M:Variants.Imitator.Common.Entity.Dispose">
+<summary>Перегружаемый метод удаления сущности.</summary>
+</member>
+<member name="M:Variants.Imitator.Common.Entity.Item(System.String)">
+<summary>Поиск сущности по именам составных мешей.</summary>
+</member>
+<member name="M:Variants.Imitator.Common.Intelligence.CreateRoute(Variants.Imitator.Common.Entity,Variants.Imitator.Common.Entity)">
+<summary>Заполняет маршрут от <paramref name="character"/> до <paramref name="target"/>.</summary>
+<remarks>Желательно вызывать как можно реже.</remarks>
+</member>
+<member name="M:Variants.Imitator.Common.Intelligence.GetClosestRouteIndex(System.Collections.Generic.List{Variants.Imitator.Engine.WayPoint},System.Numerics.Vector3)">
+<summary>Возвращает ближайшую точку на маршруте.</summary>
+<remarks>Можно вызывать каждый кадр.</remarks>
+<returns>Индекс ближайшей точки, иначе -1.</returns>
+</member>
+<member name="M:Variants.Imitator.Common.Intelligence.CanJump(Variants.Imitator.Scene.Body,System.Single)">
+<summary>Можно ли сделать прыжок при данном угле скалярного произведения нормали точки контакта и вектора направления гравитации?</summary>
+</member>
+<member name="M:Variants.Imitator.Common.Intelligence.CanMove(Variants.Imitator.Scene.Body,System.Single)">
+<summary>Можно ли продолжить движение?</summary>
+</member>
+<member name="M:Variants.Imitator.Common.Intelligence.ContainMotion(Variants.Imitator.Scene.Body,System.String)">
+<summary>Проверяет наличие указаного имени анимации у данного тела.</summary>
+<remarks>Проверяется весь массив анимаций у данного тела.</remarks>
+<returns>Возвращает <see langword="True"/> если текст найден.</returns>
+</member>
+<member name="M:Variants.Imitator.Common.Intelligence.SetNoClipAndNullGravity(Variants.Imitator.Scene.Body,System.Boolean)">
+<summary>Устанавливает тело абсолютно проницаемым, полностью разгружая физику от просчётов столкновений.</summary>
+</member>
+<member name="M:Variants.Imitator.Common.Intelligence.SpeedLimiter(System.Numerics.Vector3,System.Single)">
+<summary>Ограничивает скорость до установленной.</summary>
+</member>
+<member name="M:Variants.Imitator.Common.Intelligence.DistanceAndAngle(System.Numerics.Vector3,System.Numerics.Vector3,System.Numerics.Vector3)">
+<returns>(Расстояние до цели, Угол отклонения от цели)</returns>
+</member>
+<member name="M:Variants.Imitator.Common.Intelligence.EntityInsight(Variants.Imitator.Common.Entity,System.Single,System.Single,System.Func{Variants.Imitator.Engine.BaseObject,System.Boolean})">
+<summary>Поиск ближайшей сущности <see cref="T:Variants.Imitator.Common.Entity"/>.</summary>
+<remarks>Производится поиск по всему списку сущностей <see cref="F:Variants.Imitator.Common.Entity.Library"/> и контактирует с их <see cref="P:Variants.Imitator.Common.Entity.Physic"/> частью.</remarks>
+<param name="bot">Используется <see cref="P:Variants.Imitator.Common.Entity.Render"/> для позиции и ориентации поискового луча.</param>
+<param name="maxAngle">Максимальный угол отклонения для попадания в зону действия (в радианах).</param>
+<param name="maxDistance">Максимальная дистанция для попадания в зону действия (в метрах).</param>
+<param name="excludeObjects">Делегат на функцию исключения сущностей для поиска.</param>
+<returns>(Ближайшая сущность, Контакт с сущностью)</returns>
+</member>
+<member name="M:Variants.Imitator.Common.Intelligence.WrapAngle(System.Single)">
+<summary>Оборачивает угол в диапазон от -<see cref="F:System.Math.PI"/> до +<see cref="F:System.Math.PI"/>.</summary>
+</member>
+<member name="T:Variants.Imitator.Common.Intelligence.Sight`2">
+<summary>Для каждой пары сущностей (<typeparamref name="T"/>, <typeparamref name="T"/>) из словаря <see cref="T:System.Collections.Generic.Dictionary`2"/>.</summary>
+<typeparam name="T">Производный класс на основе базового <see cref="T:Variants.Imitator.Common.Entity"/>.</typeparam>
+<typeparam name="outData">Результат работы функции.</typeparam>
+</member>
+<member name="F:Variants.Imitator.Common.Intelligence.Sight`2.Sights">
+<summary>Локальный кэш списков видимости объектов.</summary>
+<remarks>Содержит активный индекс пары (<typeparamref name="T"/>, <typeparamref name="T"/>) в списке видимости.</remarks>
+</member>
+<member name="M:Variants.Imitator.Common.Intelligence.Sight`2.Update(System.Collections.Generic.Dictionary{System.ValueTuple{`0,`0},System.ValueTuple{`1,`1}},System.Collections.Generic.List{`0},System.Func{System.Collections.Generic.Dictionary{System.ValueTuple{`0,`0},System.ValueTuple{`1,`1}},System.ValueTuple{`0,`0},System.ValueTuple{`1,`1}},System.Byte)">
+<summary>Обновление списка видимости объектов.</summary>
+<param name="sightList">Список видимости.</param>
+<param name="originalList">Список объектов на основе <see cref="T:Variants.Imitator.Common.Entity"/>.</param>
+<param name="rayCast">Делегат на функцию тестирования столкновения луча между двумя сущностями (<typeparamref name="T"/>, <typeparamref name="T"/>) и запись результатов в <typeparamref name="outData"/>.</param>
+<param name="iterations">Количество повторных запусков функции для данной пары (<typeparamref name="T"/>, <typeparamref name="T"/>).</param>
+</member>
+<member name="M:Variants.Imitator.Common.Particle.RemoveAll(Variants.Imitator.Common.Particle)">
+<summary>Обновляет или удаляет объект.</summary>
+</member>
+<member name="F:Variants.Imitator.Common.Particle.Library">
+<summary>Коллекция частиц.</summary>
+</member>
+<member name="F:Variants.Imitator.Common.Particle.Emitters">
+<summary>Коллекция эмиттеров данной частицы.</summary>
+</member>
+<member name="F:Variants.Imitator.Common.Particle.Life">
+<summary>Максимальный срок жизни данной частицы в секундах.</summary>
+</member>
+<member name="M:Variants.Imitator.Common.Particle.Create(System.Single,System.Action{System.Collections.Generic.List{Variants.Imitator.Scene.Emitter}},Variants.Imitator.Scene.Emitter[])">
+<summary>Создание новой частицы с заданным сроком жизни и массивом эммитеров.</summary>
+<param name="life">Максимальный срок жизни данной частицы в секундах.</param>
+<param name="emitters">Коллекция эмиттеров данной частицы.</param>
+</member>
+<member name="T:Variants.Imitator.Common.QuestSystem`1">
+<summary>Универсальная система квестов.</summary>
+</member>
+<member name="T:Variants.Imitator.Common.QuestSystem`1.Options">
+<summary>Содержит настройки для миссии.</summary>
+</member>
+<member name="F:Variants.Imitator.Common.QuestSystem`1.Options.Arguments">
+<summary>Передаваемые аргументы в функцию.</summary>
+</member>
+<member name="F:Variants.Imitator.Common.QuestSystem`1.Options.FuncName">
+<summary>Имя функции.</summary>
+</member>
+<member name="F:Variants.Imitator.Common.QuestSystem`1.Options.ItemKey">
+<summary>Одно из значений перечисления</summary>
+</member>
+<member name="F:Variants.Imitator.Common.QuestSystem`1.Options.ScriptFile">
+<summary>Файл скрипта с указанной функцией.</summary>
+</member>
+<member name="M:Variants.Imitator.Common.QuestSystem`1.Options.#ctor(`0,System.String,System.String,System.Object[])">
+<summary>Задание настроек для миссии.</summary>
+<param name="arguments">Передаваемые аргументы в функцию.</param>
+<param name="funcName">Имя функции.</param>
+<param name="itemKey">Одно из значений перечисления.</param>
+<param name="scriptFile">Файл скрипта с указанной функцией.</param>
+</member>
+<member name="T:Variants.Imitator.Common.QuestSystem`1.Quest">
+<summary>Одиночное задание со скриптом и набором аргументов.</summary>
+</member>
+<member name="F:Variants.Imitator.Common.QuestSystem`1.Quest.Library">
+<summary>Содержит значения аргументов для каждой функции.</summary>
+</member>
+<member name="F:Variants.Imitator.Common.QuestSystem`1.Journal.Library">
+<summary>Содержит строгую последовательность миссий.</summary>
+</member>
+<member name="F:Variants.Imitator.Common.QuestSystem`1.Journal.Number">
+<summary>Содержит номер миссии на данный момент.</summary>
+</member>
+<member name="F:Variants.Imitator.Common.QuestSystem`1.Journal.Quests">
+<summary>Содержит активные миссии на данный момент.</summary>
+</member>
+<member name="F:Variants.Imitator.Common.UserInterface.Library">
+<summary>Содержит строго последовательную очередь всплывающих окон.</summary>
+</member>
+<member name="F:Variants.Imitator.Common.UserInterface.List_Highlight">
+<summary>Индекс выделенного в списке пункта.</summary>
+</member>
+<member name="F:Variants.Imitator.Common.UserInterface.List_Rectangle">
+<summary>Площадь выделенного в списке пункта.</summary>
+</member>
+<member name="P:Variants.Imitator.Common.UserInterface.MaxCount">
+<summary>Максимальное количество видимых элементов в списке.</summary>
+</member>
+<member name="F:Variants.Imitator.Common.UserInterface.MessageBox.Layers">
+<summary>1 - Material, 2 - TexCoords, 3 - LocSize, 4 - Rotation, 5 - Color, 6 - (1 - Text, 2 - Point, 3 - Font, 4 - Color).</summary>
+</member>
+<member name="M:Variants.Imitator.Common.UserInterface.DrawString(Variants.Imitator.Scene.Camera,System.String,System.Drawing.Point,System.Drawing.Font,System.Drawing.Color,System.Boolean)">
+<summary>Draws centered string.</summary>
+</member>
+<member name="M:Variants.IntergalacticInterceptors.Battle.Control_MouseMove_KeyboardRotate(Variants.IntergalacticInterceptors.Ships,Variants.Imitator.Scene.Camera)">
+<summary>Тип управления: мышь - перемещение, клавиатура - вращение.</summary>
+</member>
+<member name="M:Variants.IntergalacticInterceptors.Battle.Control_KeyboardMove_MouseAim(Variants.IntergalacticInterceptors.Ships,Variants.Imitator.Scene.Camera)">
+<summary>Тип управления: клавиатура - перемещение, мышь - прицеливание.</summary>
+</member>
+<member name="T:Variants.IntergalacticInterceptors.Battle.Breakage">
+<summary>Аналог игры "Arkanoid".</summary>
+</member>
+<member name="P:Variants.IntergalacticInterceptors.Battle.Breakage.PlayerSpeed">
+<summary>Скорость передвижения.</summary>
+</member>
+<member name="T:Variants.IntergalacticInterceptors.Battle.Galaxian">
+<summary>Аналог игры "Space Invaders".</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Battle.Galaxian.BattleField">
+<summary>Поле боя, Top -Z, Bottom +Z.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Battle.Galaxian.LocalRecord">
+<summary>Рекорды: Item1 - frags, Item2 - time.</summary>
+</member>
+<member name="T:Variants.IntergalacticInterceptors.Entities.Asteroid">
+<summary>Астероид.</summary>
+</member>
+<member name="T:Variants.IntergalacticInterceptors.Entities.Ball">
+<summary>Шар.</summary>
+</member>
+<member name="T:Variants.IntergalacticInterceptors.Entities.Bonus">
+<summary>Бонус.</summary>
+</member>
+<member name="T:Variants.IntergalacticInterceptors.Entities.Sight">
+<summary>Прицел.</summary>
+</member>
+<member name="P:Variants.IntergalacticInterceptors.Entities.Sight.Attraction">
+<summary>Радиус зоны показа информации о враге.</summary>
+</member>
+<member name="T:Variants.IntergalacticInterceptors.HeadQuarters.PlayerStatus">
+<summary>Для сохранения используется именно эта структура.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.HeadQuarters.PlayerStatus.Опыт">
+<summary>Сохраняемый опыт.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.HeadQuarters.PlayerStatus.Уровень">
+<summary>Сохраняемый уровень.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.HeadQuarters.PlayerStatus.Деньги">
+<summary>Сохраняемые деньги.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.HeadQuarters.PlayerStatus.Инвентарь">
+<summary>Сохраняемый инвентарь.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.HeadQuarters.PlayerStatus.Используемые">
+<summary>Сохраняемое вооружение.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.HeadQuarters.RestAndRate">
+<summary>Item1 - Остаток боеприпасов, Item2 - Откат оружия.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.HeadQuarters.UniqueID">
+<summary>Идентификатор подчинённого корабля.</summary>
+</member>
+<member name="M:Variants.IntergalacticInterceptors.HeadQuarters.CheckAmmunition(Variants.IntergalacticInterceptors.Weapon.Enum_WeaponClass)">
+<summary>Проверка остатков и охлаждения вооружения.</summary>
+</member>
+<member name="M:Variants.IntergalacticInterceptors.HeadQuarters.ReloadAmmunition(Variants.IntergalacticInterceptors.Weapon.Enum_WeaponClass,System.Int32)">
+<summary>Перезарядка вооружения.</summary>
+</member>
+<member name="M:Variants.IntergalacticInterceptors.HeadQuarters.UpdateAmmunition">
+<summary>Обновление состояния вооружения игрока.</summary>
+</member>
+<member name="M:Variants.IntergalacticInterceptors.HeadQuarters.Foe.CheckAmmunition(Variants.IntergalacticInterceptors.Weapon.Enum_WeaponClass)">
+<summary>Проверка остатков и охлаждения вооружения врага.</summary>
+</member>
+<member name="M:Variants.IntergalacticInterceptors.HeadQuarters.Foe.ReloadAmmunition(Variants.IntergalacticInterceptors.Weapon.Enum_WeaponClass,System.Int32)">
+<summary>Перезарядка вооружения врага.</summary>
+</member>
+<member name="M:Variants.IntergalacticInterceptors.HeadQuarters.Foe.UpdateAmmunition">
+<summary>Обновление состояния вооружения врага.</summary>
+</member>
+<member name="M:Variants.IntergalacticInterceptors.HeadQuarters.Player.UpdateExperience">
+<summary>Обновление опыта и уровня игрока.</summary>
+</member>
+<member name="M:Variants.IntergalacticInterceptors.HeadQuarters.Player.Add(Variants.IntergalacticInterceptors.Weapon.Экземпляр)">
+<summary>Добавление единицы вооружения в инвентарь игрока.</summary>
+</member>
+<member name="M:Variants.IntergalacticInterceptors.HeadQuarters.Player.Remove(Variants.IntergalacticInterceptors.Weapon.Экземпляр)">
+<summary>Удаление единицы вооружения из инвентаря игрока.</summary>
+</member>
+<member name="P:Variants.IntergalacticInterceptors.HeadQuarters.Player.Деньги">
+<summary>Деньги игрока.</summary>
+</member>
+<member name="P:Variants.IntergalacticInterceptors.HeadQuarters.Player.Опыт">
+<summary>Опыт игрока.</summary>
+</member>
+<member name="P:Variants.IntergalacticInterceptors.HeadQuarters.Player.Уровень">
+<summary>Уровень игрока.</summary>
+</member>
+<member name="M:Variants.IntergalacticInterceptors.HeadQuarters.Player.ReloadAmmunition(Variants.IntergalacticInterceptors.Weapon.Enum_WeaponClass,System.Int32)">
+<summary>Перезарядка вооружения игрока.</summary>
+</member>
+<member name="M:Variants.IntergalacticInterceptors.HeadQuarters.Player.CheckAmmunition(Variants.IntergalacticInterceptors.Weapon.Enum_WeaponClass)">
+<summary>Проверка остатков и охлаждения вооружения игрока.</summary>
+</member>
+<member name="M:Variants.IntergalacticInterceptors.HeadQuarters.Player.UpdateAmmunition">
+<summary>Обновление состояния вооружения игрока.</summary>
+</member>
+<member name="T:Variants.IntergalacticInterceptors.Ships">
+<summary>Основа для всех кораблей.</summary>
+</member>
+<member name="T:Variants.IntergalacticInterceptors.Ships.Stinger">
+<summary>Корабль игрока.</summary>
+</member>
+<member name="T:Variants.IntergalacticInterceptors.Ships.Enemy">
+<summary>Корабль врага.</summary>
+</member>
+<member name="T:Variants.IntergalacticInterceptors.Skill.Target">
+<summary>Список целей, на которые действует эффект.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Skill.Target.Ball">
+<summary>Шар.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Skill.Target.Player">
+<summary>Игрок.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Skill.Target.Partner">
+<summary>Напарник.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Skill.Target.Enemy">
+<summary>Враг.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Skill.Target.Barrier">
+<summary>Барьер.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Skill.Target.MachineGun">
+<summary>Пулемёт.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Skill.Target.PlasmaGun">
+<summary>Плазмомёт.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Skill.Target.RocketLauncher">
+<summary>Ракетомёт.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Skill.Target.GrenadeLauncher">
+<summary>Гранатомёт.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Skill.Target.Robot">
+<summary>Робот.</summary>
+</member>
+<member name="T:Variants.IntergalacticInterceptors.Skill.Parameter">
+<summary>Параметр, который применяет эффект.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Skill.Parameter.Health_Ammo">
+<summary>Жизнь или патроны.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Skill.Parameter.Armor_Damage">
+<summary>Броня или урон.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Skill.Parameter.Speed">
+<summary>Скорость.</summary>
+</member>
+<member name="T:Variants.IntergalacticInterceptors.Skill.Effect">
+<summary>Эффект.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Skill.Effect.Capacity">
+<summary>Количество.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Skill.Effect.Duration">
+<summary>Продолжительность.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Skill.Effect.Chance">
+<summary>Шанс.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Skill.Effect.Target">
+<summary>Тип цели.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Skill.Effect.Parameter">
+<summary>Параметы цели.</summary>
+</member>
+<member name="T:Variants.IntergalacticInterceptors.Skill.Type">
+<summary>Варианты эффектов.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Skill.Type.None">
+<summary>Нет.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Skill.Type.MagneticBat">
+<summary>Магнитная битка для шара.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Skill.Type.MagneticSight">
+<summary>Магнитный прицел для шара.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Skill.Type.QuadruplingBall">
+<summary>Размножение шара (кроме последнего все шары при касании барьера уничтожаются).</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Skill.Type.WeightingBall">
+<summary>Усилитель шара.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Skill.Type.DecelerateBall">
+<summary>Замедлитель шара.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Skill.Type.AccelerateBall">
+<summary>Ускоритель шара.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Skill.Type.WeaponPowerAmplifierX2">
+<summary>Усилитель мощности оружия х2.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Skill.Type.WeaponSpeedBoosterX2">
+<summary>Усилитель скорости оружия х2.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Skill.Type.BarrierProtection">
+<summary>Защита барьера.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Skill.Type.CloneBat">
+<summary>Добавление клона-битки (CPU).</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Skill.Type.EnergyRecovery">
+<summary>Восстановление энергии 50%.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Skill.Type.ReplenishmentOfAmmunition">
+<summary>Пополнение боезапаса ракет и бомб.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Skill.Type.BatExtension">
+<summary>Расширение битки (работает до удара шара по барьеру).</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Skill.Type.Freeze">
+<summary>Заморозка всех мобов.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Skill.Type.EMP">
+<summary>ЕМР бомба (-50% жизней ниже по уровню мобов).</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Skill.Type.RestrictedArea">
+<summary>Ограниченная зона.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Skill.Type.PlayerSlowdown">
+<summary>Замедление игрока.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Skill.Type.InvisibleSight">
+<summary>Невидимый прицел.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Skill.Type.TranslucentBall">
+<summary>Полупрозрачный шар.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Skill.Type.WeaponFailure">
+<summary>Отказ оружия.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Skill.Type.WildBall">
+<summary>Дикий шар (пытается уничтожить всех мобов).</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Skill.Type.UselessBall">
+<summary>Бесполезный шар (ничего не уничтожается).</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Skill.Type.CrazyBall">
+<summary>Сумасшедший шар (отскакивает в случайную сторону).</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Skill.Type.InvertedControl">
+<summary>Инвертор (меняется управление на обратное).</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Skill.Type.ExplosiveBall">
+<summary>Взрывной шар (при каждом ударе - взрыв).</summary>
+</member>
+<member name="P:Variants.IntergalacticInterceptors.UserInterface.MaxStockView">
+<summary>Максимальное количество видимых элементов в списке.</summary>
+</member>
+<member name="M:Variants.IntergalacticInterceptors.UserInterface.Scroll(Variants.IntergalacticInterceptors.Inter,Variants.Imitator.Scene.Camera,System.Int32,System.Drawing.Point,System.Int32,System.Drawing.Color,System.Boolean,System.Windows.Forms.VisualStyles.ContentAlignment,System.Collections.Generic.List{Variants.IntergalacticInterceptors.Weapon.Экземпляр})">
+<summary>Выводит список с прокруткой.</summary>
+</member>
+<member name="M:Variants.IntergalacticInterceptors.Store.Start">
+<summary>Очищает всю сцену и заполняет магазин.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Inter.Game_Ramdomizer">
+<summary>Генератор псевдослучайных целых чисел.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Inter.RootDirectory">
+<summary>Корневая папка с контентом.</summary>
+</member>
+<member name="T:Variants.IntergalacticInterceptors.Inter.MenuEntries">
+<summary>Пункты меню.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Inter.MenuEntries.Main">
+<summary>Главное меню.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Inter.MenuEntries.Start">
+<summary>Начало игры.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Inter.MenuEntries.Difficulty">
+<summary>Сложность.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Inter.MenuEntries.Options">
+<summary>Настройки.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Inter.MenuEntries.Graphics">
+<summary>Графика.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Inter.MenuEntries.Sound">
+<summary>Звук.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Inter.MenuEntries.Controls">
+<summary>Управление.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Inter.MenuEntries.Language">
+<summary>Язык.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Inter.MenuEntries.Store">
+<summary>В магазине.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Inter.MenuEntries.Galaxian">
+<summary>Режим боя - Галактика.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Inter.MenuEntries.Breakage">
+<summary>Режим боя - Разрушение.</summary>
+</member>
+<member name="T:Variants.IntergalacticInterceptors.Weapon.Enum_WeaponClass">
+<summary>Типы вооружения.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Weapon.Enum_WeaponClass.MachineGun">
+<summary>Пулемёт.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Weapon.Enum_WeaponClass.PlasmaGun">
+<summary>Плазмомёт.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Weapon.Enum_WeaponClass.RocketLauncher">
+<summary>Ракетомёт.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Weapon.Enum_WeaponClass.GrenadeLauncher">
+<summary>Гранатомёт.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Weapon.Enum_WeaponClass.Robot">
+<summary>Робот.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Weapon.Enum_WeaponClass.Enemy">
+<summary>Враги.</summary>
+</member>
+<member name="T:Variants.IntergalacticInterceptors.Weapon.Enum_MachineGun">
+<summary>Виды огнестрельного вооружения.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Weapon.Enum_MachineGun.None">
+<summary>Пулемёт не выбран.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Weapon.Enum_MachineGun.Minigun">
+<summary>Стандартный пулемёт.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Weapon.Enum_MachineGun.Burst">
+<summary>Стреляет очередями со свойством 1й пули.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Weapon.Enum_MachineGun.Shotgun">
+<summary>Дробовик.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Weapon.Enum_MachineGun.Sniper">
+<summary>Снайперка (мощная и медленная).</summary>
+</member>
+<member name="T:Variants.IntergalacticInterceptors.Weapon.Enum_PlasmaGun">
+<summary>Виды пламенного вооружения.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Weapon.Enum_PlasmaGun.None">
+<summary>Лазер не выбран.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Weapon.Enum_PlasmaGun.Spray">
+<summary>Скорострельный импульсный лазер.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Weapon.Enum_PlasmaGun.Charge">
+<summary>Заряжаемый импульс.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Weapon.Enum_PlasmaGun.Ricochet">
+<summary>Импульсы отражаются от объектов.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Weapon.Enum_PlasmaGun.Piercer">
+<summary>Пролетают насквозь.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Weapon.Enum_PlasmaGun.Marker">
+<summary>Окрашивает объекты.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Weapon.Enum_PlasmaGun.Apocalipse">
+<summary>Мощнейший прямой луч, уничтожающий всё на поверхности астероида.</summary>
+</member>
+<member name="T:Variants.IntergalacticInterceptors.Weapon.Enum_RocketLauncher">
+<summary>Виды ракетного вооружения.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Weapon.Enum_RocketLauncher.None">
+<summary>Ракеты не выбраны.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Weapon.Enum_RocketLauncher.Torpedo">
+<summary>Прямолетящие ракеты.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Weapon.Enum_RocketLauncher.Homing">
+<summary>Самонаводящиеся ракеты.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Weapon.Enum_RocketLauncher.Spread">
+<summary>Разлетающиеся ракеты.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Weapon.Enum_RocketLauncher.Tracer">
+<summary>Трассирующая ракета за курсором.</summary>
+</member>
+<member name="T:Variants.IntergalacticInterceptors.Weapon.Enum_GrenadeLauncher">
+<summary>Виды ядерного вооружения.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Weapon.Enum_GrenadeLauncher.None">
+<summary>Гранаты не выбраны.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Weapon.Enum_GrenadeLauncher.Bomb">
+<summary>Взрыв большого радиуса.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Weapon.Enum_GrenadeLauncher.Mine">
+<summary>Располагаются на поле для уничтожения мобов и их пуль.</summary>
+</member>
+<member name="T:Variants.IntergalacticInterceptors.Weapon.Enum_Robot">
+<summary>Виды электронного вооружения.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Weapon.Enum_Robot.None">
+<summary>Робот не выбран.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Weapon.Enum_Robot.Shield">
+<summary>Доп. защита барьера, но не корабля.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Weapon.Enum_Robot.Repair">
+<summary>Починка корабля.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Weapon.Enum_Robot.Zond">
+<summary>Спутниковый защитный робот.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Weapon.Enum_Robot.Drone">
+<summary>Автономный атакующий робот.</summary>
+</member>
+<member name="T:Variants.IntergalacticInterceptors.Weapon.Enum_Enemy">
+<summary>Виды вражеского вооружения.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Weapon.Enum_Enemy.None">
+<summary>Без вооружения.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Weapon.Enum_Enemy.Impulse">
+<summary>Импульс.</summary>
+</member>
+<member name="T:Variants.IntergalacticInterceptors.Weapon.Enum_Редкость">
+<summary>Варианты качества и редкости оружия.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Weapon.Enum_Редкость.Gray">
+<summary>Худшее качество, стоит дешевле.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Weapon.Enum_Редкость.White">
+<summary>Стандартное качество.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Weapon.Enum_Редкость.Blue">
+<summary>Хорошее качество, уровень +1.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Weapon.Enum_Редкость.Green">
+<summary>Лучшее качество, уровень +2.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Weapon.Enum_Редкость.Orange">
+<summary>Наилучшее качество, уровень +3.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Weapon.Enum_Редкость.Magenta">
+<summary>Высшее качество, уровень +4.</summary>
+</member>
+<member name="T:Variants.IntergalacticInterceptors.Weapon.Экземпляр">
+<summary>Индивидуальные параметры каждого оружия.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Weapon.Экземпляр.Класс">
+<summary>Класс данного оружия.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Weapon.Экземпляр.Вид">
+<summary>Подкласс данного оружия.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Weapon.Экземпляр.Уровень">
+<summary>Уровень оружия.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Weapon.Экземпляр.Урон">
+<summary>Урон оружия (единиц на выстрел).</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Weapon.Экземпляр.Темп">
+<summary>Темп оружия (выстрелов в секунду).</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Weapon.Экземпляр.Скорость">
+<summary>Скорость снаряда (метров в секунду).</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Weapon.Экземпляр.Прочность">
+<summary>Прочность оружия (расход на выстрел).</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Weapon.Экземпляр.Убойность">
+<summary>Убойность оружия (метров за выстрел).</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Weapon.Экземпляр.Критичность">
+<summary>Критичность оружия (шанс мгновенного убийства).</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Weapon.Экземпляр.Редкость">
+<summary>Редкость оружия (коэфф. усиления).</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Weapon.Экземпляр.Описание">
+<summary>Описание оружия.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Weapon.Экземпляр.Цена">
+<summary>Цена оружия (в §).</summary>
+</member>
+<member name="M:Variants.IntergalacticInterceptors.Weapon.GenerateRarity(System.Int32@)">
+<summary>Генерирует уровень редкости.</summary>
+</member>
+<member name="M:Variants.IntergalacticInterceptors.Weapon.Damage(Variants.IntergalacticInterceptors.Ships,Variants.Imitator.Engine.Contact,Variants.IntergalacticInterceptors.Weapon.Enum_WeaponClass)">
+<summary>Расчёт ущерба от попадания из оружия от игроков и врагов.</summary>
+</member>
+<member name="T:Variants.IntergalacticInterceptors.Weapon.Projectile">
+<summary>Представляет из себя экземпляр снаряда в сцене.</summary>
+</member>
+<member name="M:Variants.IntergalacticInterceptors.Weapon.Projectile.#ctor(Variants.IntergalacticInterceptors.HeadQuarters,Variants.IntergalacticInterceptors.Weapon.Enum_WeaponClass,System.Single)">
+<summary>Выстрел снаряда.</summary>
+<param name="player">Кто стреляет?</param>
+<param name="weapClass">Чем стреляет?</param>
+<param name="angle">Угол отклонения выстрела.</param>
+</member>
+<member name="M:Variants.IntergalacticInterceptors.Weapon.MachineGun.Generate(System.Int32)">
+<summary>Генерирует новый экземпляр пулемёта по заданому уровню редкости.</summary>
+</member>
+<member name="M:Variants.IntergalacticInterceptors.Weapon.PlasmaGun.Generate(System.Int32)">
+<summary>Генерирует новый экземпляр плазмомёта по заданому уровню редкости.</summary>
+</member>
+<member name="M:Variants.IntergalacticInterceptors.Weapon.RocketLauncher.Generate(System.Int32)">
+<summary>Генерирует новый экземпляр ракетомёта по заданому уровню редкости.</summary>
+</member>
+<member name="M:Variants.IntergalacticInterceptors.Weapon.GrenadeLauncher.Generate(System.Int32)">
+<summary>Генерирует новый экземпляр гранатомёта по заданому уровню редкости.</summary>
+</member>
+<member name="M:Variants.IntergalacticInterceptors.Weapon.Robot.Generate(System.Int32)">
+<summary>Генерирует новый экземпляр робота по заданому уровню редкости.</summary>
+</member>
+<member name="T:Variants.IntergalacticInterceptors.Weapon.Enum_Description">
+<summary>Описание оружия.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Weapon.Enum_Description.Horrible">
+<summary>Ужасный.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Weapon.Enum_Description.Fierce">
+<summary>Свирепый.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Weapon.Enum_Description.Cruel">
+<summary>Жестокий.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Weapon.Enum_Description.Large">
+<summary>Большой.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Weapon.Enum_Description.Massive">
+<summary>Массивный.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Weapon.Enum_Description.Dangerous">
+<summary>Опасный.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Weapon.Enum_Description.Savage">
+<summary>Дикий.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Weapon.Enum_Description.Sharp">
+<summary>Колкий.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Weapon.Enum_Description.Pointy">
+<summary>Заостренный.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Weapon.Enum_Description.Tiny">
+<summary>Крошечный.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Weapon.Enum_Description.Terrible">
+<summary>Страшный.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Weapon.Enum_Description.Small">
+<summary>Маленький.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Weapon.Enum_Description.Dull">
+<summary>Тупой.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Weapon.Enum_Description.Unhappy">
+<summary>Несчастливый.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Weapon.Enum_Description.Bulky">
+<summary>Громоздкий.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Weapon.Enum_Description.Shameful">
+<summary>Постыдный.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Weapon.Enum_Description.Heavy">
+<summary>Тяжелый.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Weapon.Enum_Description.Light">
+<summary>Лёгкий.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Weapon.Enum_Description.Sighted">
+<summary>Зрячий.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Weapon.Enum_Description.Rapid">
+<summary>Скоростной.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Weapon.Enum_Description.Hasty">
+<summary>Стремительный.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Weapon.Enum_Description.Intimidating">
+<summary>Устрашающий.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Weapon.Enum_Description.Deadly">
+<summary>Смертоносный.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Weapon.Enum_Description.Staunch">
+<summary>Стойкий.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Weapon.Enum_Description.Awful">
+<summary>Ужасный.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Weapon.Enum_Description.Lethargic">
+<summary>Летаргический.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Weapon.Enum_Description.Awkward">
+<summary>Неуклюжий.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Weapon.Enum_Description.Powerful">
+<summary>Мощный.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Weapon.Enum_Description.Mystic">
+<summary>Мистический.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Weapon.Enum_Description.Adept">
+<summary>Искусный.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Weapon.Enum_Description.Masterful">
+<summary>Мастерский.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Weapon.Enum_Description.Inept">
+<summary>Неумелый.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Weapon.Enum_Description.Ignorant">
+<summary>Невежественный.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Weapon.Enum_Description.Deranged">
+<summary>Невменяемый.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Weapon.Enum_Description.Intense">
+<summary>Интенсивный.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Weapon.Enum_Description.Taboo">
+<summary>Запретный.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Weapon.Enum_Description.Celestial">
+<summary>Небесный.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Weapon.Enum_Description.Furious">
+<summary>Яростный.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Weapon.Enum_Description.Keen">
+<summary>Острый.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Weapon.Enum_Description.Superior">
+<summary>Превосходный.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Weapon.Enum_Description.Forceful">
+<summary>Сильный.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Weapon.Enum_Description.Broken">
+<summary>Сломанный.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Weapon.Enum_Description.Damaged">
+<summary>Поврежденный.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Weapon.Enum_Description.Shoddy">
+<summary>Поддельный.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Weapon.Enum_Description.Quick">
+<summary>Быстрый.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Weapon.Enum_Description.Agile">
+<summary>Проворный.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Weapon.Enum_Description.Nimble">
+<summary>Ловкий.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Weapon.Enum_Description.Murderous">
+<summary>Убийственный.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Weapon.Enum_Description.Slow">
+<summary>Медлительный.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Weapon.Enum_Description.Sluggish">
+<summary>Вялый.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Weapon.Enum_Description.Lazy">
+<summary>Ленивый.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Weapon.Enum_Description.Annoying">
+<summary>Раздражающий.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Weapon.Enum_Description.Nasty">
+<summary>Угрожающий.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Weapon.Enum_Description.Manic">
+<summary>Маниакальный.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Weapon.Enum_Description.Hurtful">
+<summary>Пагубный.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Weapon.Enum_Description.Strong">
+<summary>Крепкий.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Weapon.Enum_Description.Unpleasant">
+<summary>Отталкивающий.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Weapon.Enum_Description.Weak">
+<summary>Слабый.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Weapon.Enum_Description.Ruthless">
+<summary>Беспощадный.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Weapon.Enum_Description.Frenzying">
+<summary>Безумный.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Weapon.Enum_Description.Godly">
+<summary>Божественный.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Weapon.Enum_Description.Demonic">
+<summary>Демонический.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Weapon.Enum_Description.Zealous">
+<summary>Усердный.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Weapon.Enum_Description.Legendary">
+<summary>Легендарный.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Weapon.Enum_Description.Unreal">
+<summary>Нереальный.</summary>
+</member>
+<member name="F:Variants.IntergalacticInterceptors.Weapon.Enum_Description.Mythical">
+<summary>Мифический.</summary>
+</member>
+</members>
+</doc>

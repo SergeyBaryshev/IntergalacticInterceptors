@@ -1,0 +1,3309 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+Imitator
+</name>
+</assembly>
+<members>
+<member name="T:Variants.My.Resources.Resources">
+<summary>
+  Класс ресурса со строгой типизацией для поиска локализованных строк и т.д.
+</summary>
+</member>
+<member name="P:Variants.My.Resources.Resources.ResourceManager">
+<summary>
+  Возвращает кэшированный экземпляр ResourceManager, использованный этим классом.
+</summary>
+</member>
+<member name="P:Variants.My.Resources.Resources.Culture">
+<summary>
+  Перезаписывает свойство CurrentUICulture текущего потока для всех
+  обращений к ресурсу с помощью этого класса ресурса со строгой типизацией.
+</summary>
+</member>
+<member name="P:Variants.My.Resources.Resources.Action">
+<summary>
+  Поиск локализованного ресурса типа System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Variants.My.Resources.Resources.Clear">
+<summary>
+  Поиск локализованного ресурса типа System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Variants.My.Resources.Resources.DirectX">
+<summary>
+  Поиск локализованного ресурса типа System.Drawing.Icon, аналогичного (Значок).
+</summary>
+</member>
+<member name="P:Variants.My.Resources.Resources.Edit">
+<summary>
+  Поиск локализованного ресурса типа System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Variants.My.Resources.Resources.Help">
+<summary>
+  Поиск локализованного ресурса типа System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Variants.My.Resources.Resources.HLSL">
+<summary>
+  Поиск локализованного ресурса типа System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Variants.My.Resources.Resources.Imitator">
+<summary>
+  Поиск локализованного ресурса типа System.Drawing.Icon, аналогичного (Значок).
+</summary>
+</member>
+<member name="P:Variants.My.Resources.Resources.Lighting">
+<summary>
+  Ищет локализованную строку, похожую на #ifndef Lighting
+#define Lighting
+#endif
+
+#ifndef Specials
+#include &quot;Specials&quot;
+#endif
+
+float ShadowBias;
+float ShadowOffset;
+float ShadowQuality;
+
+//_______________________________________________________________________________________________________________________________
+
+// Данные источника частиц и света
+struct EmitterType
+{
+	float4 Diffuse;
+	float3 Direction; float Shadow;
+	float Ambient, FarClip, NearClip, Power;
+	float3 Position; float LightType;
+}	Emitter;
+
+//______________ [остаток строки не уместился]&quot;;.
+</summary>
+</member>
+<member name="P:Variants.My.Resources.Resources.Mathematics">
+<summary>
+  Ищет локализованную строку, похожую на #ifndef Mathematics
+#define Mathematics
+#endif
+
+float4		QuadResolution;
+float4		vObectPosition;
+float4		vObjectVelocity;
+float4x4		mEllipsoid;
+float4		EllipsoidRadius;
+
+Texture CollisionVolumeTexture;
+sampler3D CollisionVolumeSampler = sampler_state
+{
+	Texture = &lt;CollisionVolumeTexture&gt;;
+	MinFilter = point;
+	MagFilter = point;
+	MipFilter = point;
+};
+
+Texture MipTexture;
+sampler2D MipSampler = sampler_state
+{
+	Texture = &lt;MipTexture&gt;;
+	MinFilter = point;
+	MagFilter = point;
+	MipFilter [остаток строки не уместился]&quot;;.
+</summary>
+</member>
+<member name="P:Variants.My.Resources.Resources.Mechanics">
+<summary>
+  Ищет локализованную строку, похожую на #ifndef Mechanics
+#define Mechanics
+#endif
+
+// Данные камеры
+float4 CameraViewport;	// Width, Height, FarClip, NearClip
+matrix CameraViewMatrix;
+matrix CameraViewInvertMatrix;
+matrix CameraProjectionMatrix;
+matrix CameraViewProjectionMatrix;
+matrix CameraProjectionInvertMatrix;
+matrix CameraViewProjectionInvertMatrix;
+
+#ifndef Utilities
+#include &quot;Utilities&quot;
+#endif
+
+#ifndef Lighting
+#include &quot;Lighting&quot;
+#endif
+
+#ifndef Mathematics
+#include &quot;Mathematics&quot;
+#endif
+
+// Данные материалов
+s [остаток строки не уместился]&quot;;.
+</summary>
+</member>
+<member name="P:Variants.My.Resources.Resources.Open">
+<summary>
+  Поиск локализованного ресурса типа System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Variants.My.Resources.Resources.Panel">
+<summary>
+  Поиск локализованного ресурса типа System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Variants.My.Resources.Resources.Print">
+<summary>
+  Поиск локализованного ресурса типа System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Variants.My.Resources.Resources.Save">
+<summary>
+  Поиск локализованного ресурса типа System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Variants.My.Resources.Resources.Specials">
+<summary>
+  Ищет локализованную строку, похожую на #ifndef Specials
+#define Specials
+#endif
+
+// Константы
+static const float PI = acos(-1.0f);
+float ParallaxHeight = 0.05f;
+int ParallaxSteps = 64;
+
+//_______________________________________________________________________________________________________________________________
+
+// Geometric Shadowing Function (GSF) - Walter et al
+float GGX_Geometric(in float NV, in float NL, in float in_roughness)
+{
+	//float a2 = in_roughness * in_roughness;
+	//float2 n2 = float2(NV * NV, NL * NL);
+	//n2 = 2. [остаток строки не уместился]&quot;;.
+</summary>
+</member>
+<member name="P:Variants.My.Resources.Resources.Tool">
+<summary>
+  Поиск локализованного ресурса типа System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Variants.My.Resources.Resources.Utilities">
+<summary>
+  Ищет локализованную строку, похожую на #ifndef Utilities
+#define Utilities
+#endif
+
+//_______________________________________________________________________________________________________________________________
+
+// Двойной Кватернион и дальнейшее его применение
+struct DualQuaternion
+{
+	float4 Real;
+	float4 Dual;
+
+	//float3 Translate()
+	//{
+	//	return 2.0f * (Real.w * Dual.xyz - Dual.w * Real.xyz + cross(Real.xyz, Dual.xyz));
+	//}
+
+	//float4 GetReal()
+	//{
+		//return Real;
+	//}
+
+}	Armature[100];
+
+//______________________ [остаток строки не уместился]&quot;;.
+</summary>
+</member>
+<member name="P:Variants.My.Resources.Resources.View">
+<summary>
+  Поиск локализованного ресурса типа System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="T:Variants.Imitator.Editor.Content.Font">
+<summary>Оболочка для шрифта в редакторе.</summary>
+</member>
+<member name="M:Variants.Imitator.Editor.Content.Font.#ctor(System.String)">
+<summary>Создание оболочки для шрифта в редакторе.</summary>
+</member>
+<member name="T:Variants.Imitator.Editor.Content.Mesh">
+<summary>Оболочка для модели в редакторе.</summary>
+</member>
+<member name="M:Variants.Imitator.Editor.Content.Mesh.#ctor(System.String)">
+<summary>Создание оболочки для модели в редакторе.</summary>
+</member>
+<member name="T:Variants.Imitator.Editor.Content.Motion">
+<summary>Оболочка для анимации в редакторе.</summary>
+</member>
+<member name="M:Variants.Imitator.Editor.Content.Motion.#ctor(System.String)">
+<summary>Создание оболочки для анимации в редакторе.</summary>
+</member>
+<member name="T:Variants.Imitator.Editor.Content.Script">
+<summary>Оболочка для скрипта в редакторе.</summary>
+</member>
+<member name="M:Variants.Imitator.Editor.Content.Script.#ctor(System.String)">
+<summary>Создание оболочки для скрипта в редакторе.</summary>
+</member>
+<member name="T:Variants.Imitator.Editor.Content.Shader">
+<summary>Оболочка для шейдера в редакторе.</summary>
+</member>
+<member name="M:Variants.Imitator.Editor.Content.Shader.#ctor(System.String)">
+<summary>Создание оболочки для шейдера в редакторе.</summary>
+</member>
+<member name="T:Variants.Imitator.Editor.Content.Sound">
+<summary>Оболочка для звука в редакторе.</summary>
+</member>
+<member name="M:Variants.Imitator.Editor.Content.Sound.#ctor(System.String)">
+<summary>Создание оболочки для звука в редакторе.</summary>
+</member>
+<member name="T:Variants.Imitator.Editor.Content.Texture">
+<summary>Оболочка для текстуры в редакторе.</summary>
+</member>
+<member name="M:Variants.Imitator.Editor.Content.Texture.#ctor(System.String)">
+<summary>Создание оболочки для текстуры в редакторе.</summary>
+</member>
+<member name="M:Variants.Imitator.Editor.Element.Material.op_Implicit(Variants.Imitator.Element.Material)~Variants.Imitator.Editor.Element.Material">
+<summary><see cref="T:Variants.Imitator.Element.Material"/> -> <see cref="T:Variants.Imitator.Editor.Element.Material"/></summary>
+</member>
+<member name="M:Variants.Imitator.Editor.Element.Material.op_Implicit(Variants.Imitator.Editor.Element.Material)~Variants.Imitator.Element.Material">
+<summary><see cref="T:Variants.Imitator.Editor.Element.Material"/> -> <see cref="T:Variants.Imitator.Element.Material"/></summary>
+</member>
+<member name="M:Variants.Imitator.Editor.Element.Material.op_Implicit(Variants.Imitator.Engine.BaseElement{Variants.Imitator.Element.Material})~Variants.Imitator.Editor.Element.Material">
+<summary><see cref="T:Variants.Imitator.Element.Material"/> -> <see cref="T:Variants.Imitator.Editor.Element.Material"/></summary>
+</member>
+<member name="M:Variants.Imitator.Editor.Element.Node.#ctor(System.String)">
+<summary>Создание оболочки для узла в редакторе.</summary>
+</member>
+<member name="M:Variants.Imitator.Editor.Element.Node.op_Implicit(Variants.Imitator.Element.Node)~Variants.Imitator.Editor.Element.Node">
+<summary><see cref="T:Variants.Imitator.Element.Node"/> -> <see cref="T:Variants.Imitator.Editor.Element.Node"/></summary>
+</member>
+<member name="M:Variants.Imitator.Editor.Element.Node.op_Implicit(Variants.Imitator.Editor.Element.Node)~Variants.Imitator.Element.Node">
+<summary><see cref="T:Variants.Imitator.Editor.Element.Node"/> -> <see cref="T:Variants.Imitator.Element.Node"/></summary>
+</member>
+<member name="M:Variants.Imitator.Editor.Element.Node.op_Implicit(Variants.Imitator.Engine.BaseElement{Variants.Imitator.Element.Node})~Variants.Imitator.Editor.Element.Node">
+<summary><see cref="T:Variants.Imitator.Element.Node"/> -> <see cref="T:Variants.Imitator.Editor.Element.Node"/></summary>
+</member>
+<member name="T:Variants.Imitator.Editor.Scene.Body">
+<summary>Оболочка для тела в редакторе.</summary>
+</member>
+<member name="M:Variants.Imitator.Editor.Scene.Body.#ctor(System.String)">
+<summary>Создание оболочки для тела в редакторе.</summary>
+</member>
+<member name="T:Variants.Imitator.Editor.Scene.Camera">
+<summary>Оболочка для камеры в редакторе.</summary>
+</member>
+<member name="M:Variants.Imitator.Editor.Scene.Camera.#ctor(System.String)">
+<summary>Создание оболочки для камеры в редакторе.</summary>
+</member>
+<member name="T:Variants.Imitator.Editor.Scene.Effect">
+<summary>Оболочка для эффекта в редакторе.</summary>
+</member>
+<member name="M:Variants.Imitator.Editor.Scene.Effect.#ctor(System.String)">
+<summary>Создание оболочки для эффекта в редакторе.</summary>
+</member>
+<member name="T:Variants.Imitator.Editor.Scene.Emitter">
+<summary>Оболочка для источника в редакторе.</summary>
+</member>
+<member name="M:Variants.Imitator.Editor.Scene.Emitter.#ctor(System.String)">
+<summary>Создание оболочки для источника в редакторе.</summary>
+</member>
+<member name="T:Variants.Imitator.Editor.Scene.Trigger">
+<summary>Оболочка для триггера в редакторе.</summary>
+</member>
+<member name="M:Variants.Imitator.Editor.Scene.Trigger.#ctor(System.String)">
+<summary>Создание оболочки для триггера в редакторе.</summary>
+</member>
+<member name="T:Variants.Imitator.Editor.Scene.Voxel">
+<summary>Оболочка для вокселя в редакторе.</summary>
+</member>
+<member name="M:Variants.Imitator.Editor.Scene.Voxel.#ctor(System.String)">
+<summary>Создание оболочки для вокселя в редакторе.</summary>
+</member>
+<member name="T:Variants.Imitator.Editor.ExpandableObjectConverter1`1">
+<summary>Базовый преобразователь для сетки свойств редактора.</summary>
+</member>
+<member name="T:Variants.Imitator.Editor.BaseObject`1">
+<summary>Базовый тип сущностей для редактора.</summary>
+</member>
+<member name="F:Variants.Imitator.Editor.BaseObject`1.Reference">
+<summary>Ссылка на внешний тип.</summary>
+</member>
+<member name="M:Variants.Imitator.Editor.BaseObject`1.#ctor(Variants.Imitator.Engine.BaseObject)">
+<summary>Создание ссылки на внешний тип.</summary>
+</member>
+<member name="M:Variants.Imitator.Editor.DropdownStrings.GetStandardValuesExclusive(System.ComponentModel.ITypeDescriptorContext)">
+<summary>True for read-only values.</summary>
+</member>
+<member name="M:Variants.Imitator.Editor.DropdownStrings.GetStandardValuesSupported(System.ComponentModel.ITypeDescriptorContext)">
+<summary>True for dropdown list support.</summary>
+</member>
+<member name="M:Variants.Imitator.Editor.DropdownStrings.GetStandardValues(System.ComponentModel.ITypeDescriptorContext)">
+<summary>Fill the list.</summary>
+</member>
+<member name="M:Variants.Imitator.Editor.DropdownStrings.GetContentFiles(Variants.Imitator.Engine.ResourceType[])">
+<summary>Возвращает список всех текстур в памяти, удволетворяющих списку указанных форматов.</summary>
+</member>
+<member name="M:Variants.Imitator.Editor.DropdownStrings.GetDirectoryFiles(System.String[])">
+<summary>Собирает список всех файлов в данной папке, удволетворяющих списку указанных форматов.</summary>
+</member>
+<member name="T:Variants.Imitator.Editor.Parameter">
+<summary>Автоматически подбирает параметры в зависимости от типа данных.</summary>
+</member>
+<member name="T:Variants.Imitator.Editor.HLSL.Enum_Directives">
+<summary></summary>
+</member>
+<member name="F:Variants.Imitator.Editor.HLSL.Enum_Directives.define">
+<summary>Preprocessor directive that assigns a meaningful name to a constant and  creates a function-like macro.</summary>
+</member>
+<member name="T:Variants.Imitator.Editor.HLSL.Enum_Functions">
+<summary>Intrinsic Functions.</summary>
+</member>
+<member name="F:Variants.Imitator.Editor.HLSL.Enum_Functions.abs">
+<summary>Absolute value (per component).</summary>
+</member>
+<member name="F:Variants.Imitator.Editor.HLSL.Enum_Functions.acos">
+<summary>Returns the arccosine of each component of x.</summary>
+</member>
+<member name="F:Variants.Imitator.Editor.HLSL.Enum_Functions.all">
+<summary>Test if all components of x are nonzero.</summary>
+</member>
+<member name="F:Variants.Imitator.Editor.HLSL.Enum_Functions.any">
+<summary>Test if any component of x is nonzero.</summary>
+</member>
+<member name="F:Variants.Imitator.Editor.HLSL.Enum_Functions.asin">
+<summary>Returns the arcsine of each component of x.</summary>
+</member>
+<member name="F:Variants.Imitator.Editor.HLSL.Enum_Functions.atan">
+<summary>Returns the arctangent of x.</summary>
+</member>
+<member name="F:Variants.Imitator.Editor.HLSL.Enum_Functions.atan2">
+<summary>Returns the arctangent of of two values (x,y).</summary>
+</member>
+<member name="F:Variants.Imitator.Editor.HLSL.Enum_Functions.ceil">
+<summary>Returns the smallest integer which is greater than or equal to x.</summary>
+</member>
+<member name="F:Variants.Imitator.Editor.HLSL.Enum_Functions.clamp">
+<summary>Clamps x to the range [min, max].</summary>
+</member>
+<member name="F:Variants.Imitator.Editor.HLSL.Enum_Functions.clip">
+<summary>Discards the current pixel, if any component of x is less than zero.</summary>
+</member>
+<member name="F:Variants.Imitator.Editor.HLSL.Enum_Functions.cos">
+<summary>Returns the cosine of x.</summary>
+</member>
+<member name="F:Variants.Imitator.Editor.HLSL.Enum_Functions.cosh">
+<summary>Returns the hyperbolic cosine of x.</summary>
+</member>
+<member name="F:Variants.Imitator.Editor.HLSL.Enum_Functions.cross">
+<summary>Returns the cross product of two 3D vectors.</summary>
+</member>
+<member name="F:Variants.Imitator.Editor.HLSL.Enum_Functions.D3DCOLORtoUBYTE4">
+<summary>Swizzles and scales components of the 4D vector xto compensate for the lack of UBYTE4 support in some hardware.</summary>
+</member>
+<member name="F:Variants.Imitator.Editor.HLSL.Enum_Functions.ddx">
+<summary>Returns the partial derivative of x with respect to the screen-space x-coordinate.</summary>
+</member>
+<member name="F:Variants.Imitator.Editor.HLSL.Enum_Functions.ddy">
+<summary>Returns the partial derivative of x with respect to the screen-space y-coordinate.</summary>
+</member>
+<member name="F:Variants.Imitator.Editor.HLSL.Enum_Functions.degrees">
+<summary>Converts x from radians to degrees.</summary>
+</member>
+<member name="F:Variants.Imitator.Editor.HLSL.Enum_Functions.determinant">
+<summary>Returns the determinant of the square matrix m.</summary>
+</member>
+<member name="F:Variants.Imitator.Editor.HLSL.Enum_Functions.distance">
+<summary>Returns the distance between two points.</summary>
+</member>
+<member name="F:Variants.Imitator.Editor.HLSL.Enum_Functions.dot">
+<summary>Returns the dot product of two vectors.</summary>
+</member>
+<member name="F:Variants.Imitator.Editor.HLSL.Enum_Functions.exp">
+<summary>Returns the base-e exponent.</summary>
+</member>
+<member name="F:Variants.Imitator.Editor.HLSL.Enum_Functions.exp2">
+<summary>Base 2 exponent (per component).</summary>
+</member>
+<member name="F:Variants.Imitator.Editor.HLSL.Enum_Functions.faceforward">
+<summary>Returns -n * sign(dot(i, ng)).</summary>
+</member>
+<member name="F:Variants.Imitator.Editor.HLSL.Enum_Functions.floor">
+<summary>Returns the greatest integer which is less than or equal to x.</summary>
+</member>
+<member name="F:Variants.Imitator.Editor.HLSL.Enum_Functions.fmod">
+<summary>Returns the floating point remainder of x/y.</summary>
+</member>
+<member name="F:Variants.Imitator.Editor.HLSL.Enum_Functions.frac">
+<summary>Returns the fractional part of x.</summary>
+</member>
+<member name="F:Variants.Imitator.Editor.HLSL.Enum_Functions.frexp">
+<summary>Returns the mantissa and exponent of x.</summary>
+</member>
+<member name="F:Variants.Imitator.Editor.HLSL.Enum_Functions.fwidth">
+<summary>Returns abs(ddx(x)) + abs(ddy(x))</summary>
+</member>
+<member name="F:Variants.Imitator.Editor.HLSL.Enum_Functions.isfinite">
+<summary>Returns true if x is finite, false otherwise.</summary>
+</member>
+<member name="F:Variants.Imitator.Editor.HLSL.Enum_Functions.isinf">
+<summary>Returns true if x is +INF or -INF, false otherwise.</summary>
+</member>
+<member name="F:Variants.Imitator.Editor.HLSL.Enum_Functions.isnan">
+<summary>Returns true if x is NAN or QNAN, false otherwise.</summary>
+</member>
+<member name="F:Variants.Imitator.Editor.HLSL.Enum_Functions.ldexp">
+<summary>Returns x * 2exp</summary>
+</member>
+<member name="F:Variants.Imitator.Editor.HLSL.Enum_Functions.length">
+<summary>Returns the length of the vector v.</summary>
+</member>
+<member name="F:Variants.Imitator.Editor.HLSL.Enum_Functions.lerp">
+<summary>Returns x + s(y - x).</summary>
+</member>
+<member name="F:Variants.Imitator.Editor.HLSL.Enum_Functions.lit">
+<summary>Returns a lighting vector (ambient, diffuse, specular, 1)</summary>
+</member>
+<member name="F:Variants.Imitator.Editor.HLSL.Enum_Functions.log">
+<summary>Returns the base-e logarithm of x.</summary>
+</member>
+<member name="F:Variants.Imitator.Editor.HLSL.Enum_Functions.log10">
+<summary>Returns the base-10 logarithm of x.</summary>
+</member>
+<member name="F:Variants.Imitator.Editor.HLSL.Enum_Functions.log2">
+<summary>Returns the base-2 logarithm of x.</summary>
+</member>
+<member name="F:Variants.Imitator.Editor.HLSL.Enum_Functions.max">
+<summary>Selects the greater of x and y.</summary>
+</member>
+<member name="F:Variants.Imitator.Editor.HLSL.Enum_Functions.min">
+<summary>Selects the lesser of x and y.</summary>
+</member>
+<member name="F:Variants.Imitator.Editor.HLSL.Enum_Functions.modf">
+<summary>Splits the value x into fractional and integer parts.</summary>
+</member>
+<member name="F:Variants.Imitator.Editor.HLSL.Enum_Functions.mul">
+<summary>Performs matrix multiplication using x and y.</summary>
+</member>
+<member name="F:Variants.Imitator.Editor.HLSL.Enum_Functions.normalize">
+<summary>Returns a normalized vector.</summary>
+</member>
+<member name="F:Variants.Imitator.Editor.HLSL.Enum_Functions.pow">
+<summary>Returns x^y.</summary>
+</member>
+<member name="F:Variants.Imitator.Editor.HLSL.Enum_Functions.radians">
+<summary>Converts x from degrees to radians.</summary>
+</member>
+<member name="F:Variants.Imitator.Editor.HLSL.Enum_Functions.reflect">
+<summary>Returns a reflection vector.</summary>
+</member>
+<member name="F:Variants.Imitator.Editor.HLSL.Enum_Functions.refract">
+<summary>Returns the refraction vector.</summary>
+</member>
+<member name="F:Variants.Imitator.Editor.HLSL.Enum_Functions.round">
+<summary>Rounds x to the nearest integer.</summary>
+</member>
+<member name="F:Variants.Imitator.Editor.HLSL.Enum_Functions.rsqrt">
+<summary>Returns 1 / sqrt(x).</summary>
+</member>
+<member name="F:Variants.Imitator.Editor.HLSL.Enum_Functions.saturate">
+<summary>Clamps x to the range [0, 1].</summary>
+</member>
+<member name="F:Variants.Imitator.Editor.HLSL.Enum_Functions.sign">
+<summary>Computes the sign of x.</summary>
+</member>
+<member name="F:Variants.Imitator.Editor.HLSL.Enum_Functions.sin">
+<summary>Returns the sine of x.</summary>
+</member>
+<member name="F:Variants.Imitator.Editor.HLSL.Enum_Functions.sincos">
+<summary>Returns the sine and cosine of x.</summary>
+</member>
+<member name="F:Variants.Imitator.Editor.HLSL.Enum_Functions.sinh">
+<summary>Returns the hyperbolic sine of x.</summary>
+</member>
+<member name="F:Variants.Imitator.Editor.HLSL.Enum_Functions.smoothstep">
+<summary>Returns a smooth Hermite interpolation between 0 and 1.</summary>
+</member>
+<member name="F:Variants.Imitator.Editor.HLSL.Enum_Functions.sqrt">
+<summary>Square root (per component).</summary>
+</member>
+<member name="F:Variants.Imitator.Editor.HLSL.Enum_Functions.step">
+<summary>Returns (x >= a) ? 1 : 0.</summary>
+</member>
+<member name="F:Variants.Imitator.Editor.HLSL.Enum_Functions.tan">
+<summary>Returns the tangent of x.</summary>
+</member>
+<member name="F:Variants.Imitator.Editor.HLSL.Enum_Functions.tanh">
+<summary>Returns the hyperbolic tangent of x.</summary>
+</member>
+<member name="F:Variants.Imitator.Editor.HLSL.Enum_Functions.tex1D">
+<summary>1D texture lookup.</summary>
+</member>
+<member name="F:Variants.Imitator.Editor.HLSL.Enum_Functions.tex1Dbias">
+<summary>1D texture lookup with bias.</summary>
+</member>
+<member name="F:Variants.Imitator.Editor.HLSL.Enum_Functions.tex1Dgrad">
+<summary>1D texture lookup with a gradient.</summary>
+</member>
+<member name="F:Variants.Imitator.Editor.HLSL.Enum_Functions.tex1Dlod">
+<summary>1D texture lookup with LOD.</summary>
+</member>
+<member name="F:Variants.Imitator.Editor.HLSL.Enum_Functions.tex1Dproj">
+<summary>1D texture lookup with projective divide.</summary>
+</member>
+<member name="F:Variants.Imitator.Editor.HLSL.Enum_Functions.tex2D">
+<summary>2D texture lookup.</summary>
+</member>
+<member name="F:Variants.Imitator.Editor.HLSL.Enum_Functions.tex2Dbias">
+<summary>2D texture lookup with bias.</summary>
+</member>
+<member name="F:Variants.Imitator.Editor.HLSL.Enum_Functions.tex2Dgrad">
+<summary>2D texture lookup with a gradient.</summary>
+</member>
+<member name="F:Variants.Imitator.Editor.HLSL.Enum_Functions.tex2Dlod">
+<summary>2D texture lookup with LOD.</summary>
+</member>
+<member name="F:Variants.Imitator.Editor.HLSL.Enum_Functions.tex2Dproj">
+<summary>2D texture lookup with projective divide.</summary>
+</member>
+<member name="F:Variants.Imitator.Editor.HLSL.Enum_Functions.tex3D">
+<summary>3D texture lookup.</summary>
+</member>
+<member name="F:Variants.Imitator.Editor.HLSL.Enum_Functions.tex3Dbias">
+<summary>3D texture lookup with bias.</summary>
+</member>
+<member name="F:Variants.Imitator.Editor.HLSL.Enum_Functions.tex3Dgrad">
+<summary>3D texture lookup with a gradient.</summary>
+</member>
+<member name="F:Variants.Imitator.Editor.HLSL.Enum_Functions.tex3Dlod">
+<summary>3D texture lookup with LOD.</summary>
+</member>
+<member name="F:Variants.Imitator.Editor.HLSL.Enum_Functions.tex3Dproj">
+<summary>3D texture lookup with projective divide.</summary>
+</member>
+<member name="F:Variants.Imitator.Editor.HLSL.Enum_Functions.texCUBE">
+<summary>Cube texture lookup.</summary>
+</member>
+<member name="F:Variants.Imitator.Editor.HLSL.Enum_Functions.texCUBEbias">
+<summary>Cube texture lookup with bias.</summary>
+</member>
+<member name="F:Variants.Imitator.Editor.HLSL.Enum_Functions.texCUBEgrad">
+<summary>Cube texture lookup with a gradient.</summary>
+</member>
+<member name="F:Variants.Imitator.Editor.HLSL.Enum_Functions.texCUBElod">
+<summary>Cube texture lookup with LOD.</summary>
+</member>
+<member name="F:Variants.Imitator.Editor.HLSL.Enum_Functions.texCUBEproj">
+<summary>Cube texture lookup with projective divide.</summary>
+</member>
+<member name="F:Variants.Imitator.Editor.HLSL.Enum_Functions.transpose">
+<summary>Returns the transpose of the matrix m.</summary>
+</member>
+<member name="F:Variants.Imitator.Editor.HLSL.Enum_Functions.trunc">
+<summary>Truncates floating-point value(s) to integer value(s).</summary>
+</member>
+<member name="T:Variants.Imitator.Editor.HLSL.Enum_Keywords">
+<summary></summary>
+</member>
+<member name="F:Variants.Imitator.Editor.HLSL.Enum_Keywords.asm">
+<summary></summary>
+</member>
+<member name="F:Variants.Imitator.Editor.HLSL.Enum_Keywords.break">
+<summary>Exit the surrounding loop (do, for, while).</summary>
+</member>
+<member name="F:Variants.Imitator.Editor.HLSL.Enum_Keywords.column_major">
+<summary>Mark a variable that stores 4 components in a single column to optimize matrix math.</summary>
+</member>
+<member name="F:Variants.Imitator.Editor.HLSL.Enum_Keywords.compile">
+<summary></summary>
+</member>
+<member name="F:Variants.Imitator.Editor.HLSL.Enum_Keywords.continue">
+<summary>Stop executing the current loop (do, for, while), update the loop conditions, and begin executing from the top of the loop.</summary>
+</member>
+<member name="F:Variants.Imitator.Editor.HLSL.Enum_Keywords.const">
+<summary>Mark a variable that cannot be changed by a shader, therefore, it must be initialized in the variable declaration. Global variables are considered const by default (suppress this behavior by supplying the /Gec flag to the compiler).</summary>
+</member>
+<member name="F:Variants.Imitator.Editor.HLSL.Enum_Keywords.decl">
+<summary></summary>
+</member>
+<member name="F:Variants.Imitator.Editor.HLSL.Enum_Keywords.discard">
+<summary>Do not output the result of the current pixel.</summary>
+</member>
+<member name="F:Variants.Imitator.Editor.HLSL.Enum_Keywords.do">
+<summary>Execute a series of statements continuously until the conditional expression fails.</summary>
+</member>
+<member name="F:Variants.Imitator.Editor.HLSL.Enum_Keywords.else">
+<summary>Conditionally execute a series of statements, based on the evaluation of the conditional expression.</summary>
+</member>
+<member name="F:Variants.Imitator.Editor.HLSL.Enum_Keywords.extern">
+<summary>Mark a global variable as an external input to the shader; this is the default marking for all global variables. Cannot be combined with <see cref="F:Variants.Imitator.Editor.HLSL.Enum_Keywords.static"/>.</summary>
+</member>
+<member name="F:Variants.Imitator.Editor.HLSL.Enum_Keywords.false">
+<summary></summary>
+</member>
+<member name="F:Variants.Imitator.Editor.HLSL.Enum_Keywords.for">
+<summary>Iteratively executes a series of statements, based on the evaluation of the conditional expression.</summary>
+</member>
+<member name="F:Variants.Imitator.Editor.HLSL.Enum_Keywords.if">
+<summary>Conditionally execute a series of statements, based on the evaluation of the conditional expression.</summary>
+</member>
+<member name="F:Variants.Imitator.Editor.HLSL.Enum_Keywords.in">
+<summary>Input only.</summary>
+</member>
+<member name="F:Variants.Imitator.Editor.HLSL.Enum_Keywords.inline">
+<summary>Modifier that redefines a function declaration. inline is currently the only modifier value. The modifier value must be inline because it is also the default value. Therefore, a function is inline regardless of whether you specify inline, and all functions in HLSL are inline. An inline function generates a copy of the function body (when compiling) for each function call. This is done to decrease the overhead of calling the function.</summary>
+</member>
+<member name="F:Variants.Imitator.Editor.HLSL.Enum_Keywords.inout">
+<summary>Input and an output.</summary>
+</member>
+<member name="F:Variants.Imitator.Editor.HLSL.Enum_Keywords.out">
+<summary>Output only.</summary>
+</member>
+<member name="F:Variants.Imitator.Editor.HLSL.Enum_Keywords.pass">
+<summary></summary>
+</member>
+<member name="F:Variants.Imitator.Editor.HLSL.Enum_Keywords.pixelshader">
+<summary></summary>
+</member>
+<member name="F:Variants.Imitator.Editor.HLSL.Enum_Keywords.register">
+<summary></summary>
+</member>
+<member name="F:Variants.Imitator.Editor.HLSL.Enum_Keywords.return">
+<summary></summary>
+</member>
+<member name="F:Variants.Imitator.Editor.HLSL.Enum_Keywords.row_major">
+<summary>Mark a variable that stores four components in a single row so they can be stored in a single constant register.</summary>
+</member>
+<member name="F:Variants.Imitator.Editor.HLSL.Enum_Keywords.sampler_state">
+<summary></summary>
+</member>
+<member name="F:Variants.Imitator.Editor.HLSL.Enum_Keywords.shared">
+<summary>Mark a variable for sharing between effects; this is a hint to the compiler.</summary>
+</member>
+<member name="F:Variants.Imitator.Editor.HLSL.Enum_Keywords.static">
+<summary>Mark a local variable so that it is initialized one time and persists between function calls. If the declaration does not include an initializer, the value is set to zero. A global variable marked <see cref="F:Variants.Imitator.Editor.HLSL.Enum_Keywords.static"/> is not visible to an application.</summary>
+</member>
+<member name="F:Variants.Imitator.Editor.HLSL.Enum_Keywords.struct">
+<summary></summary>
+</member>
+<member name="F:Variants.Imitator.Editor.HLSL.Enum_Keywords.switch">
+<summary>Transfer control to a different statement block within the switch body depending on the value of a selector.</summary>
+</member>
+<member name="F:Variants.Imitator.Editor.HLSL.Enum_Keywords.technique">
+<summary></summary>
+</member>
+<member name="F:Variants.Imitator.Editor.HLSL.Enum_Keywords.true">
+<summary></summary>
+</member>
+<member name="F:Variants.Imitator.Editor.HLSL.Enum_Keywords.typedef">
+<summary></summary>
+</member>
+<member name="F:Variants.Imitator.Editor.HLSL.Enum_Keywords.uniform">
+<summary>Mark a variable whose data is constant throughout the execution of a shader (such as a material color in a vertex shader); global variables are considered uniform by default.</summary>
+</member>
+<member name="F:Variants.Imitator.Editor.HLSL.Enum_Keywords.vertexshader">
+<summary></summary>
+</member>
+<member name="F:Variants.Imitator.Editor.HLSL.Enum_Keywords.void">
+<summary></summary>
+</member>
+<member name="F:Variants.Imitator.Editor.HLSL.Enum_Keywords.volatile">
+<summary>Mark a variable that changes frequently; this is a hint to the compiler. This storage class modifier only applies to a local variable. The HLSL compiler currently ignores this storage class modifier.</summary>
+</member>
+<member name="F:Variants.Imitator.Editor.HLSL.Enum_Keywords.while">
+<summary>Executes a statement block until the conditional expression fails.</summary>
+</member>
+<member name="T:Variants.Imitator.Editor.HLSL.Enum_Semantics">
+<summary></summary>
+</member>
+<member name="F:Variants.Imitator.Editor.HLSL.Enum_Semantics.POSITION">
+<summary>Vertex position in object space (float4) -OR- Position of a vertex in homogenous space. Compute position in screen-space by dividing (x,y,z) by w. Every vertex shader must write out a parameter with this semantic.</summary>
+</member>
+<member name="F:Variants.Imitator.Editor.HLSL.Enum_Semantics.POSITIONT">
+<summary>Transformed vertex position (float4).</summary>
+</member>
+<member name="F:Variants.Imitator.Editor.HLSL.Enum_Semantics.BLENDWEIGHT">
+<summary>Blend weights (float).</summary>
+</member>
+<member name="F:Variants.Imitator.Editor.HLSL.Enum_Semantics.BLENDINDICES">
+<summary>Blend indices (uint).</summary>
+</member>
+<member name="F:Variants.Imitator.Editor.HLSL.Enum_Semantics.NORMAL">
+<summary>Normal vector (float4).</summary>
+</member>
+<member name="F:Variants.Imitator.Editor.HLSL.Enum_Semantics.PSIZE">
+<summary>Point size (float).</summary>
+</member>
+<member name="F:Variants.Imitator.Editor.HLSL.Enum_Semantics.TEXCOORD">
+<summary>Texture coordinates (float4).</summary>
+</member>
+<member name="F:Variants.Imitator.Editor.HLSL.Enum_Semantics.TANGENT">
+<summary>Tangent (float4).</summary>
+</member>
+<member name="F:Variants.Imitator.Editor.HLSL.Enum_Semantics.BINORMAL">
+<summary>Binormal (float4).</summary>
+</member>
+<member name="F:Variants.Imitator.Editor.HLSL.Enum_Semantics.TESSFACTOR">
+<summary>Tessellation factor (float).</summary>
+</member>
+<member name="F:Variants.Imitator.Editor.HLSL.Enum_Semantics.VPOS">
+<summary>The pixel location (x,y) in screen space (float2).</summary>
+</member>
+<member name="F:Variants.Imitator.Editor.HLSL.Enum_Semantics.VFACE">
+<summary>Floating-point scalar that indicates a back-facing primitive. A negative value faces backwards, while a positive value faces the camera (float).</summary>
+</member>
+<member name="F:Variants.Imitator.Editor.HLSL.Enum_Semantics.FOG">
+<summary>Vertex fog (float).</summary>
+</member>
+<member name="F:Variants.Imitator.Editor.HLSL.Enum_Semantics.COLOR">
+<summary>Diffuse color (float4).</summary>
+</member>
+<member name="F:Variants.Imitator.Editor.HLSL.Enum_Semantics.DEPTH">
+<summary>Depth (float).</summary>
+</member>
+<member name="T:Variants.Imitator.Editor.HLSL.Enum_Types">
+<summary>Типы значений.</summary>
+</member>
+<member name="F:Variants.Imitator.Editor.HLSL.Enum_Types.matrix">
+<summary>float4x4</summary>
+</member>
+<member name="F:Variants.Imitator.Editor.HLSL.Enum_Types.vector">
+<summary>float4</summary>
+</member>
+<member name="M:Variants.Imitator.Editor.Scenographer.SelectNode(System.String)">
+<summary>Выбирает указанный по имени узел в разделе сцены.</summary>
+</member>
+<member name="M:Variants.Imitator.Editor.Scenographer.OpenMultipleFiles(System.String[])">
+<summary>Открытие нескольких файлов из коммандной строки или диалогового окна.</summary>
+</member>
+<member name="M:Variants.Imitator.Editor.Scenographer.CameraSetup">
+<summary>Центровка камеры по сцене.</summary>
+<remarks>Для неизвестных сцен надо вызывать единожды хотя бы после одного апдейта сцены.</remarks>
+</member>
+<member name="M:Variants.Imitator.Editor.Scenographer.SaveSceneToState(System.String)">
+<summary>Сохранение сцены в файл сохранения.</summary>
+</member>
+<member name="M:Variants.Imitator.Editor.Scenographer.UpdateUI">
+<summary>Заполняет строковые поля соответствующими текстовыми описаниями.</summary>
+</member>
+<member name="M:Variants.Imitator.Editor.Scenographer.Scenographer_MdiChildActivate(System.Object,System.EventArgs)">
+<summary>Подключает или отключает режим редактирования к дочерним окнам.</summary>
+<param name="sender">Родительское окно редактора <see cref="T:Variants.Imitator.Editor.Scenographer"/>.</param>
+<param name="e">Пустые данные событий.</param>
+</member>
+<member name="M:Variants.Imitator.Editor.Spectator.ExcludeObjects(Variants.Imitator.Engine.BaseObject)">
+<summary>Проверка объекта на возможность выбора в редакторе.</summary>
+ <param name="contactObject">Проверяемый объект.</param>
+ <returns>False чтобы отменить выбор объекта.</returns>
+</member>
+<member name="T:Variants.Imitator.Editor.Spectator.Character">
+<summary>Тестовый персонаж.</summary>
+</member>
+<member name="M:Variants.Imitator.Editor.Spectator.Character.Update(Variants.Imitator.Scene.Camera)">
+<summary>Управление персонажем.</summary>
+<param name="currentCamera"></param>
+</member>
+<member name="T:Variants.Imitator.Editor.Spectator.Manipulator">
+<summary>Манипулятор для управления объектами в сцене.</summary>
+</member>
+<member name="F:Variants.Imitator.Editor.Spectator.Manipulator.Distance">
+<summary>Дистанция до объекта во время его манипулирования.</summary>
+</member>
+<member name="F:Variants.Imitator.Editor.Spectator.Manipulator.PreviousState">
+<summary>Предыдущие ориентация и позиция объекта.</summary>
+</member>
+<member name="F:Variants.Imitator.Editor.Spectator.Manipulator.SelectedNode">
+<summary>Выбранный узел для манипулирования.</summary>
+</member>
+<member name="F:Variants.Imitator.Editor.Spectator.Manipulator.Transform">
+<summary>Тип манипулирования.</summary>
+</member>
+<member name="P:Variants.Imitator.Editor.Spectator.Manipulator.BaseObject">
+<summary>Возвращает базовый объект из сцены.</summary>
+</member>
+<member name="P:Variants.Imitator.Editor.Spectator.Manipulator.Active">
+<summary>Режим манипулятора.</summary>
+<remarks><see cref="F:Assimp.UVTransformFlags.Scaling"/> = Not active</remarks>
+</member>
+<member name="P:Variants.Imitator.Editor.Spectator.Manipulator.Directory">
+<summary>Возвращает последнюю реально существующую папку ресурса.</summary>
+</member>
+<member name="P:Variants.Imitator.Editor.Spectator.Manipulator.File">
+<summary>Возвращает последний реально существующий файл ресурса.</summary>
+</member>
+<member name="M:Variants.Imitator.Editor.Spectator.Manipulator.UpdatePosition(Variants.Imitator.Scene.Camera)">
+<summary>Перемещение объекта.</summary>
+<param name="currentCamera"></param>
+</member>
+<member name="M:Variants.Imitator.Editor.Spectator.Manipulator.UpdateRotation(Variants.Imitator.Scene.Camera)">
+<summary>Вращение объекта.</summary>
+<param name="currentCamera"></param>
+</member>
+<member name="M:Variants.Imitator.Editor.Spectator.Manipulator.CalculateZ(System.Numerics.Vector2)">
+<summary>If the point is further than away from the center than a constant we calculate the z value with a hyperbola based function instead the distance Is chosen for niceity.</summary>
+</member>
+<member name="M:Variants.Imitator.Editor.Spectator.GetFirstContact(System.Collections.Generic.List{Variants.Imitator.Engine.Contact})">
+<summary>Возвращает первый контакт из списка.</summary>
+</member>
+<member name="M:Variants.Imitator.Editor.Spectator.GetSceneLength">
+<summary>Возвращает длину всей сцены.</summary>
+</member>
+<member name="P:Variants.Imitator.Editor.Spectator.Mdi(System.Windows.Forms.Form)">
+<summary>Возвращает или задаёт состояние визуального окна внутри или вне редактора.</summary>
+<returns>"True" внутри редактора, "False" вне редактора.</returns>
+</member>
+<member name="T:Variants.Imitator.Console">
+<summary>Allows to control the public properties via the command line at runtime.</summary>
+</member>
+<member name="P:Variants.Imitator.Console.Visible">
+<summary>Выводить консоль на экран?</summary>
+</member>
+<member name="F:Variants.Imitator.Console.OutputList">
+<summary>Коллекция ответов.</summary>
+</member>
+<member name="F:Variants.Imitator.Console.InputList">
+<summary>Коллекция запросов.</summary>
+</member>
+<member name="F:Variants.Imitator.Console.TypeProperties">
+<summary>Содержит коллекцию именованых объектов, свойства которых должна принимать консоль.</summary>
+</member>
+<member name="P:Variants.Imitator.Console.Debug">
+<summary>Enables tracking collection versions and message timestamps in the console window.</summary>
+<remarks>Initialized equal to <see cref="P:System.Diagnostics.Debugger.IsAttached"/> by default.</remarks>
+</member>
+<member name="P:Variants.Imitator.Console.ImportLogging">
+<summary>Enables tracking import logging errors and additional information in the console window.</summary>
+</member>
+<member name="P:Variants.Imitator.Console.Help">
+<summary>Describes how to work with console window while running the engine.</summary>
+</member>
+<member name="P:Variants.Imitator.Console.Clear">
+<summary>Clears the console window.</summary>
+</member>
+<member name="P:Variants.Imitator.Console.Quit">
+<summary>Quits from running engine.</summary>
+</member>
+<member name="P:Variants.Imitator.Console.Exit">
+<summary>Exits from running engine.</summary>
+</member>
+<member name="F:Variants.Imitator.Console.EnumMessageMode.Client">
+<summary>Тип сообщения - Информация! Выводится в консоль в любом случае.</summary>
+<remarks>Цвет текста сообщения - <see cref="F:System.Drawing.KnownColor.LightGray"/>.</remarks>
+</member>
+<member name="F:Variants.Imitator.Console.EnumMessageMode.Debug">
+<summary>Тип сообщения - Ошибка! Выводится в режиме <see cref="P:Variants.Imitator.Console.Debug"/>.</summary>
+<remarks>Цвет текста сообщения - <see cref="F:System.Drawing.KnownColor.Red"/>.</remarks>
+</member>
+<member name="F:Variants.Imitator.Console.EnumMessageMode.Developer">
+<summary>Тип сообщения - Предупреждение! Выводится в режиме <see cref="F:Variants.Imitator.Maths.EditorContext"/>.</summary>
+<remarks>Цвет текста сообщения - <see cref="F:System.Drawing.KnownColor.Yellow"/>.</remarks>
+</member>
+<member name="F:Variants.Imitator.Console.MessageDefinition.Color">
+<summary>Цвет текста сообщения.</summary>
+</member>
+<member name="F:Variants.Imitator.Console.MessageDefinition.Count">
+<summary>Количество выводов данного сообщения.</summary>
+</member>
+<member name="F:Variants.Imitator.Console.MessageDefinition.Text">
+<summary>Текст данного сообщения.</summary>
+</member>
+<member name="F:Variants.Imitator.Console.MessageDefinition.Time">
+<summary>Время последнего вывода данного сообщения.</summary>
+</member>
+<member name="M:Variants.Imitator.Console.Update">
+<summary>Шаг 2: Обработка консольных команд.</summary>
+</member>
+<member name="M:Variants.Imitator.Console.CommandSplit(System.Object,System.String)">
+<summary>Находит объект и его свойство, возвращает правильные имена.</summary>
+</member>
+<member name="M:Variants.Imitator.Engine.Import.Autodesk.Load_3DS(System.String)">
+<param name="FileName">Относительный путь к файлу.</param>
+</member>
+<member name="F:Variants.Imitator.Engine.Import.Assimp.Context">
+<summary>Контекст импортера с предустановками.</summary>
+</member>
+<member name="F:Variants.Imitator.Engine.Import.Assimp.CurrentFile">
+<summary>Относительный путь к файлу.</summary>>
+</member>
+<member name="F:Variants.Imitator.Engine.Import.Assimp.CurrentFill">
+<summary>Заполение <see cref="T:Variants.Imitator.Scene"/>.</summary>
+</member>
+<member name="F:Variants.Imitator.Engine.Import.Assimp.CurrentScene">
+<summary>Импортированная сцена из файла.</summary>
+</member>
+<member name="F:Variants.Imitator.Engine.Import.Assimp.CurrentTexture">
+<summary>Масштабирование текстурных координат.</summary>
+</member>
+<member name="M:Variants.Imitator.Engine.Import.Assimp.OpenAsset(System.String,System.Boolean)">
+<summary>Открывает контейнер с объёмными объектами при помощи плагина <see cref="T:Variants.Imitator.Engine.Import.Assimp"/>.</summary>
+<param name="fileName">Относительный путь к файлу.</param>
+<param name="fillScene">Заполение <see cref="T:Variants.Imitator.Scene"/>.</param>
+</member>
+<member name="M:Variants.Imitator.Engine.Import.Assimp.ConvertName(System.String,System.String)">
+<summary>Удаляет из имени запрещённые символы.</summary>
+</member>
+<member name="M:Variants.Imitator.Engine.Import.Assimp.ConvertTriggerName(System.String)">
+<summary>Расшифровывает имя триггера на путь к файла скрипта и его главному классу.</summary>
+<param name="incomingName">Зашифрованное имя триггера.</param>
+<returns>Возвращает путь к файлу и имя класса.</returns>
+</member>
+<member name="P:Variants.Imitator.Engine.Import.Assimp.RootTransform">
+<summary>Возвращает матрицу мира.</summary>
+</member>
+<member name="M:Variants.Imitator.Engine.Import.Khronos.Load_DAE(System.String)">
+<param name="fileName">Относительный путь к файлу.</param>
+</member>
+<member name="M:Variants.Imitator.Engine.Import.Khronos.Read_TriggerName(System.String)">
+<summary>Расшифровывает имя триггера на путь к файла скрипта и его главному классу.</summary>
+<param name="incomingName">Зашифрованное имя триггера.</param>
+<returns>Возвращает путь к файлу и имя класса.</returns>
+</member>
+<member name="M:Variants.Imitator.Engine.Import.Khronos.StringSplit(System.String)">
+<summary>Безопасное преобразование заданной строки в массив отдельных слов, исключая из преобразования все управляющие символы.</summary>
+</member>
+<member name="M:Variants.Imitator.Engine.Import.Khronos.Floats(System.String)">
+<summary>Безопасное преобразование заданного строкового представления чисел в массив эквивалентных чисел с плавающей запятой одиночной точности, исключая из преобразования все управляющие символы.</summary>
+</member>
+<member name="F:Variants.Imitator.Engine.Import.Khronos.Asset.Collada_Asset_Up_Axis_Type.Y_UP">
+<summary>Right Axis: +X, Up Axis: +Y, In Axis: +Z.</summary>
+</member>
+<member name="F:Variants.Imitator.Engine.Import.Khronos.Asset.Collada_Asset_Up_Axis_Type.Z_UP">
+<summary>Right Axis: +X, Up Axis: +Z, In Axis: -Y.</summary>
+</member>
+<member name="F:Variants.Imitator.Engine.Import.Khronos.Asset.Collada_Asset_Up_Axis_Type.X_UP">
+<summary>Right Axis: -Y, Up Axis: +X, In Axis: +Z.</summary>
+</member>
+<member name="T:Variants.Imitator.Engine.Import.Khronos.Constant">
+<summary>Emission, Index_Of_Refraction, Reflective, Reflectivity, Transparency, Transparent.</summary>
+</member>
+<member name="F:Variants.Imitator.Engine.Import.Khronos.Input_semantic.BINORMAL">
+<summary>Geometric binormal (bitangent) vector.</summary>
+</member>
+<member name="F:Variants.Imitator.Engine.Import.Khronos.Input_semantic.COLOR">
+<summary>Color coordinate vector. Color inputs are RGB (float3_type).</summary>
+</member>
+<member name="F:Variants.Imitator.Engine.Import.Khronos.Input_semantic.CONTINUITY">
+<summary>Continuity constraint at the control vertex (CV).</summary>
+</member>
+<member name="F:Variants.Imitator.Engine.Import.Khronos.Input_semantic.IMAGE">
+<summary>Raster or MIP-level input.</summary>
+</member>
+<member name="F:Variants.Imitator.Engine.Import.Khronos.Input_semantic.IN_TANGENT">
+<summary>Tangent vector for preceding control point.</summary>
+</member>
+<member name="F:Variants.Imitator.Engine.Import.Khronos.Input_semantic.INPUT">
+<summary>Sampler input.</summary>
+</member>
+<member name="F:Variants.Imitator.Engine.Import.Khronos.Input_semantic.INTERPOLATION">
+<summary>Sampler interpolation type.</summary>
+</member>
+<member name="F:Variants.Imitator.Engine.Import.Khronos.Input_semantic.INV_BIND_MATRIX">
+<summary>Inverse of local-to-world matrix.</summary>
+</member>
+<member name="F:Variants.Imitator.Engine.Import.Khronos.Input_semantic.JOINT">
+<summary>Skin influence identifier.</summary>
+</member>
+<member name="F:Variants.Imitator.Engine.Import.Khronos.Input_semantic.LINEAR_STEPS">
+<summary>Number of piece-wise linear approximation steps to use for the spline segment that follows this CV.</summary>
+</member>
+<member name="F:Variants.Imitator.Engine.Import.Khronos.Input_semantic.MORPH_TARGET">
+<summary>Morph targets for mesh morphing.</summary>
+</member>
+<member name="F:Variants.Imitator.Engine.Import.Khronos.Input_semantic.MORPH_WEIGHT">
+<summary>Weights for mesh morphing.</summary>
+</member>
+<member name="F:Variants.Imitator.Engine.Import.Khronos.Input_semantic.NORMAL">
+<summary>Normal vector.</summary>
+</member>
+<member name="F:Variants.Imitator.Engine.Import.Khronos.Input_semantic.OUT_TANGENT">
+<summary>Tangent vector for succeeding control point.</summary>
+</member>
+<member name="F:Variants.Imitator.Engine.Import.Khronos.Input_semantic.OUTPUT">
+<summary>Sampler output.</summary>
+</member>
+<member name="F:Variants.Imitator.Engine.Import.Khronos.Input_semantic.POSITION">
+<summary>Geometric coordinate vector.</summary>
+</member>
+<member name="F:Variants.Imitator.Engine.Import.Khronos.Input_semantic.TANGENT">
+<summary>Geometric tangent vector.</summary>
+</member>
+<member name="F:Variants.Imitator.Engine.Import.Khronos.Input_semantic.TEXBINORMAL">
+<summary>Texture binormal (bitangent) vector.</summary>
+</member>
+<member name="F:Variants.Imitator.Engine.Import.Khronos.Input_semantic.TEXCOORD">
+<summary>Texture coordinate vector.</summary>
+</member>
+<member name="F:Variants.Imitator.Engine.Import.Khronos.Input_semantic.TEXTANGENT">
+<summary>Texture tangent vector.</summary>
+</member>
+<member name="F:Variants.Imitator.Engine.Import.Khronos.Input_semantic.UV">
+<summary>Generic parameter vector.</summary>
+</member>
+<member name="F:Variants.Imitator.Engine.Import.Khronos.Input_semantic.VERTEX">
+<summary>Mesh vertex.</summary>
+</member>
+<member name="F:Variants.Imitator.Engine.Import.Khronos.Input_semantic.WEIGHT">
+<summary>Skin influence weighting value.</summary>
+</member>
+<member name="M:Variants.Imitator.Engine.Import.Wavefront.Load_OBJ(System.String)">
+<param name="FileName">Относительный путь к файлу.</param>
+</member>
+<member name="T:Variants.Imitator.Engine.Import.Wavefront.Chunks">
+<summary>All possible chunks for OBJ and MTL formats.</summary>
+</member>
+<member name="F:Variants.Imitator.Engine.Import.Wavefront.Chunks.v">
+<summary>geometric points</summary>
+</member>
+<member name="F:Variants.Imitator.Engine.Import.Wavefront.Chunks.vn">
+<summary>normal vectors</summary>
+</member>
+<member name="F:Variants.Imitator.Engine.Import.Wavefront.Chunks.vt">
+<summary>texture coodinates</summary>
+</member>
+<member name="F:Variants.Imitator.Engine.Import.Wavefront.Chunks.vp">
+<summary>parameter space vertices</summary>
+</member>
+<member name="F:Variants.Imitator.Engine.Import.Wavefront.Chunks.cstype">
+<summary>rational Or non-rational forms Of curve Or surface type: basis matrix, Bezier, B-spline, Cardinal, Taylor</summary>
+</member>
+<member name="F:Variants.Imitator.Engine.Import.Wavefront.Chunks.degree">
+<summary>degree</summary>
+</member>
+<member name="F:Variants.Imitator.Engine.Import.Wavefront.Chunks.bmat">
+<summary>basis matrix</summary>
+</member>
+<member name="F:Variants.Imitator.Engine.Import.Wavefront.Chunks.step">
+<summary>step size</summary>
+</member>
+<member name="F:Variants.Imitator.Engine.Import.Wavefront.Chunks.f">
+<summary>face</summary>
+</member>
+<member name="F:Variants.Imitator.Engine.Import.Wavefront.Chunks.p">
+<summary>point</summary>
+</member>
+<member name="F:Variants.Imitator.Engine.Import.Wavefront.Chunks.l">
+<summary>line</summary>
+</member>
+<member name="F:Variants.Imitator.Engine.Import.Wavefront.Chunks.curv">
+<summary>curve</summary>
+</member>
+<member name="F:Variants.Imitator.Engine.Import.Wavefront.Chunks.curv2">
+<summary>2D curve</summary>
+</member>
+<member name="F:Variants.Imitator.Engine.Import.Wavefront.Chunks.surf">
+<summary>surface</summary>
+</member>
+<member name="F:Variants.Imitator.Engine.Import.Wavefront.Chunks.parm">
+<summary>parameter name</summary>
+</member>
+<member name="F:Variants.Imitator.Engine.Import.Wavefront.Chunks.trim">
+<summary>outer trimming Loop (trim)</summary>
+</member>
+<member name="F:Variants.Imitator.Engine.Import.Wavefront.Chunks.hole">
+<summary>inner trimming loop (hole)</summary>
+</member>
+<member name="F:Variants.Imitator.Engine.Import.Wavefront.Chunks.scrv">
+<summary>special curve (scrv)</summary>
+</member>
+<member name="F:Variants.Imitator.Engine.Import.Wavefront.Chunks.sp">
+<summary>special point (sp)</summary>
+</member>
+<member name="F:Variants.Imitator.Engine.Import.Wavefront.Chunks.end">
+<summary>end statement (end)</summary>
+</member>
+<member name="F:Variants.Imitator.Engine.Import.Wavefront.Chunks.con">
+<summary>connect</summary>
+</member>
+<member name="F:Variants.Imitator.Engine.Import.Wavefront.Chunks.g">
+<summary>group name</summary>
+</member>
+<member name="F:Variants.Imitator.Engine.Import.Wavefront.Chunks.s">
+<summary>smoothing group</summary>
+</member>
+<member name="F:Variants.Imitator.Engine.Import.Wavefront.Chunks.mg">
+<summary>merging group</summary>
+</member>
+<member name="F:Variants.Imitator.Engine.Import.Wavefront.Chunks.o">
+<summary>object name</summary>
+</member>
+<member name="F:Variants.Imitator.Engine.Import.Wavefront.Chunks.mtllib">
+<summary>material library</summary>
+</member>
+<member name="F:Variants.Imitator.Engine.Import.Wavefront.Chunks.usemtl">
+<summary>material name</summary>
+</member>
+<member name="F:Variants.Imitator.Engine.Import.Wavefront.Chunks.usemap">
+<summary>texture map name</summary>
+</member>
+<member name="F:Variants.Imitator.Engine.Import.Wavefront.Chunks.bevel">
+<summary>bevel interpolation</summary>
+</member>
+<member name="F:Variants.Imitator.Engine.Import.Wavefront.Chunks.c_interp">
+<summary>color interpolation</summary>
+</member>
+<member name="F:Variants.Imitator.Engine.Import.Wavefront.Chunks.d_interp">
+<summary>dissolve interpolation</summary>
+</member>
+<member name="F:Variants.Imitator.Engine.Import.Wavefront.Chunks.lod">
+<summary>level of detail</summary>
+</member>
+<member name="F:Variants.Imitator.Engine.Import.Wavefront.Chunks.shadow_obj">
+<summary>shadow casting</summary>
+</member>
+<member name="F:Variants.Imitator.Engine.Import.Wavefront.Chunks.trace_obj">
+<summary>ray tracing</summary>
+</member>
+<member name="F:Variants.Imitator.Engine.Import.Wavefront.Chunks.ctech">
+<summary>curve approximation technique</summary>
+</member>
+<member name="F:Variants.Imitator.Engine.Import.Wavefront.Chunks.stech">
+<summary>surface approximation technique</summary>
+</member>
+<member name="F:Variants.Imitator.Engine.Import.Wavefront.Chunks.newmtl">
+<summary>Material name (string).</summary>
+</member>
+<member name="F:Variants.Imitator.Engine.Import.Wavefront.Chunks.ka">
+<summary>Ambient RGB color (float3).</summary>
+</member>
+<member name="F:Variants.Imitator.Engine.Import.Wavefront.Chunks.kd">
+<summary>Diffuse RGB color (float3).</summary>
+</member>
+<member name="F:Variants.Imitator.Engine.Import.Wavefront.Chunks.ks">
+<summary>Specular RGB color (float3).</summary>
+</member>
+<member name="F:Variants.Imitator.Engine.Import.Wavefront.Chunks.Tf">
+<summary>Transmission filter RGB color (float3).</summary>
+</member>
+<member name="F:Variants.Imitator.Engine.Import.Wavefront.Chunks.ns">
+<summary>Specular exponent (float).</summary>
+</member>
+<member name="F:Variants.Imitator.Engine.Import.Wavefront.Chunks.d">
+<summary>Dissolve (float).</summary>
+</member>
+<member name="F:Variants.Imitator.Engine.Import.Wavefront.Chunks.sharpness">
+<summary>Reflection sharpness (integer).</summary>
+</member>
+<member name="F:Variants.Imitator.Engine.Import.Wavefront.Chunks.Ni">
+<summary>Optical density or Index of refraction (float).</summary>
+</member>
+<member name="F:Variants.Imitator.Engine.Import.Wavefront.Chunks.bump">
+<summary>Bump</summary>
+</member>
+<member name="F:Variants.Imitator.Engine.Import.Wavefront.Chunks.tr">
+<summary>Transparency</summary>
+</member>
+<member name="F:Variants.Imitator.Engine.Import.Wavefront.Chunks.illum">
+<summary>Illumination model (integer).</summary>
+</member>
+<member name="F:Variants.Imitator.Engine.Import.Wavefront.Chunks.map_ka">
+<summary>Ambient Map texture file (string).</summary>
+</member>
+<member name="F:Variants.Imitator.Engine.Import.Wavefront.Chunks.map_kd">
+<summary>Diffuse Map texture file (string).</summary>
+</member>
+<member name="F:Variants.Imitator.Engine.Import.Wavefront.Chunks.map_ks">
+<summary>Specular Map texture file (string).</summary>
+</member>
+<member name="F:Variants.Imitator.Engine.Import.Wavefront.Chunks.map_Ns">
+<summary>Specular exponent texture file (string).</summary>
+</member>
+<member name="F:Variants.Imitator.Engine.Import.Wavefront.Chunks.map_d">
+<summary>Dissolve map texture file (string).</summary>
+</member>
+<member name="F:Variants.Imitator.Engine.Import.Wavefront.Chunks.map_bump">
+<summary>Bump Map texture file (string).</summary>
+</member>
+<member name="F:Variants.Imitator.Engine.Import.Wavefront.Chunks.disp">
+<summary>Dipslacement map texture file (string).</summary>
+</member>
+<member name="M:Variants.Imitator.Engine.Import.Valve.OpenSMD(System.String)">
+<summary>Открытие файла формата "SMD".</summary>
+<param name="fileName">Относительный путь к файлу.</param>
+</member>
+<member name="M:Variants.Imitator.Engine.Import.Valve.Read_MainMesh(System.IO.StreamReader,System.String)">
+<summary>Чтение сетки модели.</summary>
+<param name="stream">Поток файла.</param>
+<param name="fileName">Имя файла.</param>
+<returns>Экземпляр сетки модели.</returns>
+</member>
+<member name="M:Variants.Imitator.Engine.Import.Valve.Read_MainMotion(System.IO.StreamReader,System.String)">
+<summary>Чтение анимации.</summary>
+<param name="stream">Поток файла.</param>
+<param name="fileName">Имя файла.</param>
+<returns>Экземляр анимации.</returns>
+</member>
+<member name="M:Variants.Imitator.Engine.Import.Valve.Read_NODES(System.IO.StreamReader)">
+<summary>Чтение узлов.</summary>
+<param name="stream">Поток файла.</param>
+<returns>Список узлов.</returns>
+</member>
+<member name="M:Variants.Imitator.Engine.Import.Valve.Read_TIME(System.IO.StreamReader,System.Int32)">
+<summary>Чтение одного кадра положения скелета.</summary>
+<param name="stream">Поток файла.</param>
+<param name="nodesCount">Количество узлов.</param>
+<returns>(позиция, поворот)</returns>
+</member>
+<member name="M:Variants.Imitator.Engine.Import.Valve.Read_SKELETON(System.IO.StreamReader,Variants.Imitator.Content.Mesh.Nodes[])">
+<summary>Чтение скелета.</summary>
+<param name="stream">Поток файла.</param>
+<param name="nodes">Массив узлов.</param>
+<returns>Список кадров.</returns>
+</member>
+<member name="M:Variants.Imitator.Engine.Import.Valve.Read_TRIANGLES(System.IO.StreamReader,Variants.Imitator.Content.Mesh)">
+<summary>Чтение треугольников.</summary>
+<param name="stream">Поток файла.</param>
+<param name="mesh">Сетка модели.</param>
+</member>
+<member name="M:Variants.Imitator.Engine.Import.Valve.CheckSmdIsMesh(System.IO.StreamReader)">
+<summary>Проверяет, является ли файл геометрической фигурой.</summary>
+<param name="stream">Поток файла.</param>
+</member>
+<member name="M:Variants.Imitator.Engine.Import.Valve.MakeSingleRoot(Variants.Imitator.Content.Mesh.Nodes[])">
+<summary>Соединяет разорваный скелет.</summary>
+<param name="nodes">Массив узлов.</param>
+</member>
+<member name="M:Variants.Imitator.Engine.Import.Valve.MakeWrappedSkeleton(Variants.Imitator.Content.Mesh,Variants.Imitator.Content.Motion.Frames)">
+<summary>Сворачивает скелет.</summary>
+<param name="mesh">Сетка модели.</param>
+<param name="skeleton">Скелет модели.</param>
+</member>
+<member name="T:Variants.Imitator.Engine.Import.Valve.Chunks">
+<summary>Разделы.</summary>
+</member>
+<member name="F:Variants.Imitator.Engine.Import.Valve.Chunks.error">
+<summary>Ошибка.</summary>
+</member>
+<member name="F:Variants.Imitator.Engine.Import.Valve.Chunks.version">
+<summary>Версия.</summary>
+</member>
+<member name="F:Variants.Imitator.Engine.Import.Valve.Chunks.nodes">
+<summary>Узлы.</summary>
+</member>
+<member name="F:Variants.Imitator.Engine.Import.Valve.Chunks.skeleton">
+<summary>Скелет.</summary>
+</member>
+<member name="F:Variants.Imitator.Engine.Import.Valve.Chunks.time">
+<summary>Кадр.</summary>
+</member>
+<member name="F:Variants.Imitator.Engine.Import.Valve.Chunks.triangles">
+<summary>Треугольники.</summary>
+</member>
+<member name="F:Variants.Imitator.Engine.Import.Valve.Chunks.end">
+<summary>Конец.</summary>
+</member>
+<member name="M:Variants.Imitator.Engine.Import.Microsoft.Load_X(System.String)">
+<param name="FileName">Относительный путь к файлу.</param>
+</member>
+<member name="T:Variants.Imitator.Engine.IBaseEffect">
+<summary>Интерфейс для сброса и восстановления ресурса.</summary>
+</member>
+<member name="M:Variants.Imitator.Engine.IBaseEffect.EffectLost">
+<summary>Вызывается ПЕРЕД сбросом рендера.</summary>
+</member>
+<member name="M:Variants.Imitator.Engine.IBaseEffect.EffectReset">
+<summary>Вызывается ПОСЛЕ установки рендера.</summary>
+</member>
+<member name="T:Variants.Imitator.Engine.IBaseUpdate">
+<summary>Интерфейс для обновления состояний физики и сцены.</summary>
+</member>
+<member name="M:Variants.Imitator.Engine.IBaseUpdate.UpdateByPhysics">
+<summary>Обновление через физику.</summary>
+</member>
+<member name="M:Variants.Imitator.Engine.IBaseUpdate.UpdateByScene">
+<summary>Обновление через сцену.</summary>
+</member>
+<member name="T:Variants.Imitator.Engine.BaseObject">
+<summary>Base abstract class for all instances in the engine.</summary>
+</member>
+<member name="F:Variants.Imitator.Engine.BaseObject.Timestamp">
+<summary>The time stamp of the object creation.</summary>
+<remarks>Auto-generated.</remarks>
+</member>
+<member name="F:Variants.Imitator.Engine.BaseObject.Name">
+<summary>Name of the object.</summary>
+<remarks>Auto-generated.</remarks>
+</member>
+<member name="F:Variants.Imitator.Engine.BaseObject.Type">
+<summary>Type of the object.</summary>
+<remarks>Auto-generated.</remarks>
+</member>
+<member name="M:Variants.Imitator.Engine.BaseObject.#ctor">
+<summary>A base object constructor that generates a name based on a time stamp.</summary>
+</member>
+<member name="M:Variants.Imitator.Engine.BaseObject.#ctor(System.String)">
+<summary>Создаёт новый объект с указанным именем.</summary>
+</member>
+<member name="P:Variants.Imitator.Engine.BaseObject.Age">
+<summary>The age of the item since its creation.</summary>
+</member>
+<member name="P:Variants.Imitator.Engine.BaseObject.UniqueID">
+<summary>A unique identifier based on the number of clock cycles of the time mechanism.</summary>
+<remarks>Auto-generated.</remarks>
+</member>
+<member name="M:Variants.Imitator.Engine.BaseObject.ToString">
+<summary>Returns current object's <see cref="F:Variants.Imitator.Engine.BaseObject.Name"/>.</summary>
+</member>
+<member name="T:Variants.Imitator.Engine.BaseCollection`1">
+<summary>Basic abstract collection for all base classes.</summary>
+</member>
+<member name="F:Variants.Imitator.Engine.BaseCollection`1.Library">
+<summary>Универсальная коллекция.</summary>
+</member>
+<member name="M:Variants.Imitator.Engine.BaseCollection`1.Dispose">
+<summary>Возможно нужно объявить как <see langword="Private"/>.</summary>
+</member>
+<member name="P:Variants.Imitator.Engine.BaseCollection`1.Actual">
+<summary>Whether this instance reference to <typeparamref name="subClass"/> is up-to-date.</summary>
+<remarks>If this instance reference is outdated, then update it using the <see cref="M:Variants.Imitator.Engine.BaseCollection`1.Item(System.String)"/> function.</remarks>
+<returns>True if ok.</returns>
+</member>
+<member name="M:Variants.Imitator.Engine.BaseCollection`1.Contains(System.String)">
+<summary>Проверяет коллекцию на наличие объекта с данным именем.</summary>
+</member>
+<member name="M:Variants.Imitator.Engine.BaseCollection`1.Add(`0)">
+<summary>Добавляет новый объект в универсальную коллекцию.</summary>
+<remarks>Если объект с данным именем <typeparamref name="subClass"/> уже существует в коллекции, то он удаляется и заменяется новым <paramref name="newItem"/>.</remarks>
+</member>
+<member name="M:Variants.Imitator.Engine.BaseCollection`1.IndexOf(System.String)">
+<summary>Индексатор.</summary>
+<returns>Порядковый номер объекта с данным именем в универсальной коллекции.</returns>
+</member>
+<member name="M:Variants.Imitator.Engine.BaseCollection`1.Item(System.String)">
+<summary>Возвращает экземпляр объекта с данным именем из универсальной коллекции.</summary>
+</member>
+<member name="M:Variants.Imitator.Engine.BaseCollection`1.Remove(System.String)">
+<summary>Удаляет существующий объект с данным именем из универсальной коллекции.</summary>
+</member>
+<member name="P:Variants.Imitator.Engine.BaseCollection`1.ClassName">
+<summary>Классифицированное имя данной коллекции.</summary>
+</member>
+<member name="P:Variants.Imitator.Engine.BaseCollection`1.Statistics">
+<summary>Статистика данной коллекции.</summary>
+</member>
+<member name="T:Variants.Imitator.Engine.BaseContent`2">
+<summary>Контроллер ресурсов.</summary>
+</member>
+<member name="F:Variants.Imitator.Engine.BaseContent`2._Resource">
+<summary>Объектозависимый тип ресурса.</summary>
+</member>
+<member name="F:Variants.Imitator.Engine.BaseContent`2.Warranty">
+<summary>Срок службы ресурса.</summary>
+</member>
+<member name="M:Variants.Imitator.Engine.BaseContent`2.GetResource">
+<summary>В переопределённом методе выполняется непосредственная загрузка ресурса.</summary>
+</member>
+<member name="F:Variants.Imitator.Engine.BaseContent`2.DelegateLoader">
+<summary>Делегат на переопределённый метод загрузки ресурса.</summary>
+</member>
+<member name="M:Variants.Imitator.Engine.BaseContent`2.FailResource">
+<summary>Создаёт временный ресурс при неудачном выполнении <see cref="M:Variants.Imitator.Engine.BaseContent`2.GetResource"/>.</summary>
+</member>
+<member name="P:Variants.Imitator.Engine.BaseContent`2.Resource">
+<summary>Универсальный тип ресурса.</summary>
+</member>
+<member name="P:Variants.Imitator.Engine.BaseContent`2.Ready">
+<summary>Resource is ready to use.</summary>
+</member>
+<member name="M:Variants.Imitator.Engine.BaseContent`2.ForEach(System.Action{`0,System.Object[]},System.Object[])">
+<summary>Performs the specified action on each element of the immutable list with passing parameters.</summary>
+</member>
+<member name="M:Variants.Imitator.Engine.BaseContent`2.Item(System.String)">
+<summary>Returns the <typeparamref name="ContentType"/> with specified <paramref name="contentName"/>.</summary>
+</member>
+<member name="T:Variants.Imitator.Engine.BaseScene`1">
+<summary>Base abstract class for an object from the scene.</summary>
+</member>
+<member name="M:Variants.Imitator.Engine.BaseScene`1.ForEach(System.Action{`0,System.Object[]},System.Object[])">
+<summary>Performs the specified action on each element of the immutable list with passing parameters.</summary>
+</member>
+<member name="M:Variants.Imitator.Engine.BaseScene`1.Item(System.String)">
+<summary>Returns the <typeparamref name="sceneType"/> with specified <paramref name="sceneName"/>.</summary>
+</member>
+<member name="M:Variants.Imitator.Engine.BaseScene`1.Remove(System.String)">
+<summary>Removes the <typeparamref name="sceneType"/> with specified <paramref name="sceneName"/>.</summary>
+</member>
+<member name="F:Variants.Imitator.Engine.BaseElement`1.BaseObject">
+<summary>Содержит текстовую ссылку на тип, временной штамп и имя владельца.</summary>
+<remarks>(<see cref="T:Variants.Imitator.Engine.ResourceType"/>, <see cref="F:Variants.Imitator.Engine.BaseObject.Timestamp"/>, <see cref="F:Variants.Imitator.Engine.BaseObject.Name"/>)</remarks>
+</member>
+<member name="F:Variants.Imitator.Engine.BaseElement`1.Index">
+<summary>Собственный индекс в массиве владельца.</summary>
+</member>
+<member name="M:Variants.Imitator.Engine.BaseElement`1.Item(System.String)">
+<summary>Returns the <typeparamref name="elementType"/> with specified <paramref name="elementName"/>.</summary>
+</member>
+<member name="T:Variants.Imitator.Engine.BaseElement2`2">
+<summary>TEST</summary>
+<typeparam name="elementType">Тип элемента коллекции.</typeparam>
+</member>
+<member name="F:Variants.Imitator.Engine.BaseElement2`2.BaseObject">
+<summary>Содержит текстовую ссылку на тип, временной штамп и имя владельца.</summary>
+<remarks>(<see cref="T:Variants.Imitator.Engine.ResourceType"/>, <see cref="F:Variants.Imitator.Engine.BaseObject.Timestamp"/>, <see cref="F:Variants.Imitator.Engine.BaseObject.Name"/>)</remarks>
+</member>
+<member name="F:Variants.Imitator.Engine.BaseElement2`2.Index">
+<summary>Собственный индекс в массиве владельца.</summary>
+</member>
+<member name="T:Variants.Imitator.Engine.ResourceType">
+<summary>Тип ресурса.</summary>
+</member>
+<member name="F:Variants.Imitator.Engine.ResourceType.None">
+<summary>Ничего.</summary>
+</member>
+<member name="F:Variants.Imitator.Engine.ResourceType.Body">
+<summary>Тело.</summary>
+</member>
+<member name="F:Variants.Imitator.Engine.ResourceType.Camera">
+<summary>Камера.</summary>
+</member>
+<member name="F:Variants.Imitator.Engine.ResourceType.Effect">
+<summary>Эффект.</summary>
+</member>
+<member name="F:Variants.Imitator.Engine.ResourceType.Emitter">
+<summary>Источник.</summary>
+</member>
+<member name="F:Variants.Imitator.Engine.ResourceType.Font">
+<summary>Шрифт.</summary>
+</member>
+<member name="F:Variants.Imitator.Engine.ResourceType.Material">
+<summary>Материал.</summary>
+</member>
+<member name="F:Variants.Imitator.Engine.ResourceType.Mesh">
+<summary>Модель.</summary>
+</member>
+<member name="F:Variants.Imitator.Engine.ResourceType.Motion">
+<summary>Движение.</summary>
+</member>
+<member name="F:Variants.Imitator.Engine.ResourceType.Node">
+<summary>Узел.</summary>
+</member>
+<member name="F:Variants.Imitator.Engine.ResourceType.Script">
+<summary>Скрипт.</summary>
+</member>
+<member name="F:Variants.Imitator.Engine.ResourceType.Shader">
+<summary>Шейдер.</summary>
+</member>
+<member name="F:Variants.Imitator.Engine.ResourceType.Sound">
+<summary>Звук.</summary>
+</member>
+<member name="F:Variants.Imitator.Engine.ResourceType.Texture">
+<summary>Текстура.</summary>
+</member>
+<member name="F:Variants.Imitator.Engine.ResourceType.Trigger">
+<summary>Триггер.</summary>
+</member>
+<member name="F:Variants.Imitator.Engine.ResourceType.Voxel">
+<summary>Воксель.</summary>
+</member>
+<member name="P:Variants.Imitator.Engine.Blob.Radius">
+<summary>Size of blob.</summary>
+</member>
+<member name="P:Variants.Imitator.Engine.Blob.Strength">
+<summary>Amount of influence.</summary>
+</member>
+<member name="F:Variants.Imitator.Engine.Blob.UpdateStates.Once">
+<summary>Пересчёт только данной ячейки.</summary>
+</member>
+<member name="F:Variants.Imitator.Engine.Blob.UpdateStates.Actual">
+<summary>Актуально, пересчёт не нужен.</summary>
+</member>
+<member name="F:Variants.Imitator.Engine.Blob.UpdateStates.Moved">
+<summary>Пересчёт всех соседних ячеек.</summary>
+</member>
+<member name="F:Variants.Imitator.Engine.Contact.FrictionImpulse">
+<summary>Friction impulse applied between the objects at the contact point.</summary>
+</member>
+<member name="F:Variants.Imitator.Engine.Contact.Node">
+<summary>The node that was contacted.</summary>
+</member>
+<member name="F:Variants.Imitator.Engine.Contact.Normal">
+<summary>Normal direction of the surface at the contact point.</summary>
+</member>
+<member name="F:Variants.Imitator.Engine.Contact.NormalImpulse">
+<summary>Normal impulse applied between the objects at the contact point.</summary>
+</member>
+<member name="F:Variants.Imitator.Engine.Contact.PenetrationDepth">
+<summary>Amount of penetration between the two objects.</summary>
+<remarks>Warning! This is NOT the distance to the contact point.</remarks>
+</member>
+<member name="F:Variants.Imitator.Engine.Contact.Position">
+<summary>Position of the contact point.</summary>
+</member>
+<member name="F:Variants.Imitator.Engine.Contact.RelativeVelocity">
+<summary>Relative velocity of the colliding objects at the position of the contact.</summary>
+</member>
+<member name="F:Variants.Imitator.Engine.Contact.Timestamp">
+<summary>The time stamp of the contact creation.</summary>
+<remarks>Auto-generated.</remarks>
+</member>
+<member name="M:Variants.Imitator.Engine.Contact.#ctor(BEPUphysics.RayCastResult)">
+<summary>Конвертирует <see cref="T:BEPUphysics.RayCastResult"/> в новый контакт <see cref="T:Variants.Imitator.Engine.Contact"/>.</summary>
+</member>
+<member name="M:Variants.Imitator.Engine.Contact.ConvertAll(BEPUphysics.RayCastResult)">
+<summary>Конвертирует <see cref="T:BEPUphysics.RayCastResult"/> в новый контакт <see cref="T:Variants.Imitator.Engine.Contact"/>.</summary>
+</member>
+<member name="F:Variants.Imitator.Engine.Light.Frustums">
+<summary>Содержит 6 ViewProjection матриц, а также счётчик кадров, количество которых осталось отрисовать.</summary>
+</member>
+<member name="F:Variants.Imitator.Engine.Light.LightType.Directional">
+<summary>Направленный свет.</summary>
+</member>
+<member name="F:Variants.Imitator.Engine.Light.LightType.Point">
+<summary>Точечный свет.</summary>
+</member>
+<member name="F:Variants.Imitator.Engine.Light.LightType.Spot">
+<summary>Прожекторный свет.</summary>
+</member>
+<member name="F:Variants.Imitator.Engine.Motion.Name">
+<summary>Name of animation file.</summary>
+</member>
+<member name="F:Variants.Imitator.Engine.Motion.Frame">
+<summary>Frame which from animation begins.</summary>
+</member>
+<member name="F:Variants.Imitator.Engine.Motion.Speed">
+<summary>Sets the animation speed by frames per second.</summary>
+</member>
+<member name="F:Variants.Imitator.Engine.Motion.Time">
+<summary>Time which from animation begins.</summary>
+</member>
+<member name="F:Variants.Imitator.Engine.Motion.Node">
+<summary>Node which from animation begins.</summary>
+</member>
+<member name="F:Variants.Imitator.Engine.Motion.Weight">
+ <summary>Force of applying to skeleton.</summary>
+</member>
+<member name="M:Variants.Imitator.Engine.Motion.#ctor(System.String,System.Single,System.Single,System.Int32,System.Single)">
+<summary>Creates a new motion structure that holds one of mergable animations.</summary>
+<param name="NewName">Name of animation file.</param>
+<param name="NewSpeed">Frames per second.</param>
+<param name="NewFrame">Frame which from animation begins.</param>
+<param name="NewNode">Node which from animation begins.</param>
+<param name="NewWeight">Force of applying to skeleton.</param>
+<remarks>Sets <see cref="F:Variants.Imitator.Engine.Motion.Time"/> to <see cref="P:Variants.Imitator.Physics.CurrentTime"/>.</remarks>
+</member>
+<member name="M:Variants.Imitator.Engine.Motion.Frames">
+<summary>Returns total frames of current motion.</summary>
+</member>
+<member name="P:Variants.Imitator.Engine.Motion.Progress">
+<summary>Returns progress of current motion.</summary>
+</member>
+<member name="M:Variants.Imitator.Engine.Vertex.Transform(System.Numerics.Matrix4x4)">
+<summary>Трансформация вершины в соотвествии с заданной матрицей преобразования.</summary>
+<param name="m">Матрица преобразования.</param>
+</member>
+<member name="P:Variants.Imitator.Engine.RenderBuffer.Indices">
+<summary>Returns the number of indices in this render buffer.</summary>
+</member>
+<member name="P:Variants.Imitator.Engine.RenderBuffer.Vertices">
+<summary>Returns the number of vertices in this render buffer.</summary>
+</member>
+<member name="M:Variants.Imitator.Engine.DualQuaternion.ToString">
+<summary>Returns a <see cref="T:System.String"/> that represents this instance.</summary>
+</member>
+<member name="M:Variants.Imitator.Engine.DualQuaternion.op_Multiply(Variants.Imitator.Engine.DualQuaternion,System.Single)">
+<summary>Dual Quaternion upscaling.</summary>
+</member>
+<member name="M:Variants.Imitator.Engine.DualQuaternion.op_Division(Variants.Imitator.Engine.DualQuaternion,System.Single)">
+<summary>Dual Quaternion downscaling.</summary>
+</member>
+<member name="M:Variants.Imitator.Engine.DualQuaternion.op_Addition(Variants.Imitator.Engine.DualQuaternion,Variants.Imitator.Engine.DualQuaternion)">
+<summary>Dual Quaternion addition.</summary>
+</member>
+<member name="M:Variants.Imitator.Engine.DualQuaternion.op_Subtraction(Variants.Imitator.Engine.DualQuaternion,Variants.Imitator.Engine.DualQuaternion)">
+<summary>Dual Quaternion subtraction.</summary>
+</member>
+<member name="M:Variants.Imitator.Engine.DualQuaternion.op_Multiply(Variants.Imitator.Engine.DualQuaternion,Variants.Imitator.Engine.DualQuaternion)">
+<summary>Dual Quaternion multiplication.</summary>
+</member>
+<member name="M:Variants.Imitator.Engine.DualQuaternion.op_Division(Variants.Imitator.Engine.DualQuaternion,Variants.Imitator.Engine.DualQuaternion)">
+<summary>Dual Quaternion division.</summary>
+</member>
+<member name="M:Variants.Imitator.Engine.DualQuaternion.Conjugate(Variants.Imitator.Engine.DualQuaternion)">
+<summary>Conjugation of a dual quaternion.</summary>
+</member>
+<member name="M:Variants.Imitator.Engine.DualQuaternion.Dot(Variants.Imitator.Engine.DualQuaternion,Variants.Imitator.Engine.DualQuaternion)">
+<summary>Dot product of two dual-quaternions.</summary>
+</member>
+<member name="M:Variants.Imitator.Engine.DualQuaternion.Inverse(Variants.Imitator.Engine.DualQuaternion)">
+<summary>Inverting a dual quaternion.</summary>
+</member>
+<member name="M:Variants.Imitator.Engine.DualQuaternion.Lerp(Variants.Imitator.Engine.DualQuaternion,Variants.Imitator.Engine.DualQuaternion,System.Single)">
+<summary>Linear interpolation.</summary>
+<returns>Linear interpolation between two dual quaternions.</returns>
+</member>
+<member name="M:Variants.Imitator.Engine.DualQuaternion.Normalize(Variants.Imitator.Engine.DualQuaternion)">
+<summary>Converts the quaternion into a unit quaternion.</summary>
+</member>
+<member name="P:Variants.Imitator.Engine.DualQuaternion.Screw">
+<summary>Gets or sets the screw parameters for this dual quaternion.</summary>
+<returns>(<para/>
+unit vector defining screw axis direction,<para/>
+screw axis moment, perpendicular to unit vector and through the origin,<para/>
+screw angle - rotation around the screw axis,<para/>
+displacement along the screw axis<para/>
+)</returns>
+</member>
+<member name="M:Variants.Imitator.Engine.DualQuaternion.SLerp(Variants.Imitator.Engine.DualQuaternion,Variants.Imitator.Engine.DualQuaternion,System.Single)">
+<summary>Screw Linear Interpolation.</summary>
+</member>
+<member name="F:Variants.Imitator.Engine.WayPoint.Child">
+<summary>Индексы связующих дочерних точек.</summary>
+</member>
+<member name="F:Variants.Imitator.Engine.WayPoint.Normal">
+<summary>Нормаль точки пути.</summary>
+</member>
+<member name="F:Variants.Imitator.Engine.WayPoint.Parent">
+<summary>Индексы родительских треугольников.</summary>
+<remarks>Чтобы получить настоящий индекс родителя делить на 3.</remarks>
+</member>
+<member name="F:Variants.Imitator.Engine.WayPoint.Position">
+<summary>Положение точки пути в центре ребра треугольника между двумя вершинами.</summary>
+</member>
+<member name="M:Variants.Imitator.Content.TaskCreate(System.Action)">
+<summary>Создание нового потока и задания для него.</summary>
+</member>
+<member name="M:Variants.Imitator.Content.TaskRun(System.Object)">
+<summary>Выполняется в отдельном потоке.</summary>
+</member>
+<member name="M:Variants.Imitator.Content.TaskExists(System.String)">
+<summary>Существует ли заданный поток?</summary>
+</member>
+<member name="P:Variants.Imitator.Content.Loading">
+<summary>Is there loading anything right now?</summary>
+</member>
+<member name="M:Variants.Imitator.Content.Deserialize``1(System.String)">
+<summary>Creates an object from string data.</summary>
+<param name="data">A string containing the data from the object.</param>
+<returns>The object created from the string data.</returns>
+<remarks>Does not support nested classes.</remarks>
+</member>
+<member name="M:Variants.Imitator.Content.Serialize(System.Object)">
+<summary>Represents any object as string data.</summary>
+<param name="data">The object to be serialized.</param>
+<returns>A string containing the object's data.</returns>
+<remarks>Does not support nested classes.</remarks>
+</member>
+<member name="M:Variants.Imitator.Content.Update">
+<summary>Шаг 10: Перезагрузка изменённых ресурсов.</summary>
+</member>
+<member name="M:Variants.Imitator.Content.Font.Encode(System.Drawing.FontStyle,System.Single,System.Drawing.GraphicsUnit,System.String)">
+<summary>Зашифровывает уникальные параметры в одну строку.</summary>
+</member>
+<member name="M:Variants.Imitator.Content.Font.Decode(System.String)">
+<summary>Расшифровывает уникальные параметры из одной строки.</summary>
+</member>
+<member name="M:Variants.Imitator.Content.Font.AddFontMemResourceEx(System.IntPtr,System.UInt32,System.IntPtr,System.UInt32@)">
+<summary>Adds the font resource from a memory image to the system.</summary>
+<param name="pbFont">A pointer to a font resource.</param>
+<param name="cbFont">The number of bytes in the font resource that is pointed to by <paramref name="pbFont"/>.</param>
+<param name="pdv">Reserved. Must be <see cref="F:System.IntPtr.Zero"/>.</param>
+<param name="pcFonts">A pointer to a variable that specifies the number of fonts installed.</param>
+<returns>If the function succeeds, the return value specifies the handle to the font added. This handle uniquely identifies the fonts that were installed on the system. If the function fails, the return value is zero. No extended error information is available.</returns>
+</member>
+<member name="M:Variants.Imitator.Content.Font.GetResource">
+<summary>Загрузка шрифта из системы или локальной папки.</summary>
+</member>
+<member name="M:Variants.Imitator.Content.Font.FailResource">
+<summary>Создание шрифта по умолчанию.</summary>
+</member>
+<member name="F:Variants.Imitator.Content.Mesh.ImportLogger">
+<summary>Содержит сообщения во время импорта моделей.</summary>
+</member>
+<member name="F:Variants.Imitator.Content.Mesh.Node">
+<summary>Определяет геометрическое положение узла.</summary>
+</member>
+<member name="F:Variants.Imitator.Content.Mesh.Skin">
+<summary>Определяет количество материалов.</summary>
+</member>
+<member name="F:Variants.Imitator.Content.Mesh.RBuffer">
+<summary>Содержит буферы отрисовки.</summary>
+</member>
+<member name="M:Variants.Imitator.Content.Mesh.CreateShapes">
+<summary>Создание детальной <see cref="F:Variants.Imitator.Content.Mesh.Nodes.MeshShape"/> и физической <see cref="F:Variants.Imitator.Content.Mesh.Nodes.PhysicShape"/> оболочек.</summary>
+<remarks>Вызывать только после заполнения <see cref="F:Variants.Imitator.Content.Mesh.RBuffer"/>.</remarks>
+</member>
+<member name="T:Variants.Imitator.Content.Mesh.Skins">
+<summary>Содержит материал, стартовый индекс и количество треугольников.</summary>
+</member>
+<member name="F:Variants.Imitator.Content.Mesh.Skins.Material">
+<summary>Коллекция текстур на данный геометричексий блок.</summary>
+</member>
+<member name="F:Variants.Imitator.Content.Mesh.Skins.StartIndex">
+<summary>Стартовый индекс в вершинном буфере.</summary>
+</member>
+<member name="F:Variants.Imitator.Content.Mesh.Skins.TriangleCount">
+<summary>Количество треугольников для отрисовки.</summary>
+</member>
+<member name="T:Variants.Imitator.Content.Mesh.Nodes">
+<summary>Узел модели.</summary>
+</member>
+<member name="F:Variants.Imitator.Content.Mesh.Nodes.CurrentNode">
+<summary>Порядковый индекс узла модели.</summary>
+</member>
+<member name="F:Variants.Imitator.Content.Mesh.Nodes.Generated">
+<summary>Является ли сустав сгенерированным.</summary>
+</member>
+<member name="F:Variants.Imitator.Content.Mesh.Nodes.MeshShape">
+<summary>Детальная фигура узла модели.</summary>
+</member>
+<member name="F:Variants.Imitator.Content.Mesh.Nodes.Name">
+<summary>Имя узла модели.</summary>
+</member>
+<member name="F:Variants.Imitator.Content.Mesh.Nodes.ParentNode">
+<summary>Родительский индекс узла модели.</summary>
+</member>
+<member name="F:Variants.Imitator.Content.Mesh.Nodes.PhysicShape">
+<summary>Физический короб узла модели.</summary>
+</member>
+<member name="F:Variants.Imitator.Content.Mesh.Nodes.World">
+<summary>Расчётное глобальное положение сустава.</summary>
+</member>
+<member name="F:Variants.Imitator.Content.Mesh.Nodes.WayPoint">
+<summary>Точки путей.</summary>
+</member>
+<member name="F:Variants.Imitator.Content.Motion.Frame">
+<summary>Кадры анимаций.</summary>
+</member>
+<member name="F:Variants.Imitator.Content.Motion.Frames.Node">
+<summary>Расположение узлов.</summary>
+</member>
+<member name="P:Variants.Imitator.Content.Script.CodeName">
+<summary>Возвращает отображаемое имя сборки.</summary>
+</member>
+<member name="P:Variants.Imitator.Content.Script.Errors">
+<summary>Возвращает коллекцию ошибок и предупреждений компилятора.</summary>
+</member>
+<member name="P:Variants.Imitator.Content.Script.Output">
+<summary>Получает выходные сообщения компилятора.</summary>
+</member>
+<member name="F:Variants.Imitator.Content.Shader.Functions">
+<summary>Коллекция функций.</summary>
+</member>
+<member name="F:Variants.Imitator.Content.Shader.Parameters">
+<summary>Коллекция параметров.</summary>
+</member>
+<member name="F:Variants.Imitator.Content.Shader.Techniques">
+<summary>Коллекция техник.</summary>
+</member>
+<member name="F:Variants.Imitator.Content.Shader.IncludeFiles">
+<summary>Коллекция вложенных зависимостей.</summary>
+</member>
+<member name="T:Variants.Imitator.Content.Shader.IncludeShader">
+<summary>Эффективно разруливает вложения в шейдере.</summary>
+</member>
+<member name="F:Variants.Imitator.Content.Sound.VoiceQueue">
+<summary>Voice queue.</summary>
+</member>
+<member name="F:Variants.Imitator.Content.Sound.DecodedPacketsInfo">
+<summary>Gets the decoded packets info.</summary><remarks>Невозможно преобразовать <see cref="T:SharpDX.DataStream"/> обратно в <see cref="T:SharpDX.Multimedia.SoundStream"/>.</remarks>
+</member>
+<member name="F:Variants.Imitator.Content.Sound.FileType">
+<summary>Gets the file type.</summary><remarks>Невозможно преобразовать <see cref="T:SharpDX.DataStream"/> обратно в <see cref="T:SharpDX.Multimedia.SoundStream"/>.</remarks>
+</member>
+<member name="F:Variants.Imitator.Content.Sound.WaveFormat">
+<summary>Gets the wave format of this instance.</summary><remarks>Невозможно преобразовать <see cref="T:SharpDX.DataStream"/> обратно в <see cref="T:SharpDX.Multimedia.SoundStream"/>.</remarks>
+</member>
+<member name="M:Variants.Imitator.Content.Texture.Add(Variants.Imitator.Content.Texture)">
+<summary>Добавляет текстуру в универсальную коллекцию.</summary>
+</member>
+<member name="M:Variants.Imitator.Content.Texture.GetResource">
+<summary>Загрузка текстуры вместе с файлом конфигурации.</summary>
+</member>
+<member name="M:Variants.Imitator.Content.Texture.FailResource">
+<summary>Создание красной текстуры с текстом ошибки.</summary>
+</member>
+<member name="M:Variants.Imitator.Content.Texture.LoadConfig">
+<summary>Загружает файл конфигурации.</summary>
+<returns>Возращает <see langword="True"/> если был использован файл конфигурации, иначе <see langword="False"/>.</returns>
+<remarks>Ключевые слова: TEXTURE, TRANSPARENT {(argb As Integer), (alpha As Integer, baseColor As Drawing.Color), (red As Integer, green As Integer, blue As Integer), (alpha As Integer, red As Integer, green As Integer, blue As Integer)}.</remarks>
+</member>
+<member name="M:Variants.Imitator.Content.Texture.Dispose">
+<summary>Удаляет саму текстуру.</summary>
+</member>
+<member name="P:Variants.Imitator.Content.Texture.Format">
+<summary>Формат.</summary>
+</member>
+<member name="P:Variants.Imitator.Content.Texture.Pool">
+<summary>Пул.</summary>
+</member>
+<member name="P:Variants.Imitator.Content.Texture.Resolution">
+<summary>Разрешение.</summary>
+</member>
+<member name="P:Variants.Imitator.Content.Texture.Usage">
+<summary>Использование.</summary>
+</member>
+<member name="F:Variants.Imitator.Content.Texture.SupportedFormats">
+<summary>Gets a list of supported texture formats.</summary>
+<remarks>(Key = file extension, Value = hardware or software or both)</remarks>
+</member>
+<member name="M:Variants.Imitator.Content.Texture.GetAllFormats">
+<summary>Получает список поддерживаемых форматов текстур (расширение, аппаратно или программно или оба).</summary>
+</member>
+<member name="M:Variants.Imitator.Extensions.ConvertSharpDX(System.Drawing.Color)">
+<summary><see cref="T:System.Drawing.Color"/> -> <see cref="T:SharpDX.Color"/></summary>
+</member>
+<member name="M:Variants.Imitator.Extensions.ConvertDrawing(SharpDX.Color)">
+<summary><see cref="T:SharpDX.Color"/> -> <see cref="T:System.Drawing.Color"/></summary>
+</member>
+<member name="M:Variants.Imitator.Extensions.ConvertAssimp(System.Numerics.Vector3)">
+<summary><see cref="T:System.Numerics.Vector3"/> -> <see cref="T:BEPUutilities.Vector3"/></summary>
+</member>
+<member name="M:Variants.Imitator.Extensions.ConvertBEPU(System.Numerics.Quaternion)">
+<summary><see cref="T:System.Numerics.Quaternion"/> -> <see cref="T:BEPUutilities.Quaternion"/></summary>
+</member>
+<member name="M:Variants.Imitator.Extensions.ConvertBEPU(System.Numerics.Vector3)">
+<summary><see cref="T:System.Numerics.Vector3"/> -> <see cref="T:BEPUutilities.Vector3"/></summary>
+</member>
+<member name="M:Variants.Imitator.Extensions.ConvertSharpDX(System.Numerics.Quaternion)">
+<summary><see cref="T:System.Numerics.Quaternion"/> -> <see cref="T:SharpDX.Quaternion"/></summary>
+</member>
+<member name="M:Variants.Imitator.Extensions.ConvertSharpDX(System.Numerics.Vector3)">
+<summary><see cref="T:System.Numerics.Vector3"/> -> <see cref="T:SharpDX.Vector3"/></summary>
+</member>
+<member name="M:Variants.Imitator.Extensions.ConvertSharpDX(System.Numerics.Vector4)">
+<summary><see cref="T:System.Numerics.Vector4"/> -> <see cref="T:SharpDX.Vector4"/></summary>
+</member>
+<member name="M:Variants.Imitator.Extensions.ConvertNumerics(Assimp.Vector3D)">
+<summary><see cref="T:Assimp.Vector3D"/> -> <see cref="T:System.Numerics.Vector3"/></summary>
+</member>
+<member name="M:Variants.Imitator.Extensions.ConvertNumerics(BEPUutilities.Quaternion)">
+<summary><see cref="T:BEPUutilities.Quaternion"/> -> <see cref="T:System.Numerics.Quaternion"/></summary>
+</member>
+<member name="M:Variants.Imitator.Extensions.ConvertNumerics(BEPUutilities.Vector3)">
+<summary><see cref="T:BEPUutilities.Vector3"/> -> <see cref="T:System.Numerics.Vector3"/></summary>
+</member>
+<member name="M:Variants.Imitator.Extensions.ConvertNumerics(SharpDX.Vector3)">
+<summary><see cref="T:SharpDX.Vector3"/> -> <see cref="T:System.Numerics.Vector3"/></summary>
+</member>
+<member name="M:Variants.Imitator.Extensions.ConvertNumerics(SharpDX.Vector4)">
+<summary><see cref="T:SharpDX.Vector4"/> -> <see cref="T:System.Numerics.Vector4"/></summary>
+</member>
+<member name="M:Variants.Imitator.Extensions.ConvertVertex(BEPUutilities.Vector3)">
+<summary><see cref="T:BEPUutilities.Vector3"/> -> <see cref="T:Variants.Imitator.Engine.Vertex"/></summary>
+</member>
+<member name="M:Variants.Imitator.Extensions.EulerXZY(System.Numerics.Vector3)">
+<summary><see cref="T:System.Numerics.Vector3"/> -> <see cref="T:System.Numerics.Quaternion"/></summary>
+<remarks>Performs XZY convertion from Euler to Quaternion, only for use in <see cref="N:Variants.Imitator"/>.</remarks>
+</member>
+<member name="M:Variants.Imitator.Extensions.EulerXZY(System.Numerics.Quaternion)">
+<summary><see cref="T:System.Numerics.Quaternion"/> -> <see cref="T:System.Numerics.Vector3"/></summary>
+<remarks>Valid only for XZY convertions from Euler to Quaternion, only for <see cref="N:Variants.Imitator"/>.</remarks>
+</member>
+<member name="M:Variants.Imitator.Extensions.EulerXYZ(System.Numerics.Quaternion)">
+<summary><see cref="T:System.Numerics.Quaternion"/> -> <see cref="T:System.Numerics.Vector3"/></summary>
+<remarks>Valid only for XYZ convertions from Euler to Quaternion, for systems like: <see cref="N:SharpDX"/>, <see cref="N:BEPUutilities"/> and <see cref="N:System.Numerics"/>.</remarks>
+</member>
+<member name="M:Variants.Imitator.Extensions.FromArray(System.Numerics.Vector3@,System.Single[])">
+<summary>Converts an array of floats to a <see cref="T:System.Numerics.Vector3"/>.</summary>
+<param name="values">Examples: {1,2,3}, {1.5f,-0.54f}</param>
+<remarks>Only direct order of floats in array is matter.</remarks>
+</member>
+<member name="M:Variants.Imitator.Extensions.ToArray(System.Numerics.Vector3)">
+<summary>Converts <see cref="T:System.Numerics.Vector3"/> to array of floats.</summary>
+</member>
+<member name="M:Variants.Imitator.Extensions.ConvertNumerics(Assimp.Vector3D[])">
+<summary>Converts an array of <see cref="T:Assimp.Vector3D"/> to array of <see cref="T:System.Numerics.Vector3"/>.</summary>
+</member>
+<member name="M:Variants.Imitator.Extensions.ConvertNumerics(BEPUutilities.Vector3[])">
+<summary>Converts an array of <see cref="T:BEPUutilities.Vector3"/> to array of <see cref="T:System.Numerics.Vector3"/>.</summary>
+</member>
+<member name="M:Variants.Imitator.Extensions.ConvertNumerics(SharpDX.Vector3[])">
+<summary>Converts an array of <see cref="T:SharpDX.Vector3"/> to array of <see cref="T:System.Numerics.Vector3"/>.</summary>
+</member>
+<member name="M:Variants.Imitator.Extensions.ConvertAssimp(System.Numerics.Vector3[])">
+<summary>Converts an array of <see cref="T:System.Numerics.Vector3"/> to array of <see cref="T:Assimp.Vector3D"/>.</summary>
+</member>
+<member name="M:Variants.Imitator.Extensions.ConvertBEPU(System.Numerics.Vector3[])">
+<summary>Converts an array of <see cref="T:System.Numerics.Vector3"/> to array of <see cref="T:BEPUutilities.Vector3"/>.</summary>
+</member>
+<member name="M:Variants.Imitator.Extensions.ConvertSharpDX(System.Numerics.Vector3[])">
+<summary>Converts an array of <see cref="T:System.Numerics.Vector3"/> to array of <see cref="T:SharpDX.Vector3"/>.</summary>
+</member>
+<member name="M:Variants.Imitator.Extensions.ConvertVertex(BEPUutilities.Vector3[])">
+<summary>Converts an array of <see cref="T:BEPUutilities.Vector3"/> to array of <see cref="T:Variants.Imitator.Engine.Vertex"/>.</summary>
+</member>
+<member name="M:Variants.Imitator.Extensions.Inverse(System.Numerics.Matrix4x4)">
+<summary>Returns the inverse of the current matrix.</summary>
+</member>
+<member name="M:Variants.Imitator.Extensions.ConvertSharpDX(BEPUutilities.BoundingBox)">
+<summary><see cref="T:BEPUutilities.BoundingBox"/> -> <see cref="T:SharpDX.BoundingBox"/></summary>
+</member>
+<member name="M:Variants.Imitator.Extensions.ConvertSharpDX(System.Numerics.Matrix4x4)">
+<summary><see cref="T:System.Numerics.Matrix4x4"/> -> <see cref="T:SharpDX.Matrix"/></summary>
+</member>
+<member name="M:Variants.Imitator.Extensions.ConvertNumerics(SharpDX.Matrix)">
+<summary><see cref="T:SharpDX.Matrix"/> -> <see cref="T:System.Numerics.Matrix4x4"/></summary>
+</member>
+<member name="M:Variants.Imitator.Extensions.ConvertNumerics(Assimp.Matrix4x4)">
+<summary><see cref="T:Assimp.Matrix4x4"/> -> <see cref="T:System.Numerics.Matrix4x4"/></summary>
+</member>
+<member name="M:Variants.Imitator.Extensions.ConvertDrawing(Assimp.Color4D)">
+<summary><see cref="T:Assimp.Color4D"/> -> <see cref="T:System.Drawing.Color"/></summary>
+<returns>Нормализованный цвет.</returns>
+</member>
+<member name="M:Variants.Imitator.Extensions.ConvertDrawing(SharpDX.Rectangle)">
+<summary><see cref="T:SharpDX.Rectangle"/> -> <see cref="T:System.Drawing.Rectangle"/></summary>
+</member>
+<member name="M:Variants.Imitator.Extensions.ConvertVector3(System.String)">
+<summary><see cref="T:System.String"/> -> <see cref="T:System.Numerics.Vector3"/></summary>
+</member>
+<member name="M:Variants.Imitator.Extensions.Intersects(SharpDX.BoundingFrustum,SharpDX.BoundingFrustum)">
+<summary><see cref="T:SharpDX.BoundingFrustum"/> VS <see cref="T:SharpDX.BoundingFrustum"/></summary>
+</member>
+<member name="F:Variants.Imitator.Input.BaseDriver`2.InputDevice">
+<summary>Тип устройства.</summary>
+</member>
+<member name="F:Variants.Imitator.Input.BaseDriver`2.PressedList">
+<summary>Список нажатых кнопок.</summary>
+</member>
+<member name="M:Variants.Imitator.Input.BaseDriver`2.PressedByDevice(`1)">
+<summary>Функция проверки нажатия устройством.</summary>
+</member>
+<member name="M:Variants.Imitator.Input.BaseDriver`2.PressedByManager(`1,System.Single)">
+<summary>Функция проверки нажатия менеджером.</summary>
+</member>
+<member name="M:Variants.Imitator.Input.BaseDriver`2.Update">
+<summary>Покадровая проверка состояния нажатий.</summary>
+</member>
+<member name="M:Variants.Imitator.Input.BaseDriver`2.Dispose">
+<summary>Очищает список нажатых кнопок.</summary>
+</member>
+<member name="T:Variants.Imitator.Input.BaseDriver`2.KeyState">
+<summary>Представление состояния нажатой клавиши.</summary>
+<remarks>Не структура, а именно класс для лёгкого изменения <see cref="F:Variants.Imitator.Input.BaseDriver`2.KeyState.Interval"/>.</remarks>
+</member>
+<member name="F:Variants.Imitator.Input.BaseDriver`2.KeyState.Interval">
+<summary>Интервал для программирования нажатий.</summary>
+</member>
+<member name="F:Variants.Imitator.Input.BaseDriver`2.KeyState.Key">
+<summary>Ключ для добавления в коллекцию.</summary>
+</member>
+<member name="F:Variants.Imitator.Input.BaseDriver`2.KeyState.Time">
+<summary>Временной штамп для контроля нажатий.</summary>
+</member>
+<member name="F:Variants.Imitator.Input.MouseDriver.Button">
+<summary>Состояние нажатых кнопок мыши.</summary>
+</member>
+<member name="F:Variants.Imitator.Input.MouseDriver.Delta">
+<summary>Накопительное количество делений, на которое повернулось колесико мыши.</summary>
+</member>
+<member name="F:Variants.Imitator.Input.MouseDriver.Location">
+<summary>Положение курсора мыши.</summary>
+</member>
+<member name="F:Variants.Imitator.Input.MouseDriver.Velocity">
+<summary>Скорость движения курсора мыши.</summary>
+</member>
+<member name="F:Variants.Imitator.Input.MouseDriver.Wheel">
+<summary>Результативное количество делений, на которое повернулось колесико мыши.</summary>
+</member>
+<member name="F:Variants.Imitator.Input.MouseDriver.Attenuation">
+<summary>Коэффициент ослабления мыши.</summary>
+</member>
+<member name="F:Variants.Imitator.Input.MouseDriver.Sensitivity">
+<summary>Чувствительность мыши.</summary>
+<remarks>Влияет только на <see cref="F:Variants.Imitator.Input.MouseDriver.Velocity"/>.</remarks>
+</member>
+<member name="M:Variants.Imitator.Input.MouseDriver.Clear">
+<summary>Очищает всю очередь событий мыши из буфера.</summary>
+</member>
+<member name="M:Variants.Imitator.Input.MouseDriver.Update">
+<summary>Применяет все события изменений состояний мыши из буфера.</summary>
+</member>
+<member name="P:Variants.Imitator.Input.MouseDriver.Center">
+<summary>Возвращает или устанавливает курсор мыши в центр контрола.</summary>
+</member>
+<member name="M:Variants.Imitator.Input.Update">
+<summary>Шаг 9: Опрос средств управления.</summary>
+</member>
+<member name="M:Variants.Imitator.Input.CursorToggle(System.Boolean)">
+<summary>Shows or hides the system cursor, like <see cref="M:System.Windows.Forms.Cursor.Show"/> or <see cref="M:System.Windows.Forms.Cursor.Hide"/>, but ensures that it is toggled.</summary>
+<param name="show">True to show, false to hide.</param>
+</member>
+<member name="M:Variants.Imitator.Input.CheckStatus``1(``0)">
+<summary>Проверяет статус опроса средств управления в режиме наблюдателя <see cref="F:Variants.Imitator.Input.Spectator"/> и формы ввода в фокусе <see cref="F:Variants.Imitator.Input.Focused"/>.</summary>
+</member>
+<member name="M:Variants.Imitator.Input.GamepadLeftThumbstick(System.Boolean)">
+<summary>Left thumbstick X/Y-axis values.</summary>
+<param name="deadZoneFilter">Sets absolute values less than 7849 to be ignored.</param>
+<returns>The value is between -32768 and 32767.</returns>
+</member>
+<member name="M:Variants.Imitator.Input.GamepadRightThumbstick(System.Boolean)">
+<summary>Right thumbstick X/Y-axis values.</summary>
+<param name="deadZoneFilter">Sets absolute values less than 8689 to be ignored.</param>
+<returns>The value is between -32768 and 32767.</returns>
+</member>
+<member name="M:Variants.Imitator.Input.GamepadFlowingTriggers(System.Boolean)">
+<summary>Left and Right triggers analog control.</summary>
+<param name="deadZoneFilter">Sets values less than 30 to be ignored.</param>
+<returns>The value is between 0 and 255.</returns>
+</member>
+<member name="M:Variants.Imitator.Input.KeyboardButton(System.Windows.Forms.Keys,System.Single)">
+<summary></summary>
+<param name="inKey">Physical key on keyboard.</param>
+<param name="inInterval"></param>
+<returns><see langword="False"/> if window is not focused.</returns>
+</member>
+<member name="M:Variants.Imitator.Input.MousePosition">
+<summary>A universal method for getting the coordinates of the mouse cursor in the screen space.</summary>
+</member>
+<member name="T:Variants.Imitator.Localizer">
+<summary>Autotranslater.</summary>
+</member>
+<member name="P:Variants.Imitator.Localizer.A_startup_form_has_not_been_specified">
+<summary>Форма запуска не указана.</summary>
+</member>
+<member name="P:Variants.Imitator.Localizer.Array_specifies_an_invalid_length">
+<summary>Массив задаёт недопустимую длину.</summary>
+</member>
+<member name="P:Variants.Imitator.Localizer.Array_may_not_be_empty_or_null">
+<summary>Массив не может быть пустым.</summary>
+</member>
+<member name="P:Variants.Imitator.Localizer.Type_0_was_not_completed">
+<summary>Тип "{0}" не завершён.</summary>
+</member>
+<member name="P:Variants.Imitator.Localizer.Type_0_not_found">
+<summary>Не найден тип "{0}".</summary>
+</member>
+<member name="P:Variants.Imitator.Localizer.Direct_deserialization_of_type_0_is_not_supported">
+<summary>Сериализация типа "{0}" не поддерживается.</summary>
+</member>
+<member name="P:Variants.Imitator.Localizer.The_given_key_was_not_present_in_the_dictionary">
+<summary>Данный ключ отсутствует в словаре.</summary>
+</member>
+<member name="P:Variants.Imitator.Localizer.Member_0_not_found">
+<summary>Не найден член "{0}".</summary>
+</member>
+<member name="P:Variants.Imitator.Localizer.Delete">
+<summary>Удалить.</summary>
+</member>
+<member name="P:Variants.Imitator.Localizer.Add_new">
+<summary>Добавить.</summary>
+</member>
+<member name="P:Variants.Imitator.Localizer.Help">
+<summary>Справка.</summary>
+</member>
+<member name="P:Variants.Imitator.Localizer.Misc">
+<summary>Прочее.</summary>
+</member>
+<member name="P:Variants.Imitator.Localizer.Properties_Window">
+<summary>Окно свойств.</summary>
+</member>
+<member name="P:Variants.Imitator.Localizer.Toolbar">
+<summary>Панель интсрументов.</summary>
+</member>
+<member name="P:Variants.Imitator.Localizer.Appearance">
+<summary>Внешний вид</summary>
+</member>
+<member name="P:Variants.Imitator.Localizer.Paste">
+<summary>Вставка</summary>
+</member>
+<member name="P:Variants.Imitator.Localizer.Cut">
+<summary>Вырезать</summary>
+</member>
+<member name="P:Variants.Imitator.Localizer.Edit">
+<summary>Правка</summary>
+</member>
+<member name="P:Variants.Imitator.Localizer.Quit">
+<summary>Выход</summary>
+</member>
+<member name="P:Variants.Imitator.Localizer.Save">
+<summary>Сохранить</summary>
+</member>
+<member name="P:Variants.Imitator.Localizer.Browse">
+<summary>Обзор...</summary>
+</member>
+<member name="P:Variants.Imitator.Localizer.Run">
+<summary>Запуск.</summary>
+</member>
+<member name="P:Variants.Imitator.Localizer.Create_New">
+<summary>(Создать новый).</summary>
+</member>
+<member name="P:Variants.Imitator.Localizer.Action">
+<summary>Действие.</summary>
+</member>
+<member name="P:Variants.Imitator.Localizer.File_0_does_not_exist_Verify_that_the_correct_file_name_was_given">
+<summary>Файл {0} не существует. Убедитесь в правильности указанного имени файла.</summary>
+</member>
+<member name="P:Variants.Imitator.Localizer.File_format_is_not_valid">
+<summary>Недопустимый формат файла.</summary>
+</member>
+<member name="P:Variants.Imitator.Localizer.Requested_value_0_was_not_found">
+<summary>Запрошенное значение "{0}" не найдено.</summary>
+</member>
+<member name="P:Variants.Imitator.Localizer.Resume_without_error">
+<summary>Выполнение возобновлено без ошибок.</summary>
+</member>
+<member name="P:Variants.Imitator.Localizer.Add_failed_Duplicate_key_value_supplied">
+<summary>Сбой при добавлении. Указано повторяющееся значение ключа.</summary>
+</member>
+<member name="P:Variants.Imitator.Localizer.File_0_not_found">
+<summary>Файл "{0}" не найден.</summary>
+</member>
+<member name="P:Variants.Imitator.Localizer.Image_type_is_unknown">
+<summary>Неизвестный тип изображения.</summary>
+</member>
+<member name="P:Variants.Imitator.Localizer.Font_0_cannot_be_found">
+<summary>Шрифт "{0}" не найден.</summary>
+</member>
+<member name="P:Variants.Imitator.Localizer.Type_validation_succeeded">
+<summary>Тип подтверждён.</summary>
+</member>
+<member name="P:Variants.Imitator.Localizer.Configurations">
+<summary>Конфигурации.</summary>
+</member>
+<member name="P:Variants.Imitator.Localizer.Please_be_sure_a_sound_file_exists_at_the_specified_location">
+<summary>Убедитесь, что в указанном месте есть звуковой файл.</summary>
+</member>
+<member name="P:Variants.Imitator.Localizer.The_settings_property_0_was_not_found">
+<summary>Свойство настроек '{0}' не найдено.</summary>
+</member>
+<member name="P:Variants.Imitator.Localizer.Syntax_error_command_unrecognized">
+<summary>Синтаксическая ошибка. Команда не опознана.</summary>
+</member>
+<member name="P:Variants.Imitator.Localizer.Conversion_from_string_0_to_type_1_is_not_valid">
+<summary>Приведение строки "{0}" к типу "{1}" является недопустимым.</summary>
+</member>
+<member name="F:Variants.Imitator.Maths.EditorActionQueue">
+<summary>Очередь отложенных заданий от редактора к движку.</summary>
+</member>
+<member name="F:Variants.Imitator.Maths.SelectedGridItem">
+<summary>Последний выбранный пункт в панели настроек.</summary>
+</member>
+<member name="F:Variants.Imitator.Maths.EditorContext">
+<summary>Контекст синхронизации для потока редактора.</summary>
+<remarks>Если не равен <see langword="Nothing"/>, то движок в режиме редактора.</remarks>
+</member>
+<member name="F:Variants.Imitator.Maths.ClientMethods">
+<summary>Коллекция внутридвижковых рабочих классов.</summary>
+</member>
+<member name="M:Variants.Imitator.Maths.ToString">
+<summary>Возвращает список форм пользовательского интерфейса приложения.</summary>
+</member>
+<member name="M:Variants.Imitator.Maths.Run``1(System.Action)">
+<summary>The main entry point for starting the <see cref="N:Variants.Imitator"/> Engine.</summary>
+<typeparam name="mainForm">Reference to the main application form.</typeparam>
+<param name="mainMethod">Delegate to a main method that will be run in a separate thread.</param>
+</member>
+<member name="M:Variants.Imitator.Maths.MdiChildActivate(System.Object,System.EventArgs)">
+<summary>Происходит, когда дочерняя MDI-форма активируется или закрывается внутри MDI-приложения.</summary>
+</member>
+<member name="M:Variants.Imitator.Maths.HandleCreated(System.Object,System.EventArgs)">
+<summary>Происходит для каждого нового окна.</summary>
+</member>
+<member name="M:Variants.Imitator.Maths.HandleDestroyed(System.Object,System.EventArgs)">
+<summary>Происходит для каждого закрытого окна.</summary>
+</member>
+<member name="M:Variants.Imitator.Maths.Update">
+<summary>Шаг 1:<para/>Выполнение отложенных действий редактора.<para/>Проверка контрольной суммы контента.<para/>Сопоставление форм и камер друг другу.</summary>
+</member>
+<member name="F:Variants.Imitator.Maths.Forms.RenderForm">
+<summary>Список открытых форм и привязанных к ним камер.</summary>
+</member>
+<member name="P:Variants.Imitator.Maths.Forms.GetActiveForm">
+<summary>Возвращает активную форму.</summary>
+<returns>Всегда возвращает активное или старшее окно.</returns>
+</member>
+<member name="P:Variants.Imitator.Maths.Forms.GetClientForm">
+<summary>Возвращает клиентскую (игровую) форму.</summary>
+<remarks>Может быть <see langword="Nothing"/>.</remarks>
+<returns>Форма, не являющейся контейнером.</returns>
+<value><see langword="Not"/> <see cref="P:System.Windows.Forms.Form.IsMdiContainer"/> <see langword="AndAlso Not"/> <see cref="P:System.Reflection.Assembly.GlobalAssemblyCache"/></value>
+</member>
+<member name="P:Variants.Imitator.Maths.Forms.GetFocusedForm">
+<summary>Возвращает форму наблюдателя в фокусе.</summary>
+<remarks>Может быть <see langword="Nothing"/>.</remarks>
+<returns>Форма, не являющейся контейнером.</returns>
+<value><see langword="Not"/> <see cref="P:System.Windows.Forms.Form.IsMdiContainer"/> <see langword="AndAlso"/> <see cref="P:System.Windows.Forms.Control.Focused"/> <see langword="AndAlso"/> <see cref="P:System.Reflection.Assembly.GlobalAssemblyCache"/></value>
+</member>
+<member name="M:Variants.Imitator.Maths.Forms.GetFormForCamera(Variants.Imitator.Scene.Camera)">
+<summary>Сопоставляет указанной камере свою форму окна.</summary>
+<remarks></remarks>
+<param name="currentCamera"></param>
+<returns>Форма.</returns>
+</member>
+<member name="M:Variants.Imitator.Maths.Reflection.GetVersion``1(System.Collections.Generic.List{``0})">
+<summary>Версия (количество изменений) данной коллекции.</summary>
+</member>
+<member name="M:Variants.Imitator.Maths.Reflection.NewClass``1(System.Reflection.Assembly,System.String,System.Object[])">
+<summary>Создаёт новый класс из конструктора с указанными аргументами.</summary>
+</member>
+<member name="P:Variants.Imitator.Maths.Reflection.Property(System.Type,System.String)">
+<summary>Возвращает или задёт параметры объекту.</summary>
+<param name="objectType">Тип объекта.</param>
+<param name="propertyName">Имя параметра.</param>
+<returns>Значение параметра.</returns>
+</member>
+<member name="M:Variants.Imitator.Maths.Reflection.Serialize(System.Object)">
+<summary>Представляет объект в виде строки.</summary>
+<param name="target">Объект для сериализации.</param>
+<returns>Строковые данные объекта.</returns>
+<remarks>Не поддерживает поля ссылочного типа.</remarks>
+</member>
+<member name="M:Variants.Imitator.Maths.Reflection.Deserialize(System.String,System.Type)">
+<summary>Создаёт объект из строки.</summary>
+ <param name="targetdata">Строка представляющая объект.</param>
+ <param name="targetType">Тип объекта.</param>
+ <returns>Сам объект.</returns>
+</member>
+<member name="M:Variants.Imitator.Maths.Build.ViewMatrix(SharpDX.Vector3,SharpDX.Direct3D9.CubeMapFace)">
+<summary>Создаёт матрицу вида для кубической карты текстур.</summary>
+</member>
+<member name="M:Variants.Imitator.Maths.Build.CollisionBox(BEPUutilities.Vector3,BEPUutilities.Vector3)">
+<summary>Создаёт искусственную полигональную коробку для сгенерированного узла.</summary>
+</member>
+<member name="M:Variants.Imitator.Maths.Build.BoxOfLines(System.Int32,BEPUutilities.Vector3,BEPUutilities.Vector3)">
+<summary>Создаёт искусственную линейную коробку для индексированного узла.</summary>
+</member>
+<member name="M:Variants.Imitator.Maths.Build.ErrorMesh(System.String,System.Single)">
+<summary>Создаёт временую модель при указании неправильного пути или отсутствующего файла.</summary>
+<param name="FileName">Относительный путь к файлу.</param>
+</member>
+<member name="M:Variants.Imitator.Maths.Build.StringTexture(System.String,System.Drawing.Color)">
+<summary>Создаёт 2D текстуру с вписанным текстом и указанным цветом.</summary>
+</member>
+<member name="M:Variants.Imitator.Maths.Build.IndexBuffer``1(``0[])">
+<summary>Универсальный метод для создания индексного буфера.</summary>
+</member>
+<member name="M:Variants.Imitator.Maths.Build.VertexBuffer``1(``0[])">
+<summary>Универсальный метод для создания вершинного буфера.</summary>
+</member>
+<member name="M:Variants.Imitator.Maths.Build.BoundingVolume(Variants.Imitator.Engine.Vertex[])">
+<summary>Создаёт 3D (объёмную) текстуру с трёхмерными данными.</summary>
+</member>
+<member name="M:Variants.Imitator.Maths.Build.TangentSpace(Variants.Imitator.Engine.Vertex[],System.Collections.Generic.List{System.Int32})">
+<summary>Computes the tangents, binormals and normals for each vertex.</summary>
+</member>
+<member name="M:Variants.Imitator.Maths.Convert.LongToInteger(System.Int64)">
+<summary>Преобразует 64-разрядное целое число со знаком в 32-битовое целое число со знаком путём отсечения старшего байта.</summary>
+</member>
+<member name="M:Variants.Imitator.Maths.Convert.Texture(Variants.Imitator.Content.Texture,SharpDX.Direct3D9.SurfaceDescription@)">
+<summary>Преобразует <see cref="T:Variants.Imitator.Content.Texture"/> (<see cref="T:SharpDX.Direct3D9.BaseTexture"/>) в <see cref="T:SharpDX.Direct3D9.Texture"/>, <see cref="T:SharpDX.Direct3D9.CubeTexture"/> или <see cref="T:SharpDX.Direct3D9.VolumeTexture"/>, затем в обычную <see cref="T:SharpDX.Direct3D9.Texture"/> для представления в виде двумерной текстуры.</summary>
+</member>
+<member name="M:Variants.Imitator.Maths.Convert.Image(SharpDX.Direct3D9.BaseTexture)">
+<summary>Преобразует <see cref="T:SharpDX.Direct3D9.BaseTexture"/> в <see cref="T:System.Drawing.Image"/>.</summary>
+</member>
+<member name="M:Variants.Imitator.Maths.Convert.BaseTexture(System.Drawing.Image,System.Int32)">
+<summary>Преобразует <see cref="T:System.Drawing.Image"/> в <see cref="T:SharpDX.Direct3D9.BaseTexture"/>.</summary>
+</member>
+<member name="M:Variants.Imitator.Media.Player.Dispose">
+<summary>Закрывает мультимедиа.</summary>
+</member>
+<member name="M:Variants.Imitator.Media.Player.Pause">
+<summary>Приостанавливает воспроизведение файла мультимедиа в текущем положении.</summary>
+</member>
+<member name="M:Variants.Imitator.Media.Player.Play(System.Boolean)">
+<summary>Воспроизводит файл мультимедиа с текущего положения.</summary>
+</member>
+<member name="M:Variants.Imitator.Media.Player.Stop">
+<summary>Останавливает воспроизводимое мультимедиа и сбрасывает его для воспроизведения с самого начала.</summary>
+</member>
+<member name="P:Variants.Imitator.Media.Player.Balance">
+<summary>Баланс громкости динамиков в диапазоне от -1 до 1. Значение по умолчанию — 0.</summary>
+</member>
+<member name="P:Variants.Imitator.Media.Player.Position">
+<summary>Время с момента начала воспроизведения мультимедиа. Значение по умолчанию — 00:00:00.</summary>
+</member>
+<member name="P:Variants.Imitator.Media.Player.SpeedRatio">
+<summary>Скорость воспроизведения файла мультимедиа. Допустимый диапазон — от 0 (нуль) до бесконечности. Значение по умолчанию — 1.</summary>
+</member>
+<member name="P:Variants.Imitator.Media.Player.Volume">
+<summary>Громкость мультимедиа отображается на линейной шкале от 0 до 1. Значение по умолчанию — 0,5.</summary>
+</member>
+<member name="M:Variants.Imitator.Navigator.Update">
+<summary>Шаг 8: Сборка информации о контактах и обновление навигационной сетки.</summary>
+</member>
+<member name="M:Variants.Imitator.Navigator.DrawBox(Variants.Imitator.Engine.Contact,Variants.Imitator.Scene.Body,Variants.Imitator.Content.Mesh)">
+<summary>Рисует контактный короб.</summary>
+</member>
+<member name="M:Variants.Imitator.Navigator.DrawConnections(System.Int32,Variants.Imitator.Scene.Camera,Variants.Imitator.Scene.Body,Variants.Imitator.Content.Mesh,System.Int32)">
+<summary>Рисует дочерние связи.</summary>
+</member>
+<member name="M:Variants.Imitator.Navigator.DrawPath(System.ValueTuple{System.Int32,System.Int32},Variants.Imitator.Scene.Camera,Variants.Imitator.Scene.Body,Variants.Imitator.Content.Mesh,System.Int32)">
+<summary>Рисует найденный путь (зелёная траектория, жёлтые нормали).</summary>
+</member>
+<member name="M:Variants.Imitator.Navigator.ValidatePoint(Variants.Imitator.Engine.WayPoint,Variants.Imitator.Engine.WayPoint)">
+<summary>Переделать в вызываемую функцию со стороны клиента для валидации каждой точки навигации.</summary>
+</member>
+<member name="M:Variants.Imitator.Navigator.ScanEdges(Variants.Imitator.Engine.WayPoint[]@,System.Int32,System.Collections.Generic.List{System.Int32},BEPUutilities.Vector3[],System.Int32[])">
+<summary>Находжение смежных рёбер треугольников</summary>
+<param name="elements">Список первых индексов пересекаемых треугольников</param>
+</member>
+<member name="M:Variants.Imitator.Navigator.AddPoint(Variants.Imitator.Engine.WayPoint[]@,System.Int32,BEPUutilities.Vector3,BEPUutilities.Vector3)">
+<summary>Добавляет новую точку пути к навигационной сетке.</summary>
+</member>
+<member name="M:Variants.Imitator.Navigator.AddParent(Variants.Imitator.Engine.WayPoint[]@,System.Int32,System.Int32,BEPUutilities.Vector3)">
+<summary>Добавляет индексы родительских треугольников к точкам.</summary>
+</member>
+<member name="M:Variants.Imitator.Navigator.ScanChilds(Variants.Imitator.Engine.WayPoint[]@,System.String)">
+<summary>Сканирует точки с похожими родителями и добавляет связи между ними.</summary>
+</member>
+<member name="M:Variants.Imitator.Navigator.AddChild(Variants.Imitator.Engine.WayPoint[]@,System.Int32,System.Int32)">
+<summary>Добавляет индексы соседних точек.</summary>
+</member>
+<member name="M:Variants.Imitator.Network.Update">
+<summary>Шаг 5: Отправка данных на сервер.</summary>
+</member>
+<member name="F:Variants.Imitator.Physics.DelegateDrawUserPrimitive">
+<inheritdoc cref="M:Variants.Imitator.Physics.DrawUserPrimitive"/>
+</member>
+<member name="F:Variants.Imitator.Physics.DelegateUpdateEachBody">
+<inheritdoc cref="M:Variants.Imitator.Physics.UpdateEachBody(Variants.Imitator.Scene.Body,System.Object[])"/>
+</member>
+<member name="F:Variants.Imitator.Physics.DelegateUpdateEachCamera">
+<inheritdoc cref="M:Variants.Imitator.Physics.UpdateEachCamera(Variants.Imitator.Scene.Camera,System.Object[])"/>
+</member>
+<member name="F:Variants.Imitator.Physics.DelegateUpdateEachEmitter">
+<inheritdoc cref="M:Variants.Imitator.Physics.UpdateEachEmitter(Variants.Imitator.Scene.Emitter,System.Object[])"/>
+</member>
+<member name="F:Variants.Imitator.Physics.DelegateUpdateEachTrigger">
+<inheritdoc cref="M:Variants.Imitator.Physics.UpdateEachTrigger(Variants.Imitator.Scene.Trigger,System.Object[])"/>
+</member>
+<member name="F:Variants.Imitator.Physics.DelegateUpdateEachVoxel">
+<inheritdoc cref="M:Variants.Imitator.Physics.UpdateEachVoxel(Variants.Imitator.Scene.Voxel,System.Object[])"/>
+</member>
+<member name="P:Variants.Imitator.Physics.Gravity">
+<summary>Gets or sets the gravity applied to the whole scene.</summary>
+</member>
+<member name="P:Variants.Imitator.Physics.Enabled">
+<summary>Gets or sets whether or not the processing stage is active.</summary>
+</member>
+<member name="P:Variants.Imitator.Physics.IterationLimit">
+<summary>Gets or sets the maximum number of iterations the solver will attempt to use to solve the simulation's constraints. Defaults to 10.</summary>
+</member>
+<member name="P:Variants.Imitator.Physics.MaximumTimeStepsPerFrame">
+<summary>Maximum number of timesteps to perform during in one frame. Defaults to 3.</summary>
+</member>
+<member name="P:Variants.Imitator.Physics.TimeStepDuration">
+<summary>Length of each integration step. Defaults to 1/60.</summary>
+</member>
+<member name="P:Variants.Imitator.Physics.CurrentTime">
+<summary>Gets the number of seconds elapsed since the program started.</summary>
+</member>
+<member name="P:Variants.Imitator.Physics.ElapsedTime">
+<summary>The elapsed time since the previous frame.</summary>
+</member>
+<member name="M:Variants.Imitator.Physics.UpdateEachBody(Variants.Imitator.Scene.Body,System.Object[])">
+<summary>Обновление физикой каждого тела.</summary>
+</member>
+<member name="M:Variants.Imitator.Physics.UpdateEachCamera(Variants.Imitator.Scene.Camera,System.Object[])">
+<summary>Обновление физикой каждой камеры.</summary>
+</member>
+<member name="M:Variants.Imitator.Physics.UpdateEachEmitter(Variants.Imitator.Scene.Emitter,System.Object[])">
+<summary>Обновление физикой каждого источника.</summary>
+</member>
+<member name="M:Variants.Imitator.Physics.UpdateEachTrigger(Variants.Imitator.Scene.Trigger,System.Object[])">
+<summary>Обновление физикой каждого триггера.</summary>
+</member>
+<member name="M:Variants.Imitator.Physics.UpdateEachVoxel(Variants.Imitator.Scene.Voxel,System.Object[])">
+<summary>Обновление физикой каждого вокселя.</summary>
+</member>
+<member name="M:Variants.Imitator.Physics.Update">
+<summary>Шаг 4: Решение контактов, применение клиентских импульсов.</summary>
+</member>
+<member name="M:Variants.Imitator.Physics.RayCast(System.Numerics.Vector3,System.Numerics.Vector3)">
+<summary>Тестирует луч со сценой, возвращая всевозможные пересечения.</summary>
+<remarks>If there is no contacts, returns null.</remarks>
+</member>
+<member name="M:Variants.Imitator.Physics.RayCastByNode(System.Numerics.Vector3,System.Numerics.Quaternion,System.Single)">
+<remarks>If there is no contacts, returns null.</remarks>
+</member>
+<member name="M:Variants.Imitator.Physics.RayCastByTarget(System.Numerics.Vector3,System.Numerics.Vector3)">
+<summary>Tests a ray against the scene from <paramref name="StartPosition"/> to <paramref name="TargetPosition"/>, possibly returning multiple hits.</summary>
+<remarks>If there is no contacts, returns <see langword="Nothing"/>.</remarks>
+</member>
+<member name="M:Variants.Imitator.Profiler.Update">
+<summary>Шаг 0: Профилирование состояния памяти и быстродействия.</summary>
+</member>
+<member name="M:Variants.Imitator.Profiler.CheckRequirements(SharpDX.Direct3D9.ImageInformation@,SharpDX.Direct3D9.Pool)">
+<summary>Проверка текстуры на совместимость с данной видеокартой.</summary>
+<remarks>Оригинальные команды не работают. Придётся использовать через отражение.</remarks>
+</member>
+<member name="P:Variants.Imitator.Profiler.AdapterIndex">
+<summary>Возвращает порядковый номер видеоадаптера в данной системе.</summary>
+</member>
+<member name="P:Variants.Imitator.Profiler.AdapterColorFormat">
+<summary>Задаёт или возвращает выбранный формат экрана для видеоадаптера.</summary>
+</member>
+<member name="P:Variants.Imitator.Profiler.AdapterDepthFormat">
+<summary>Возвращает формат глубины для текстур теней.</summary>
+</member>
+<member name="P:Variants.Imitator.Profiler.AdapterModes">
+<summary>Возвращает коллекцию полноэкранных разрешений экрана, поддерживаемых для данного видеоадаптера.</summary>
+</member>
+<member name="T:Variants.Imitator.Profiler.Enumeration.DepthStencilMultiSampleConflict">
+ <summary>
+ A depth/stencil buffer format that is incompatible with a multisample type.
+ </summary>
+</member>
+<member name="M:Variants.Imitator.Profiler.Enumeration.EnumerateDeviceCombos(Variants.Imitator.Profiler.Enumeration.GraphicsDeviceInfo,System.Collections.Generic.List{SharpDX.Direct3D9.Format})">
+<summary>
+Enumerates DeviceCombos for a particular device
+</summary>
+</member>
+<member name="M:Variants.Imitator.Profiler.Enumeration.BuildDepthStencilFormatList(Variants.Imitator.Profiler.Enumeration.DeviceCombo)">
+<summary>
+Adds all depth/stencil formats that are compatible with the device and app to
+the given deviceCombo
+</summary>
+</member>
+<member name="M:Variants.Imitator.Profiler.Enumeration.BuildMultiSampleTypeList(Variants.Imitator.Profiler.Enumeration.DeviceCombo)">
+<summary>
+Adds all multisample types that are compatible with the device and app to
+the given deviceCombo
+</summary>
+</member>
+<member name="M:Variants.Imitator.Profiler.Enumeration.BuildDepthStencilMultiSampleConflictList(Variants.Imitator.Profiler.Enumeration.DeviceCombo)">
+<summary>
+Finds any depthstencil formats that are incompatible with multisample types and
+builds a list of them.
+</summary>
+</member>
+<member name="M:Variants.Imitator.Profiler.Enumeration.BuildVertexProcessingTypeList(Variants.Imitator.Profiler.Enumeration.GraphicsDeviceInfo,Variants.Imitator.Profiler.Enumeration.DeviceCombo)">
+<summary>
+Adds all vertex processing types that are compatible with the device and app to
+the given deviceCombo
+</summary>
+</member>
+<member name="M:Variants.Imitator.Profiler.Enumeration.BuildPresentIntervalList(Variants.Imitator.Profiler.Enumeration.GraphicsDeviceInfo,Variants.Imitator.Profiler.Enumeration.DeviceCombo)">
+<summary>
+Adds all present intervals that are compatible with the device and app to
+the given deviceCombo
+</summary>
+</member>
+<member name="F:Variants.Imitator.Render.DelegateDrawBody">
+<inheritdoc cref="M:Variants.Imitator.Render.DrawBody(Variants.Imitator.Scene.Body,System.Object[])"/>
+</member>
+<member name="F:Variants.Imitator.Render.DelegateDrawBodyArmature">
+<inheritdoc cref="M:Variants.Imitator.Render.DrawBodyArmature(Variants.Imitator.Scene.Body,System.Object[])"/>
+</member>
+<member name="F:Variants.Imitator.Render.DelegateDrawBodyBox">
+<inheritdoc cref="M:Variants.Imitator.Render.DrawBodyBox(Variants.Imitator.Scene.Body,System.Object[])"/>
+</member>
+<member name="F:Variants.Imitator.Render.DelegateDrawCamera">
+<inheritdoc cref="M:Variants.Imitator.Render.DrawCamera(Variants.Imitator.Scene.Camera,System.Object[])"/>
+</member>
+<member name="F:Variants.Imitator.Render.DelegateDrawCameraBox">
+<inheritdoc cref="M:Variants.Imitator.Render.DrawCameraBox(Variants.Imitator.Scene.Camera,System.Object[])"/>
+</member>
+<member name="F:Variants.Imitator.Render.DelegateDrawEffect">
+<inheritdoc cref="M:Variants.Imitator.Render.DrawEffect(Variants.Imitator.Scene.Effect,System.Object[])"/>
+</member>
+<member name="F:Variants.Imitator.Render.DelegateDrawUserPrimitiveInvoke">
+<inheritdoc cref="M:Variants.Imitator.Render.DrawUserPrimitiveInvoke(System.Func{System.Collections.Generic.List{Variants.Imitator.Engine.Primitive}},Variants.Imitator.Scene.Camera)"/>
+</member>
+<member name="F:Variants.Imitator.Render.DelegateDrawEmitterBox">
+<inheritdoc cref="M:Variants.Imitator.Render.DrawEmitterBox(Variants.Imitator.Scene.Emitter,System.Object[])"/>
+</member>
+<member name="F:Variants.Imitator.Render.DelegateDrawEmitterLight">
+<inheritdoc cref="M:Variants.Imitator.Render.DrawEmitterLight(Variants.Imitator.Scene.Emitter,System.Object[])"/>
+</member>
+<member name="F:Variants.Imitator.Render.DelegateDrawEmitterParticle">
+<inheritdoc cref="M:Variants.Imitator.Render.DrawEmitterParticle(Variants.Imitator.Scene.Emitter,System.Object[])"/>
+</member>
+<member name="F:Variants.Imitator.Render.DelegateDrawLight">
+<inheritdoc cref="M:Variants.Imitator.Render.DrawLight(Variants.Imitator.Scene.Emitter,System.Object[])"/>
+</member>
+<member name="F:Variants.Imitator.Render.DelegateDrawTriggerBox">
+<inheritdoc cref="M:Variants.Imitator.Render.DrawTriggerBox(Variants.Imitator.Scene.Trigger,System.Object[])"/>
+</member>
+<member name="F:Variants.Imitator.Render.DelegateDrawVoxel">
+<inheritdoc cref="M:Variants.Imitator.Render.DrawVoxel(Variants.Imitator.Scene.Voxel,System.Object[])"/>
+</member>
+<member name="F:Variants.Imitator.Render.DelegateDrawVoxelBox">
+<inheritdoc cref="M:Variants.Imitator.Render.DrawVoxelBox(Variants.Imitator.Scene.Voxel,System.Object[])"/>
+</member>
+<member name="F:Variants.Imitator.Render.DelegateRenderScreen">
+<inheritdoc cref="M:Variants.Imitator.Render.RenderScreen(Variants.Imitator.Scene.Camera,System.Object[])"/>
+</member>
+<member name="F:Variants.Imitator.Render.DelegateConvertPresentParameters">
+<inheritdoc cref="M:Variants.Imitator.Maths.Convert.PresentParameters(System.Collections.Generic.KeyValuePair{System.Windows.Forms.Form,Variants.Imitator.Scene.Camera})"/>
+</member>
+<member name="P:Variants.Imitator.Render.RenderingScene">
+<summary>Начинает или заканчивает отрисовку сцены.</summary>
+<returns><see langword="True"/> = <see cref="M:SharpDX.Direct3D9.Device.BeginScene"/><para/><see langword="False"/> = <see cref="M:SharpDX.Direct3D9.Device.EndScene"/></returns>
+</member>
+<member name="T:Variants.Imitator.Render.EffectParameters">
+<summary>Содержит статические указатели на параметры в шейдере.</summary>
+</member>
+<member name="F:Variants.Imitator.Render.EffectParameters.CameraBaseTexture">
+<summary>Содержит цветную сцену.</summary>
+</member>
+<member name="F:Variants.Imitator.Render.EffectParameters.CameraDepthTexture">
+<summary>Содержит глубину сцены.</summary>
+</member>
+<member name="F:Variants.Imitator.Render.EffectParameters.CameraNormalTexture">
+<summary>Содержит нормали сцены.</summary>
+</member>
+<member name="F:Variants.Imitator.Render.EffectParameters.CameraMaterialTexture">
+<summary>Содержит PBR материалы сцены.</summary>
+</member>
+<member name="F:Variants.Imitator.Render.EffectParameters.CameraLightingTexture">
+<summary>Содержит тени и освещение сцены.</summary>
+</member>
+<member name="F:Variants.Imitator.Render.EffectParameters.CameraViewMatrix">
+<summary>Используется только в Parallax Occlusion Mapping.</summary>
+</member>
+<member name="F:Variants.Imitator.Render.EffectParameters.CameraProjectionMatrix">
+<summary>Используется только в прорисовке частиц.</summary>
+</member>
+<member name="F:Variants.Imitator.Render.EffectParameters.CameraViewProjectionMatrix">
+<summary>Используется во всех 3D отрисовках.</summary>
+</member>
+<member name="F:Variants.Imitator.Render.EffectParameters.CameraViewInvertMatrix">
+<summary>Используется только в 2D процессах.</summary>
+</member>
+<member name="F:Variants.Imitator.Render.EffectParameters.CameraViewProjectionInvertMatrix">
+<summary>Используется только в восстановлении 3D позиции.</summary>
+</member>
+<member name="F:Variants.Imitator.Render.EffectParameters.CameraProjectionInvertMatrix">
+<summary>НЕ ИСПОЛЬЗУЕТСЯ.</summary>
+</member>
+<member name="F:Variants.Imitator.Render.EffectParameters.CameraViewport">
+<summary>Используется только в пост-процессах.</summary>
+</member>
+<member name="F:Variants.Imitator.Render.EffectParameters.ShaderEmitter.Diffuse">
+<summary>Цвет освещения.</summary>
+<remarks>(<see cref="P:Variants.Imitator.Engine.Light.Diffuse"/>)</remarks>
+</member>
+<member name="F:Variants.Imitator.Render.EffectParameters.ShaderEmitter.Direction">
+<summary>Вектор направления и тень.</summary>
+<remarks>(<see cref="F:Variants.Imitator.Element.Node.Orientation"/>, <see cref="F:Variants.Imitator.Engine.Light.Shadow"/>)</remarks>
+</member>
+<member name="F:Variants.Imitator.Render.EffectParameters.ShaderEmitter.Parameters">
+<summary>Окружающая сила света, дальняя грань, ближняя грань, сила света.</summary>
+<remarks>(<see cref="F:Variants.Imitator.Engine.Light.Ambient"/>, <see cref="F:Variants.Imitator.Engine.Light.FarClip"/>, <see cref="F:Variants.Imitator.Engine.Light.NearClip"/>, <see cref="F:Variants.Imitator.Engine.Light.Power"/>)</remarks>
+</member>
+<member name="F:Variants.Imitator.Render.EffectParameters.ShaderEmitter.Position">
+<summary>Позиция и тип света.</summary>
+<remarks>(<see cref="F:Variants.Imitator.Element.Node.Position"/>, <see cref="T:Variants.Imitator.Engine.Light.LightType"/>)</remarks>
+</member>
+<member name="F:Variants.Imitator.Render.EffectParameters.ShaderMaterial.BaseColor">
+<remarks>(<see cref="P:Variants.Imitator.Element.Material.BaseColor"/>) [0.0 - 1.0].</remarks>
+</member>
+<member name="F:Variants.Imitator.Render.EffectParameters.ShaderMaterial.NormalDepth">
+<remarks>(<see cref="P:Variants.Imitator.Element.Material.NormalScale"/>, <see cref="P:Variants.Imitator.Element.Material.DepthScale"/>)</remarks>
+</member>
+<member name="F:Variants.Imitator.Render.EffectParameters.ShaderMaterial.Parameters">
+<remarks>(<see cref="P:Variants.Imitator.Element.Material.AlphaBlend"/>, <see cref="P:Variants.Imitator.Element.Material.AlphaClip"/>, <see cref="P:Variants.Imitator.Element.Material.MetallicScale"/>, <see cref="P:Variants.Imitator.Element.Material.RoughnessScale"/>)</remarks>
+</member>
+<member name="F:Variants.Imitator.Render.EffectParameters.ShaderMaterial.Transparency">
+<remarks>(<see cref="F:Variants.Imitator.Element.Material.TextureSet"/>, <see cref="P:Variants.Imitator.Element.Material.CullMode"/>, <see cref="P:Variants.Imitator.Element.Material.FillMode"/>, <see langword="Nothing"/>)</remarks>
+</member>
+<member name="M:Variants.Imitator.Render.DrawEnvironment(Variants.Imitator.Scene.Camera,SharpDX.Direct3D9.EffectHandle)">
+<summary>Рисует кубическую карту окружения.</summary>
+<param name="currentCamera">Камера, для которой происходит отрисовка.</param>
+</member>
+<member name="M:Variants.Imitator.Render.DrawCamera(Variants.Imitator.Scene.Camera,System.Object[])">
+<summary>Рисует всю сцену.</summary>
+<param name="currentCamera">Камера, для которой происходит отрисовка.</param>
+</member>
+<member name="M:Variants.Imitator.Render.DrawFrame(Variants.Imitator.Render.MultiRenderTarget,SharpDX.Direct3D9.Effect,System.Tuple{SharpDX.Vector3,SharpDX.Matrix,SharpDX.BoundingFrustum},SharpDX.Direct3D9.EffectHandle)">
+<summary></summary>
+</member>
+<member name="M:Variants.Imitator.Render.RenderScene">
+<summary>Рисует сцену для всех камер и эффектов.</summary>
+</member>
+<member name="M:Variants.Imitator.Render.RenderScreen(Variants.Imitator.Scene.Camera,System.Object[])">
+<summary>Квад вывода финальной картинки на экран.</summary>
+<param name="currentCamera">Камера, для которой происходит отрисовка.</param>
+</member>
+<member name="M:Variants.Imitator.Render.DrawBody(Variants.Imitator.Scene.Body,System.Object[])">
+<summary>Рисует полигональные объекты.</summary>
+<param name="args">(0) - Эффект, для которого происходит отрисовка, (1) - Лампа, для которой строится тень.</param>
+</member>
+<member name="M:Variants.Imitator.Render.DrawVoxel(Variants.Imitator.Scene.Voxel,System.Object[])">
+<summary>Рисует воксели.</summary>
+<param name="args">(0) - Камера, для которой происходит отрисовка, (1) - Лампа, для которой строится тень.</param>
+</member>
+<member name="M:Variants.Imitator.Render.DrawEmitterParticle(Variants.Imitator.Scene.Emitter,System.Object[])">
+<summary>Рисует частицы.</summary>
+<param name="args">(0) - Эффект, для которой происходит отрисовка.</param>
+</member>
+<member name="M:Variants.Imitator.Render.DrawNodeBoxOfLines(Variants.Imitator.Element.Node,System.Object[])">
+<summary>Непосредственно рисует короб узла из линий.</summary>
+<param name="args">(0) - Камера, для которой происходит отрисовка.</param>
+<remarks>Генерирует лишние материалы в режиме <see cref="P:Variants.Imitator.Console.Debug"/> = <see langword="True"/>. Это нормально!</remarks>
+</member>
+<member name="M:Variants.Imitator.Render.DrawNodeBoxOfTriangles(Variants.Imitator.Element.Node,System.Object[])">
+<summary>Непосредственно рисует короб узла из треугольников.</summary>
+<param name="args">(0) - Камера, для которой происходит отрисовка.</param>
+<remarks>Генерирует лишние материалы в режиме <see cref="P:Variants.Imitator.Console.Debug"/> = <see langword="True"/>. Это нормально!</remarks>
+</member>
+<member name="M:Variants.Imitator.Render.DrawBodyArmature(Variants.Imitator.Scene.Body,System.Object[])">
+<summary>Рисует скелет тела.</summary>
+<param name="args">(0) - Камера, для которой происходит отрисовка.</param>
+<remarks>Генерирует лишние материалы в режиме <see cref="P:Variants.Imitator.Console.Debug"/> = <see langword="True"/>. Это нормально!</remarks>
+</member>
+<member name="M:Variants.Imitator.Render.DrawBodyBox(Variants.Imitator.Scene.Body,System.Object[])">
+<summary>Рисует коробы тел.</summary>
+<param name="args">(0) - Камера, для которой происходит отрисовка.</param>
+</member>
+<member name="M:Variants.Imitator.Render.DrawCameraBox(Variants.Imitator.Scene.Camera,System.Object[])">
+<summary>Рисует коробы камер.</summary>
+<param name="args">(0) - Камера, для которой происходит отрисовка.</param>
+</member>
+<member name="M:Variants.Imitator.Render.DrawEmitterBox(Variants.Imitator.Scene.Emitter,System.Object[])">
+<summary>Рисует коробы эмиттеров.</summary>
+<param name="args">(0) - Камера, для которой происходит отрисовка.</param>
+</member>
+<member name="M:Variants.Imitator.Render.DrawTriggerBox(Variants.Imitator.Scene.Trigger,System.Object[])">
+<summary>Рисует коробы триггеров.</summary>
+<param name="args">(0) - Камера, для которой происходит отрисовка.</param>
+</member>
+<member name="M:Variants.Imitator.Render.DrawVoxelBox(Variants.Imitator.Scene.Voxel,System.Object[])">
+<summary>Рисует коробы вокселей.</summary>
+<param name="args">(0) - Камера, для которой происходит отрисовка.</param>
+</member>
+<member name="M:Variants.Imitator.Render.DrawPass_Armature(Variants.Imitator.Scene.Body)">
+<summary>Рисует арматуру модели в чьем-нибудь проходе.</summary>
+</member>
+<member name="M:Variants.Imitator.Render.DrawPass_Grid(System.Int32,System.Numerics.Vector3,System.Numerics.Vector3,System.Numerics.Vector3)">
+<summary>Рисует сетку модели в чьем-нибудь проходе.</summary>
+</member>
+<member name="M:Variants.Imitator.Render.Update">
+<summary>Шаг 7: Отрисовка всей сцены для каждой камеры.</summary>
+</member>
+<member name="M:Variants.Imitator.Render.BaseEffectLost">
+<summary>Происходит ПЕРЕД сбросом видеоустройства.</summary>
+</member>
+<member name="M:Variants.Imitator.Render.BaseEffectReset">
+<summary>Происходит ПОСЛЕ сброса видеоустройства.</summary>
+</member>
+<member name="T:Variants.Imitator.Render.IncludeShader">
+<summary>Эффективно разруливает вложения в шейдере.</summary>
+</member>
+<member name="M:Variants.Imitator.Scene.Update">
+<summary>Шаг 3: Конвертирование клиентских данных, обновление состояний.</summary>
+</member>
+<member name="M:Variants.Imitator.Scene.StateSave(System.String)">
+<summary>Saves a current state of the world to the specified text file.</summary>
+</member>
+<member name="M:Variants.Imitator.Scene.StateLoad(System.String)">
+<summary>Loads a saved state from file.</summary>
+<param name="fileName">Relative path to state file.</param>
+</member>
+<member name="M:Variants.Imitator.Scene.Clear(System.Boolean)">
+<summary>Clears all objects from scene.</summary>
+<param name="Resources">If set to True then function will also release all resources from memory, i.e. materials, models, motions, sounds, textures and fonts.</param>
+<remarks>Function clears also all of effects and scripts, so don't forget add them again to the new scene.</remarks>
+</member>
+<member name="T:Variants.Imitator.Scene.Body">
+<summary>A geometric object with physical properties.</summary>
+</member>
+<member name="F:Variants.Imitator.Scene.Body.BoneReference">
+<summary>Ссылка на кости.</summary>
+</member>
+<member name="F:Variants.Imitator.Scene.Body.BoundBox">
+<summary>Описывающий короб.</summary><remarks>Можно использовать для ограничения взаимодействия, когда модель еще не загружена.</remarks>
+</member>
+<member name="F:Variants.Imitator.Scene.Body.Mass">
+<summary>Общая масса на всё тело со всеми суставами (в граммах).</summary>
+</member>
+<member name="F:Variants.Imitator.Scene.Body.MeshName">
+<summary>Имя меша из <see cref="T:Variants.Imitator.Content.Mesh"/>.</summary>
+</member>
+<member name="F:Variants.Imitator.Scene.Body.MaterialReference">
+<summary>Ссылки материалов.</summary>
+</member>
+<member name="F:Variants.Imitator.Scene.Body.NodeReference">
+<summary>Ссылка на узел.</summary>
+</member>
+<member name="P:Variants.Imitator.Scene.Body.DrawBoxes">
+<summary>Whether or not to draw boundaries of bodies.</summary>
+</member>
+<member name="P:Variants.Imitator.Scene.Body.DrawArmature">
+<summary>Whether or not to draw armature of bodies.</summary>
+</member>
+<member name="P:Variants.Imitator.Scene.Body.Visible">
+<summary>Whether or not to draw bodies.</summary>
+</member>
+<member name="M:Variants.Imitator.Scene.Body.UpdateByScene">
+<summary>Обновление сценой всех узлов тела и его арматуры.</summary>
+</member>
+<member name="M:Variants.Imitator.Scene.Body.UpdateByPhysics">
+<summary>Обновление физикой всех узлов тела и его анимация.</summary>
+</member>
+<member name="M:Variants.Imitator.Scene.Body.UpdateMotion">
+<summary>Me.Armature() = Me.Motion()</summary>
+<remarks>Вызывается через <see cref="M:Variants.Imitator.Engine.IBaseUpdate.UpdateByPhysics"/>.</remarks>
+</member>
+<member name="P:Variants.Imitator.Scene.Body.Mesh">
+<summary>Render mesh of the Body.</summary>
+</member>
+<member name="P:Variants.Imitator.Scene.Body.TotalMass">
+<summary>Total body weight in kilograms.</summary>
+<remarks>You can enter value up to 2 million tons to set the mass.</remarks>
+</member>
+<member name="M:Variants.Imitator.Scene.Body.RestoreMaterials">
+<summary>Restores body materials from corresponding mesh.</summary>
+</member>
+<member name="M:Variants.Imitator.Scene.Body.GetMotion">
+<summary>Анимация по имени сетки модели.</summary>
+<returns>Возвращает анимацию если количество узлов больше 1, иначе Nothing.</returns>
+</member>
+<member name="F:Variants.Imitator.Scene.Camera.Frustum">
+<summary>Видовая пирамида видимости.</summary>
+<remarks>Содержит ViewProjection матрицу.</remarks>>
+</member>
+<member name="F:Variants.Imitator.Scene.Camera.AudioListener">
+<summary>Звуковой слушатель.</summary>
+<remarks>Задаётся через инвертированную View матрицу.</remarks>
+</member>
+<member name="F:Variants.Imitator.Scene.Camera.ScreenMaterialName">
+<summary>Имя материала, который будет выведен на экран для данной камеры.</summary>
+</member>
+<member name="F:Variants.Imitator.Scene.Camera.RenderTextureReference">
+<summary>Metallic - PBR materials, Roughness - Lighting.</summary>
+</member>
+<member name="F:Variants.Imitator.Scene.Camera.RenderCubeReference">
+<summary>Metallic - PBR materials, Roughness - Lighting.</summary>
+</member>
+<member name="P:Variants.Imitator.Scene.Camera.DrawEnvironment">
+<summary>Whether or not to draw environment around camera in cube texture.</summary>
+</member>
+<member name="P:Variants.Imitator.Scene.Camera.FrustumCulling">
+<summary>Whether or not to use frustum culling for cameras.</summary>
+</member>
+<member name="P:Variants.Imitator.Scene.Camera.Visible">
+<summary>Whether or not to draw cameras.</summary>
+</member>
+<member name="P:Variants.Imitator.Scene.Camera.Width">
+<summary>Width dimension of the viewport.</summary>
+</member>
+<member name="P:Variants.Imitator.Scene.Camera.Height">
+<summary>Height dimension of the viewport.</summary>
+</member>
+<member name="P:Variants.Imitator.Scene.Camera.FarClip">
+<summary>Maximum depth of the clip volume.</summary>
+</member>
+<member name="P:Variants.Imitator.Scene.Camera.NearClip">
+<summary>Minimum depth of the clip volume.</summary>
+</member>
+<member name="M:Variants.Imitator.Scene.Camera.GetZoomDistance(System.Numerics.Vector3[])">
+<summary>Get the distance which when added to camera position along the lookat direction will do the effect of zoom to extents (zoom to fit) operation, so all the passed points will fit in the current view. if the returned value is positive, the camera will move toward the lookat direction (ZoomIn). if the returned value is negative, the camera will move in the reverse direction of the lookat direction (ZoomOut).</summary>
+<param name="points">The points.</param>
+<returns>The zoom to fit distance.</returns>
+<remarks>if <paramref name="points"/> is null the function returns 0.</remarks>
+</member>
+<member name="M:Variants.Imitator.Scene.Camera.GetZoomVector(System.Numerics.Vector3[])">
+<summary>Get the vector shift which when added to camera position will do the effect of zoom to extents (zoom to fit) operation, so all the passed points will fit in the current view.</summary>
+<param name="points">The points.</param>
+<returns>The zoom to fit vector.</returns>
+<remarks>if <paramref name="points"/> is null the function returns <see cref="P:System.Numerics.Vector3.Zero"/>.</remarks>
+</member>
+<member name="M:Variants.Imitator.Scene.Camera.DrawSprite(Variants.Imitator.Element.Material,Variants.Imitator.Element.Material.TextureType,System.Drawing.RectangleF,System.Drawing.Rectangle,System.Numerics.Vector3,System.Drawing.Color,System.ValueTuple{System.String,System.Drawing.Point,System.Drawing.Font,System.Drawing.Color}[])">
+<summary>Draws image on 2D screen.</summary>
+<returns>Returns TRUE if the function succeeds.</returns>
+<remarks>Remember that the <paramref name="locationAndSize"/> and <paramref name="rotation"/> are affects on <paramref name="textureCoordinates"/> of image.</remarks>
+<param name="textureCoordinates">Square region from Left-Top corner to Right-Bottom. Use <see cref="M:System.Drawing.RectangleF.FromLTRB(System.Single,System.Single,System.Single,System.Single)"/>(0, 0, 1, 1) to draw entire texture.</param>
+</member>
+<member name="M:Variants.Imitator.Scene.Camera.DrawString(System.String,System.Drawing.Point,System.Drawing.Font,System.Drawing.Color,System.Boolean)">
+<summary>Draws formatted text.</summary>
+<param name="text">String to draw.</param>
+<param name="location">Screen coordinates to draw the text.</param>
+<param name="font">Font which used to draw the text.</param>
+<param name="color">Color of the text.</param>
+<param name="measure">Measures the specified text to output rectangle.</param>
+<returns>Determines the width and height of the rectangle. If there are multiple lines of text, this function uses the width of the rectangle pointed to by the rect parameter and extends the base of the rectangle to bound the last line of text. If there is only one line of text, this method modifies the right side of the rectangle so that it bounds the last character in the line.</returns>
+<remarks>Attention! While font is loading, this function does nothing.</remarks>
+</member>
+<member name="M:Variants.Imitator.Scene.Camera.Project(System.Numerics.Vector3)">
+<summary>Converts a 3D vector from world space into 2D vector of screen space.</summary>
+</member>
+<member name="M:Variants.Imitator.Scene.Camera.Unproject(System.Numerics.Vector3)">
+<summary>Converts a 2D vector from screen space into 3D vector of world space.</summary>
+</member>
+<member name="M:Variants.Imitator.Scene.Camera.UpdateByScene">
+<summary>Обновление сценой узла камеры и позиции аудиослушателя.</summary>
+</member>
+<member name="M:Variants.Imitator.Scene.Camera.UpdateByPhysics">
+<summary>Обновление всех матриц и пирамиды видимости.</summary>
+</member>
+<member name="T:Variants.Imitator.Scene.Effect">
+<summary>Provides methods for setting shader parameters.</summary>
+<remarks>Vertex shader must be set to null.</remarks>
+</member>
+<member name="F:Variants.Imitator.Scene.Effect.ShaderName">
+<summary>Имя шейдера из <see cref="T:Variants.Imitator.Content.Shader"/>.</summary>
+</member>
+<member name="F:Variants.Imitator.Scene.Effect.EffectTechnique">
+<summary>Выбранная техника для данного эффекта.</summary>
+</member>
+<member name="F:Variants.Imitator.Scene.Effect.EffectTimestamp">
+<summary>Уникальный идентификатор для сверки экземпляра выбранного эффекта.</summary>
+</member>
+<member name="F:Variants.Imitator.Scene.Effect.MaterialReference">
+<summary>Держит ссылки на имена Pass'ов и Render Target'ов к ним.</summary>
+</member>
+<member name="F:Variants.Imitator.Scene.Effect.Materials">
+<summary>Держит ссылки на пользовательские параметры и указанные материалы объектов.</summary>
+</member>
+<member name="F:Variants.Imitator.Scene.Effect.Matrices">
+<summary>Пользовательские значения матриц.</summary>
+<remarks>(Имя параметра, Имя камеры, Инвертированная матрица, Транспонированная матрица)</remarks>
+</member>
+<member name="F:Variants.Imitator.Scene.Effect.Vectors">
+<summary>Пользовательские значения веторов.</summary>
+</member>
+<member name="P:Variants.Imitator.Scene.Effect.Technique">
+<summary>Gets or sets the technique for the current effect.</summary>
+<value>The name of existed technique in current effect.</value>
+<returns>The name of active technique.</returns>
+<remarks>Resets all existing resources.</remarks>
+</member>
+<member name="T:Variants.Imitator.Scene.Effect.ShaderInputs">
+<summary>Список автоматически обновляемых параметров.</summary>
+</member>
+<member name="F:Variants.Imitator.Scene.Effect.ShaderInputs.iCameraBaseTexture">
+<summary>[texture2D]</summary>
+</member>
+<member name="F:Variants.Imitator.Scene.Effect.ShaderInputs.iCameraDepthTexture">
+<summary>[texture2D]</summary>
+</member>
+<member name="F:Variants.Imitator.Scene.Effect.ShaderInputs.iCameraMetallicTexture">
+<summary>[texture2D]</summary>
+</member>
+<member name="F:Variants.Imitator.Scene.Effect.ShaderInputs.iCameraNormalTexture">
+<summary>[texture2D]</summary>
+</member>
+<member name="F:Variants.Imitator.Scene.Effect.ShaderInputs.iCameraRoughnessTexture">
+<summary>[texture2D]</summary>
+</member>
+<member name="F:Variants.Imitator.Scene.Effect.ShaderInputs.iProjectionInverseMatrix">
+<summary>[matrix] Устанавливает инвертированную проекционную матрицу целевой камеры.</summary>
+</member>
+<member name="F:Variants.Imitator.Scene.Effect.ShaderInputs.iProjectionInverseTransposeMatrix">
+<summary>[matrix] Устанавливает инвертированную транспонированную проекционную матрицу целевой камеры.</summary>
+</member>
+<member name="F:Variants.Imitator.Scene.Effect.ShaderInputs.iProjectionMatrix">
+<summary>[matrix] Устанавливает проекционную матрицу целевой камеры.</summary>
+</member>
+<member name="F:Variants.Imitator.Scene.Effect.ShaderInputs.iTime">
+<summary>[float] Устанавливает время, истекшее с момента загрузки системы (в секундах).</summary>
+</member>
+<member name="F:Variants.Imitator.Scene.Effect.ShaderInputs.iViewInverseMatrix">
+<summary>[matrix] Устанавливает инвертированную видовую матрицу целевой камеры.</summary>
+</member>
+<member name="F:Variants.Imitator.Scene.Effect.ShaderInputs.iViewInverseTransposeMatrix">
+<summary>[matrix] Устанавливает инвертированную транспонированную видовую матрицу целевой камеры.</summary>
+</member>
+<member name="F:Variants.Imitator.Scene.Effect.ShaderInputs.iViewMatrix">
+<summary>[matrix] Устанавливает видовую матрицу целевой камеры.</summary>
+</member>
+<member name="F:Variants.Imitator.Scene.Effect.ShaderInputs.iViewport">
+<summary>[float4] Разрешение экрана (x, y), дальняя граница (z) и ближняя граница (w).</summary>
+</member>
+<member name="F:Variants.Imitator.Scene.Effect.ShaderInputs.iViewProjectionInverseMatrix">
+<summary>[matrix] Устанавливает инвертированную видово-проекционную матрицу целевой камеры.</summary>
+</member>
+<member name="F:Variants.Imitator.Scene.Effect.ShaderInputs.iViewProjectionInverseTransposeMatrix">
+<summary>[matrix] Устанавливает инвертированную транспонированную видово-проекционную матрицу целевой камеры.</summary>
+</member>
+<member name="F:Variants.Imitator.Scene.Effect.ShaderInputs.iViewProjectionMatrix">
+<summary>[matrix] Устанавливает видово-проекционную матрицу целевой камеры.</summary>
+</member>
+<member name="M:Variants.Imitator.Scene.Effect.ValidateParameter(System.String,System.Boolean)">
+<summary>Проверяет, используется ли в эффекте данный параметр.</summary>
+</member>
+<member name="M:Variants.Imitator.Scene.Effect.ValidatePass(System.String,System.Boolean)">
+<summary>Проверяет, используется ли в эффекте данный проход.</summary>
+</member>
+<member name="M:Variants.Imitator.Scene.Effect.ValidateTechnique(System.String,System.Boolean)">
+<summary>Проверяет, используется ли в эффекте данная техника.</summary>
+</member>
+<member name="P:Variants.Imitator.Scene.Effect.Matrix(System.String)">
+<summary></summary>
+<param name="parameter"></param>
+<returns>(Тип матрицы, Имя камеры, Инвертированная матрица, Транспонированная матрица)</returns>
+</member>
+<member name="F:Variants.Imitator.Scene.Emitter.Render">
+<summary>Буфер для отрисовки частиц.</summary>
+</member>
+<member name="P:Variants.Imitator.Scene.Emitter.DrawParticles">
+<summary>Whether or not to draw particles in emitters.</summary>
+</member>
+<member name="P:Variants.Imitator.Scene.Emitter.FrustumCulling">
+<summary>Whether or not to use frustum culling for lights.</summary>
+</member>
+<member name="P:Variants.Imitator.Scene.Emitter.Visible">
+<summary>Whether or not to draw emitters.</summary>
+</member>
+<member name="M:Variants.Imitator.Scene.Emitter.UpdateByPhysics">
+<summary>Обновление физикой узла источника.</summary>
+</member>
+<member name="M:Variants.Imitator.Scene.Emitter.CheckActivity(SharpDX.Direct3D9.CubeMapFace)">
+<summary>Проверка активности тел в данной пирамиде видимости, и её обновление.</summary>
+</member>
+<member name="M:Variants.Imitator.Scene.Emitter.ShadowDirectional(System.Tuple{SharpDX.Vector3,SharpDX.Matrix,SharpDX.BoundingFrustum})">
+<summary>Расчёт матриц для направленного источника, округление позиции теневой матрицы чтобы избежать суб-тексельного сдвига.</summary>
+</member>
+<member name="M:Variants.Imitator.Scene.Emitter.ShadowPoint">
+<summary>Расчёт матриц для точечника.</summary>
+</member>
+<member name="M:Variants.Imitator.Scene.Emitter.ShadowSpot">
+<summary>Расчёт матриц для прожектора.</summary>
+</member>
+<member name="M:Variants.Imitator.Scene.Emitter.SoundPlay(System.String,System.Boolean,System.Boolean)">
+<summary>Plays the sound.</summary>
+<param name="fileName">Full path to sound "WAV" file.</param>
+<param name="[New]">If <see langword="True"/>, each time the function is called, it will create a new copy of the audio playback. Otherwise, if <see langword="False"/>, there will be no sound play until the previous call is completed.</param>
+<param name="[Loop]">Loops audio playback until the next <see cref="M:Variants.Imitator.Scene.Emitter.SoundStop(System.String)"/> call.</param>
+<returns>If this emitter is already playing this audio file with the parameter <paramref name="New"/> set to <see langword="True"/>, the function returns <see langword="False"/>.</returns>
+</member>
+<member name="M:Variants.Imitator.Scene.Emitter.SoundStop(System.String)">
+<summary>Stops the sound.</summary>
+<param name="fileName">Full path to sound "WAV" file, that needs to remove. If set to <see langword="Nothing"/> or <see langword="String.Empty"/> then remove all sounds related to current Emitter.</param>
+<returns><see langword="True"/> if sound was removed.</returns>
+</member>
+<member name="F:Variants.Imitator.Scene.Trigger.ScriptName">
+<summary>Имя скрипта из <see cref="T:Variants.Imitator.Content.Script"/>.</summary>
+</member>
+<member name="P:Variants.Imitator.Scene.Trigger.Visible">
+<summary>Whether or not to draw triggers.</summary>
+</member>
+<member name="M:Variants.Imitator.Scene.Trigger.UpdateByPhysics">
+<summary>Обновление физикой узла источника.</summary>
+</member>
+<member name="M:Variants.Imitator.Scene.Trigger.Execute(System.String,System.Object[])">
+ <summary>Invokes the specified member, using the specified argument list.</summary>
+ <param name="functionName">The <see cref="T:System.String">String</see> containing the name of the method member to invoke.</param>
+ <param name="arguments">An <see cref="T:System.Array">Array</see> containing the arguments to pass to the member to invoke.</param>
+ <returns>An <see cref="T:System.Object">Object</see> representing the return value of the invoked member.</returns>
+ <remarks>Do nothing if <see cref="F:Variants.Imitator.Scene.Trigger.ScriptName"/> is empty.</remarks>
+</member>
+<member name="P:Variants.Imitator.Scene.Voxel.DrawBoxes">
+<summary>Whether or not to draw boundaries of voxels.</summary>
+</member>
+<member name="P:Variants.Imitator.Scene.Voxel.Visible">
+<summary>Whether or not to draw voxels.</summary>
+</member>
+<member name="M:Variants.Imitator.Scene.Voxel.Voxel_Material(System.String,Variants.Imitator.Scene.Voxel)">
+<param name="FileName">Относительный путь к файлу.</param>
+</member>
+<member name="M:Variants.Imitator.Scene.Voxel.Voxel_Texture(System.String,Variants.Imitator.Scene.Voxel)">
+<param name="FileName">Относительный путь к файлу.</param>
+</member>
+<member name="M:Variants.Imitator.Scene.Voxel.UpdateByPhysics">
+<summary>Обновление физикой каждого узла векселя.</summary>
+</member>
+<member name="M:Variants.Imitator.Scene.Voxel.UpdateByScene">
+<summary>Обновление сценой каждого узла векселей.</summary>
+</member>
+<member name="M:Variants.Imitator.Scene.Voxel.CheckCube(Variants.Imitator.Engine.Vertex[]@,System.Int32@,Variants.Imitator.Engine.GridCell,Variants.Imitator.Engine.GridCell,Variants.Imitator.Engine.GridCell,Variants.Imitator.Engine.GridCell,Variants.Imitator.Engine.GridCell,Variants.Imitator.Engine.GridCell,Variants.Imitator.Engine.GridCell,Variants.Imitator.Engine.GridCell)">
+<summary>Расчёт и деление конкретного куба.</summary>
+</member>
+<member name="M:Variants.Imitator.Scene.Voxel.CheckStrength(System.Numerics.Vector3,System.Int32)">
+<summary>Влияние каждой капли на конкретную вершину сетки.</summary>
+</member>
+<member name="F:Variants.Imitator.Sound.Library">
+<summary>Библиотека активных голосов.</summary>
+</member>
+<member name="F:Variants.Imitator.Sound.RemoveQueue">
+<summary>Потокобезопасная очередь удаления.</summary>
+</member>
+<member name="P:Variants.Imitator.Sound.Enabled">
+<summary>Starts or stops the audio processing thread.</summary>
+</member>
+<member name="P:Variants.Imitator.Sound.DistanceScaler">
+<summary>Distance scaler that is used to scale normalized distance curves to user-defined world units.</summary>
+</member>
+<member name="P:Variants.Imitator.Sound.Volume">
+<summary>Gets or sets the current overall volume level of the sound.</summary>
+</member>
+<member name="M:Variants.Imitator.Sound.Update">
+<summary>Шаг 6: Обновление всех звуков заданных пользователем.</summary>
+</member>
+<member name="F:Variants.Imitator.Sound.Voice.AudioEmitter">
+<summary>Расположение источника звука.</summary>
+</member>
+<member name="F:Variants.Imitator.Sound.Voice.EmitterName">
+<summary>Имя источника звука.</summary>
+</member>
+<member name="F:Variants.Imitator.Sound.Voice.SoundBuffer">
+<summary>Ссылка на указанный звук.</summary>
+</member>
+<member name="F:Variants.Imitator.Sound.Voice.Settings">
+<summary>Установки для расчета положения.</summary>
+</member>
+<member name="F:Variants.Imitator.Sound.Voice.CurrentVoice">
+<summary>Ссылка на конкретный голос из очереди свободных.</summary>
+</member>
+<member name="F:Variants.Imitator.Sound.Voice.DelegateBufferEnd">
+<summary>Ссылка на метод удаления данного голоса.</summary>
+</member>
+<member name="F:Variants.Imitator.Sound.Voice.EmitterReference">
+<summary>Ссылка на источник звука.</summary>
+</member>
+<member name="P:Variants.Imitator.Storage.RootPath">
+<summary>Обязательно применять при любом обращении к файлу, т.к. используется при удалённом запуске редактора.</summary>
+</member>
+<member name="M:Variants.Imitator.Storage.RootPaths">
+<summary>Всевозможные корневые пути приложения.</summary>
+</member>
+<member name="M:Variants.Imitator.Storage.NormalizePath(System.String)">
+<summary>Удаляет лишние символы в пути, делая его стандартизированным для данного файла.</summary>
+<param name="fileName">Путь к файлу.</param>
+<returns>Исправленный уникальный путь.</returns>
+<remarks></remarks>
+</member>
+<member name="M:Variants.Imitator.Storage.RelativePath(System.String)">
+<summary>Вырезает из пути абсолютный путь, оставляя его относительным.</summary>
+</member>
+<member name="M:Variants.Imitator.Storage.CheckPathIsRooted(System.String)">
+<summary>Проверяет путь на корневой каталог.</summary>
+</member>
+<member name="M:Variants.Imitator.Storage.OpenRead(System.String)">
+<summary>Универсальный метод для загрузки контента. Если файл пуст или не найден, то возвращается пустой поток.</summary>
+<param name="fileName">Относительный путь к файлу.</param>
+<returns>Возвращает поток, хранящего в памяти содержимое указанного файла.</returns>
+<remarks>Путь не должен содержать знак разделителя томов.</remarks>
+</member>
+<member name="M:Variants.Imitator.Storage.FindContainer(System.String)">
+<summary>Производит поиск контейнера в указанном пути.</summary>
+<returns>Части путей до контейнера и до конечного файла.</returns>
+<param name="fileName">Относительный путь к файлу.</param>
+</member>
+<member name="M:Variants.Imitator.Element.Encode(Variants.Imitator.Engine.ResourceType,System.Int32,System.String)">
+<summary>Зашифровывает уникальные параметры в одну строку.</summary>
+</member>
+<member name="M:Variants.Imitator.Element.Decode(System.String)">
+<summary>Расшифровывает уникальные параметры из одной строки.</summary>
+</member>
+<member name="F:Variants.Imitator.Element.Material.Base_File">
+<summary>Основная текстура.</summary>
+</member>
+<member name="F:Variants.Imitator.Element.Material.Depth_File">
+<summary>Карта глубины.</summary>
+</member>
+<member name="F:Variants.Imitator.Element.Material.Normal_File">
+<summary>Текстура нормалей.</summary>
+</member>
+<member name="F:Variants.Imitator.Element.Material.Metallic_File">
+<summary>Текстура металла.</summary>
+</member>
+<member name="F:Variants.Imitator.Element.Material.Roughness_File">
+<summary>Текстура шероховатости.</summary>
+</member>
+<member name="F:Variants.Imitator.Element.Material.Alpha_Blend">
+<summary>Коэффициент смешивания альфа-канала.</summary>
+</member>
+<member name="F:Variants.Imitator.Element.Material.Alpha_Clip">
+<summary>Коэффициент отсечения прозрачного цвета.</summary>
+</member>
+<member name="F:Variants.Imitator.Element.Material.Alpha_Color">
+<summary>Полностью прозрачный цвет пикселя для BaseTexture.</summary>
+</member>
+<member name="F:Variants.Imitator.Element.Material.Base_Color">
+<summary>Цвет, который окрашивает BaseTexture.</summary>
+</member>
+<member name="F:Variants.Imitator.Element.Material.Cull_Mode">
+<summary>Режим отрисовки задних граней.</summary>
+</member>
+<member name="F:Variants.Imitator.Element.Material.Depth_Scale">
+<summary>Масштаб глубины, а также её инверсия.</summary>
+</member>
+<member name="F:Variants.Imitator.Element.Material.Fill_Mode">
+<summary>Режим заполнения граней.</summary>
+</member>
+<member name="F:Variants.Imitator.Element.Material.Normal_Scale">
+<summary>Масштаб вектора освещения.</summary>
+</member>
+<member name="F:Variants.Imitator.Element.Material.Metallic_Scale">
+<summary>Масштаб металличности, а также её инверсия.</summary>
+</member>
+<member name="F:Variants.Imitator.Element.Material.Roughness_Scale">
+<summary>Масштаб шероховатости, а также её инверсия.</summary>
+</member>
+<member name="F:Variants.Imitator.Element.Material.TextureSet">
+<summary>Указывает на то, какие текстуры присутствуют в данном материале.</summary>
+</member>
+<member name="T:Variants.Imitator.Element.Material.CullModes">
+<summary>The culling modes define how back faces are culled when rendering a geometry.</summary>
+</member>
+<member name="F:Variants.Imitator.Element.Material.CullModes.Clockwise">
+<summary>Cull back faces with clockwise vertices.</summary>
+</member>
+<member name="F:Variants.Imitator.Element.Material.CullModes.CounterClockwise">
+<summary>Cull back faces with counterclockwise vertices.</summary>
+</member>
+<member name="F:Variants.Imitator.Element.Material.CullModes.None">
+<summary>Do not cull back faces.</summary>
+</member>
+<member name="T:Variants.Imitator.Element.Material.FillModes">
+<summary>The filling modes define how faces are filled when rendering a geometry.</summary>
+</member>
+<member name="F:Variants.Imitator.Element.Material.FillModes.Point">
+<summary>Fill points.</summary>
+</member>
+<member name="F:Variants.Imitator.Element.Material.FillModes.Solid">
+<summary>Fill solids.</summary>
+</member>
+<member name="F:Variants.Imitator.Element.Material.FillModes.Wireframe">
+<summary>Fill wireframes.</summary>
+</member>
+<member name="T:Variants.Imitator.Element.Material.TextureType">
+<summary>Тип текстуры.</summary>
+</member>
+<member name="F:Variants.Imitator.Element.Material.TextureType.None">
+<summary>Материал не содержит текстур.</summary>
+</member>
+<member name="F:Variants.Imitator.Element.Material.TextureType.Base">
+<summary>Основная текстура.</summary>
+</member>
+<member name="F:Variants.Imitator.Element.Material.TextureType.Depth">
+<summary>Карта глубины.</summary>
+</member>
+<member name="F:Variants.Imitator.Element.Material.TextureType.Normal">
+<summary>Текстура нормалей.</summary>
+</member>
+<member name="F:Variants.Imitator.Element.Material.TextureType.Metallic">
+<summary>Текстура металла.</summary>
+</member>
+<member name="F:Variants.Imitator.Element.Material.TextureType.Roughness">
+<summary>Карта шероховатости.</summary>
+</member>
+<member name="M:Variants.Imitator.Element.Material.#ctor(Variants.Imitator.Engine.BaseObject,System.Int32,System.Int32)">
+<summary>Инициализирует материал по умолчанию.</summary>
+<remarks>Calling this constructor will add this instance to the general list of <see cref="T:Variants.Imitator.Element.Material"/> that the engine will operate on until the destructor is called.</remarks>
+</member>
+<member name="M:Variants.Imitator.Element.Material.#ctor(Variants.Imitator.Engine.BaseObject,Variants.Imitator.Element.Material)">
+<summary>Копирует материал от модели файла к телу сцены.</summary>
+</member>
+<member name="M:Variants.Imitator.Element.Material.Add(System.String)">
+<summary>Загрузка и добавление <see cref="T:Variants.Imitator.Element.Material"/> из стейта.</summary>
+<param name="serializedMaterial">Не вызывать у него <see cref="M:Variants.Imitator.Element.Material.Dispose"/>!</param>
+</member>
+<member name="M:Variants.Imitator.Element.Material.Dispose">
+<inheritdoc/>
+<remarks>Очищает настройки материала, текстуры остаются нетронутыми.</remarks>
+</member>
+<member name="F:Variants.Imitator.Element.Node.AngularMotor">
+<summary>Ориентирование нода <see cref="T:Variants.Imitator.Element.Node"/>.</summary>
+</member>
+<member name="F:Variants.Imitator.Element.Node.BallSocketJoint">
+<summary>Позиционирование нода <see cref="T:Variants.Imitator.Element.Node"/>.</summary>
+</member>
+<member name="F:Variants.Imitator.Element.Node.Orientation">
+<summary>Gets or sets the orientation quaternion of the <see cref="T:Variants.Imitator.Element.Node"/>.</summary>
+</member>
+<member name="F:Variants.Imitator.Element.Node.Position">
+<summary>Gets or sets the position of the <see cref="T:Variants.Imitator.Element.Node"/>. This Position acts as the center of mass for dynamic <see cref="T:Variants.Imitator.Element.Node"/>.</summary>
+</member>
+<member name="F:Variants.Imitator.Element.Node.Rotation">
+<summary>Gets or sets the angular velocity of the <see cref="T:Variants.Imitator.Element.Node"/>.</summary>
+</member>
+<member name="F:Variants.Imitator.Element.Node.Velocity">
+<summary>Gets or sets the linear velocity of the <see cref="T:Variants.Imitator.Element.Node"/>.</summary>
+</member>
+<member name="F:Variants.Imitator.Element.Node.Target">
+<summary>Данные о конечных ориентации и позиции.</summary>
+<remarks>Если есть значение <see cref="P:Variants.Imitator.Element.Node.TargetOrientation"/>, то тело пытается достичь этой ориентации.
+<para/>Если есть значение <see cref="P:Variants.Imitator.Element.Node.TargetPosition"/>, то тело пытается достичь этой позиции.
+</remarks>
+</member>
+<member name="F:Variants.Imitator.Element.Node.Parent">
+<summary>Данные о родителе.</summary>
+<remarks>Если есть значение <see cref="P:Variants.Imitator.Element.Node.ParentOrientation"/>, то есть зависимость от вращения родителя.
+<para/>Если есть значение <see cref="P:Variants.Imitator.Element.Node.ParentPosition"/>, то есть зависимость от перемещения родителя.
+</remarks>
+</member>
+<member name="M:Variants.Imitator.Element.Node.Add(System.String)">
+<summary>Загрузка и добавление <see cref="T:Variants.Imitator.Element.Node"/> из стейта.</summary>
+<param name="serializedNode">Не вызывать у него <see cref="M:Variants.Imitator.Element.Node.Dispose"/>!</param>
+</member>
+<member name="P:Variants.Imitator.Element.Node.BaseObject">
+<summary>Returns the scene object that this node belongs to.</summary>
+</member>
+<member name="P:Variants.Imitator.Element.Node.Index">
+<summary>Index of the node in <see cref="P:Variants.Imitator.Scene.Body.Bone(System.Int32)"/>, otherwise 0.</summary>
+</member>
+<member name="P:Variants.Imitator.Element.Node.Direction">
+<summary>Gets or sets the Euler angles from the quaternion <see cref="F:Variants.Imitator.Element.Node.Orientation"/>.</summary>
+<remarks>Use <see cref="M:System.Numerics.Vector3.Transform(System.Numerics.Vector3,System.Numerics.Quaternion)"/> with (-<see cref="P:System.Numerics.Vector3.UnitZ"/>, <see cref="F:Variants.Imitator.Element.Node.Orientation"/>) to get Normal of View vector.</remarks>
+</member>
+<member name="P:Variants.Imitator.Element.Node.ParentNode">
+<summary>Gets or sets the parent node as local coordinate center for current one.</summary>
+<returns>Reference to the parent node.</returns>
+</member>
+<member name="P:Variants.Imitator.Element.Node.MaximumImpulse">
+<summary>Gets and sets the maximum impulse that the constraint will attempt to apply when satisfying its requirements.</summary>
+<returns>If zero will not apply any force at all.</returns>
+</member>
+<member name="P:Variants.Imitator.Element.Node.ParentOrientation">
+<summary>Gets or sets the entity's offset orientation. If the value is <see langword="Nothing"/>, offsetting is disabled.</summary>
+<remarks>Default to child's orientation.</remarks>
+</member>
+<member name="P:Variants.Imitator.Element.Node.ParentPosition">
+<summary>Gets or sets the entity's offset position. If the value is <see langword="Nothing"/>, offsetting is disabled.</summary>
+<remarks>Default to child's position.</remarks>
+</member>
+<member name="P:Variants.Imitator.Element.Node.PhysicalMatch">
+<summary>Синхронизированны ли данные физического объекта?</summary>
+</member>
+<member name="M:Variants.Imitator.Element.Node.UpdateByParent">
+<summary>Выполняет пассивное следование за родительским узлом.</summary>
+</member>
+<member name="M:Variants.Imitator.Element.Node.UpdateByPhysics">
+<summary>Обновление мировых координат из физического объекта.</summary>
+</member>
+<member name="M:Variants.Imitator.Element.Node.UpdateByScene">
+<summary>Обновление физического объекта из мировых координат.</summary>
+</member>
+<member name="P:Variants.Imitator.Element.Node.TargetOrientation">
+<summary>Gets or sets the entity's destination orientation. If the value is <see langword="Nothing"/>, targeting is disabled.</summary>
+<remarks>Default is <see langword="Nothing"/>.</remarks>
+</member>
+<member name="P:Variants.Imitator.Element.Node.TargetPosition">
+<summary>Gets or sets the entity's destination position. If the value is <see langword="Nothing"/>, targeting is disabled.</summary>
+<remarks>Default is <see langword="Nothing"/>.</remarks>
+</member>
+<member name="P:Variants.Imitator.Element.Node.World">
+<summary>Мировое положение данного узла.</summary>
+</member>
+<member name="M:Variants.Imitator.Element.Node.Contacts(System.Boolean)">
+<summary>Collects all contacts with current node.</summary>
+<returns>List of <see cref="T:Variants.Imitator.Engine.Contact"/>.</returns>
+<remarks>If there is no contacts, returns <see langword="Nothing"/>.</remarks>
+</member>
+<member name="P:Variants.Imitator.Element.Node.AngularDamping">
+<summary>Gets or sets the angular damping of the entity. Values range from 0 to 1, corresponding to a fraction of angular momentum removed from the entity over a unit of time.</summary>
+<remarks>Default is 0.15F.</remarks>
+</member>
+<member name="P:Variants.Imitator.Element.Node.LinearDamping">
+<summary>Gets or sets the linear damping of the entity. Values range from 0 to 1, corresponding to a fraction of linear momentum removed from the entity over a unit of time.</summary>
+<remarks>Default is 0.03F.</remarks>
+</member>
+<member name="P:Variants.Imitator.Element.Node.IgnoreShapeChanges">
+<summary>Gets or sets whether or not to ignore shape changes. When true, changing the entity's collision shape will not update the volume, density, or inertia tensor.</summary>
+<remarks>Default is <see langword="False"/>.</remarks>
+</member>
+<member name="P:Variants.Imitator.Element.Node.CollisionDetectionPure">
+<summary>Gets the position update mode of the entity. If set to true updates position continuously. Continuous objects will integrate up to their earliest collision time.</summary>
+<remarks>Default is <see langword="False"/>.</remarks>
+</member>
+<member name="P:Variants.Imitator.Element.Node.Bounciness">
+<summary>Gets or sets the coefficient of restitution between the objects when no special material relationship is defined between the colliding objects.</summary>
+<remarks>Default is 0.0F.</remarks>
+</member>
+<member name="P:Variants.Imitator.Element.Node.StaticFriction">
+<summary>Gets or sets the friction coefficient used when the object is sliding slowly and no special material relationship is defined between the colliding objects.</summary>
+<remarks>Default is 1.0F.</remarks>
+</member>
+<member name="P:Variants.Imitator.Element.Node.KineticFriction">
+<summary>Gets or sets the friction coefficient used when the object is sliding quickly and no special material relationship is defined between the colliding objects.</summary>
+<remarks>Default is 0.8F.</remarks>
+</member>
+<member name="P:Variants.Imitator.Element.Node.Gravity">
+<summary>Gets or sets the entity's personal gravity. If <see langword="Nothing"/>, the <see cref="P:Variants.Imitator.Physics.Gravity"/> is used instead.</summary>
+<remarks>Default is <see langword="Nothing"/>.</remarks>
+</member>
+<member name="P:Variants.Imitator.Element.Node.NoClip">
+<summary>Gets or sets whether or not the entity should react to other objects.</summary>
+<remarks>Default is <see langword="False"/>.</remarks>
+</member>
+</members>
+</doc>

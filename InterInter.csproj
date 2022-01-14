@@ -1,0 +1,166 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{449457B7-F5F7-48E2-AFB8-BC56CA4E091B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Variants.IntergalacticInterceptors</RootNamespace>
+    <AssemblyName>InterInter</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Intergalactic Interceptors\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Intergalactic Interceptors\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\InterInter.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <NoWin32Manifest>true</NoWin32Manifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Imitator, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Imitator\obj\Imitator.exe</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\Common\Common.Character.cs">
+      <Link>Common.Character.cs</Link>
+    </Compile>
+    <Compile Include="..\Common\Common.Entity.cs">
+      <Link>Common.Entity.cs</Link>
+    </Compile>
+    <Compile Include="..\Common\Common.Intelligence.cs">
+      <Link>Common.Intelligence.cs</Link>
+    </Compile>
+    <Compile Include="..\Common\Common.Inventory.cs">
+      <Link>Common.Inventory.cs</Link>
+    </Compile>
+    <Compile Include="..\Common\Common.Localizator.cs">
+      <Link>Common.Localizator.cs</Link>
+    </Compile>
+    <Compile Include="..\Common\Common.UserInterface.cs">
+      <Link>Common.UserInterface.cs</Link>
+    </Compile>
+    <Compile Include="InterInter.Gameplay.Arkanoid.cs" />
+    <Compile Include="InterInter.Gameplay.cs" />
+    <Compile Include="InterInter.Entities.cs" />
+    <Compile Include="InterInter.Gameplay.Galaxian.cs" />
+    <Compile Include="InterInter.Players.cs" />
+    <Compile Include="InterInter.Localizator.cs" />
+    <Compile Include="InterInter.MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterInter.MainForm.Designer.cs">
+      <DependentUpon>InterInter.MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InterInter.Players.Human.cs" />
+    <Compile Include="InterInter.Players.Robot.cs" />
+    <Compile Include="InterInter.Projectiles.cs" />
+    <Compile Include="InterInter.Projectiles.Homing.cs" />
+    <Compile Include="InterInter.Projectiles.Impulse.cs" />
+    <Compile Include="InterInter.Projectiles.Spray.cs" />
+    <Compile Include="InterInter.Projectiles.Spread.cs" />
+    <Compile Include="InterInter.Projectiles.Torpedo.cs" />
+    <Compile Include="InterInter.Projectiles.Tracer.cs" />
+    <Compile Include="InterInter.Ships.cs" />
+    <Compile Include="InterInter.Ships.Enemy.cs" />
+    <Compile Include="InterInter.Ships.Stinger.cs" />
+    <Compile Include="InterInter.Skills.cs" />
+    <Compile Include="InterInter.Store.cs" />
+    <Compile Include="InterInter.UserInterface.cs" />
+    <Compile Include="InterInter.Weapons.cs" />
+    <Compile Include="InterInter.Weapons.Enemy.cs" />
+    <Compile Include="InterInter.Weapons.Robot.cs" />
+    <Compile Include="InterInter.Weapons.GrenadeLauncher.cs" />
+    <Compile Include="InterInter.Weapons.MachineGun.cs" />
+    <Compile Include="InterInter.Weapons.PlasmaGun.cs" />
+    <Compile Include="InterInter.Weapons.RocketLauncher.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Settings.cs" />
+    <EmbeddedResource Include="InterInter.MainForm.resx">
+      <DependentUpon>InterInter.MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\InterInter.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.8">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.8 %28x86 и x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
