@@ -58,5 +58,29 @@ namespace Variants.IntergalacticInterceptors.Properties {
                 this["ControlType"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool Sound_Music {
+            get {
+                return ((bool)(this["Sound_Music"]));
+            }
+            set {
+                this["Sound_Music"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int LanguageIndex {
+            get {
+                return ((int)(this["LanguageIndex"]));
+            }
+            set {
+                this["LanguageIndex"] = value;
+            }
+        }
     }
 }

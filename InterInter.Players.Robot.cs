@@ -34,7 +34,7 @@ namespace IntergalacticInterceptors
 
 			public override void Update()
 			{
-				if (InterInter.MenuState == InterInter.MenuEntries.Gameplay && this.Ship != null && !this.Ship.Dead && Ships.Collection.Contains(this.Ship))
+				if (InterInter.Gameplay is Gameplay.Galaxian && this.Ship != null && !this.Ship.Dead && Ships.Collection.Contains(this.Ship))
 					if (this.Ship is Ships.Stinger)
 						UpdateGalaxianStinger();
 					else

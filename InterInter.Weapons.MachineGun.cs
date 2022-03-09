@@ -25,6 +25,8 @@ namespace IntergalacticInterceptors
 				if (machine != Enum_MachineGun.None && ship.Player.CheckAmmunition(Arsenal.MachineGun))
 				{
 					ship.Emitter.SoundPlay(System.IO.Path.Combine(InterInter.RootPath, nameof(Projectiles), machine.ToString("G"), "Shot.wav"));
+					Imitator.Common.Bullet.Create(System.IO.Path.Combine(InterInter.RootPath, "Particles", "Bullet.bmp"), ship.Physic.Node.Position, Entities.Sight.Position3D, 1000, 1);
+
 					if (Entities.Sight.Contacts != null && (machine == Enum_MachineGun.Minigun | machine == Enum_MachineGun.Sniper))
 					{
 						foreach (Variants.Imitator.Engine.Contact contact in Entities.Sight.Contacts)

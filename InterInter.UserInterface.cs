@@ -87,7 +87,7 @@
 				}
 				sb.AppendLine(Weapons.GetWeaponType(Weapons.Arsenal.MachineGun, instance.GetSpecifications.Type).ToString("G"));
 				sb.Append(Diagram(Viewer, Weapons.Arsenal.MachineGun));
-				Window(mainForm, sb.ToString(), mainForm.Font.Height + (int)(InterInter.Game_CameraShaking.X), mainForm.MainCamera.Height - mainForm.Font.Height * 10 + (int)(InterInter.Game_CameraShaking.Y), (Viewer.MachineGun_PlasmaGun ? System.Drawing.Color.Blue : System.Drawing.Color.LawnGreen), Localizator.Phrase[Localizator.EnumPhrases.MachineGun]);
+				Window(mainForm, sb.ToString(), mainForm.Font.Height + (int)(InterInter.Game_CameraShaking.X), mainForm.MainCamera.Height - mainForm.Font.Height * 10 + (int)(InterInter.Game_CameraShaking.Y), (Viewer.MachineGun_PlasmaGun ? System.Drawing.Color.Blue : System.Drawing.Color.LawnGreen), Localizator.Text[Localizator.Keys.Game_MachineGun]);
 			}
 
 			sb.Clear();
@@ -101,7 +101,7 @@
 				}
 				sb.AppendLine(Weapons.GetWeaponType(Weapons.Arsenal.PlasmaGun, instance.GetSpecifications.Type).ToString("G"));
 				sb.Append(Diagram(Viewer, Weapons.Arsenal.PlasmaGun));
-				Window(mainForm, sb.ToString(), mainForm.Font.Height + (int)(InterInter.Game_CameraShaking.X), mainForm.MainCamera.Height - mainForm.Font.Height * 5 + (int)(InterInter.Game_CameraShaking.Y), (Viewer.MachineGun_PlasmaGun ? System.Drawing.Color.LawnGreen : System.Drawing.Color.Blue), Localizator.Phrase[Localizator.EnumPhrases.PlasmaGun]);
+				Window(mainForm, sb.ToString(), mainForm.Font.Height + (int)(InterInter.Game_CameraShaking.X), mainForm.MainCamera.Height - mainForm.Font.Height * 5 + (int)(InterInter.Game_CameraShaking.Y), (Viewer.MachineGun_PlasmaGun ? System.Drawing.Color.LawnGreen : System.Drawing.Color.Blue), Localizator.Text[Localizator.Keys.Game_PlasmaGun]);
 			}
 
 			sb.Clear();
@@ -115,7 +115,7 @@
 				}
 				sb.AppendLine(Weapons.GetWeaponType(Weapons.Arsenal.RocketLauncher, instance.GetSpecifications.Type).ToString("G"));
 				sb.Append(Indicator(Viewer, Weapons.Arsenal.RocketLauncher));
-				Window(mainForm, sb.ToString(), mainForm.MainCamera.Width - mainForm.Font.Height * 10 + (int)(InterInter.Game_CameraShaking.X), mainForm.MainCamera.Height - mainForm.Font.Height * 10 + (int)(InterInter.Game_CameraShaking.Y), (Viewer.RocketLauncher_GrenadeLauncher ? System.Drawing.Color.Blue : System.Drawing.Color.LawnGreen), Localizator.Phrase[Localizator.EnumPhrases.RocketLauncher]);
+				Window(mainForm, sb.ToString(), mainForm.MainCamera.Width - mainForm.Font.Height * 10 + (int)(InterInter.Game_CameraShaking.X), mainForm.MainCamera.Height - mainForm.Font.Height * 10 + (int)(InterInter.Game_CameraShaking.Y), (Viewer.RocketLauncher_GrenadeLauncher ? System.Drawing.Color.Blue : System.Drawing.Color.LawnGreen), Localizator.Text[Localizator.Keys.Game_RocketLauncher]);
 			}
 
 			sb.Clear();
@@ -129,7 +129,7 @@
 				}
 				sb.AppendLine(Weapons.GetWeaponType(Weapons.Arsenal.GrenadeLauncher, instance.GetSpecifications.Type).ToString("G"));
 				sb.Append(Indicator(Viewer, Weapons.Arsenal.GrenadeLauncher));
-				Window(mainForm, sb.ToString(), mainForm.MainCamera.Width - mainForm.Font.Height * 10 + (int)(InterInter.Game_CameraShaking.X), mainForm.MainCamera.Height - mainForm.Font.Height * 5 + (int)(InterInter.Game_CameraShaking.Y), (Viewer.RocketLauncher_GrenadeLauncher ? System.Drawing.Color.LawnGreen : System.Drawing.Color.Blue), Localizator.Phrase[Localizator.EnumPhrases.GrenadeLauncher]);
+				Window(mainForm, sb.ToString(), mainForm.MainCamera.Width - mainForm.Font.Height * 10 + (int)(InterInter.Game_CameraShaking.X), mainForm.MainCamera.Height - mainForm.Font.Height * 5 + (int)(InterInter.Game_CameraShaking.Y), (Viewer.RocketLauncher_GrenadeLauncher ? System.Drawing.Color.LawnGreen : System.Drawing.Color.Blue), Localizator.Text[Localizator.Keys.Game_GrenadeLauncher]);
 			}
 		}
 

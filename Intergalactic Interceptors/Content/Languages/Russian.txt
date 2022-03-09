@@ -1,51 +1,57 @@
-@new_game
-НОВАЯ ИГРА
-@continue
+@Menu_Yes
+Да
+@Menu_No
+Нет
+@Menu_NewGame
+Новая игра
+@Menu_Continue
 Продолжить
-@options
-НАСТРОЙКИ
-@exit
-ВЫХОД
-@graphics
+@Menu_Options
+Настройки
+@Menu_Exit
+Выход
+@Menu_Graphics
 Графика
-@sound
+@Menu_Sound
 Звук
-@Controls
+@Menu_Music
+Музыка
+@Menu_Controls
 Управление
-@Language
+@Menu_KeyboardMove_MouseAim
+Клавиатура - Перемещение
+Мышь - Прицеливание
+@Menu_MouseMove_KeyboardAim
+Мышь - Перемещение
+Клавиатура - Прицеливание
+@Menu_Language
 Язык
-@shop
-Магазин
-@inventory
-Инвентарь
-@Ammunition
-Вооружение
-@MachineGun
-Пулемёт
-@PlasmaGun
-Плазмомёт
-@RocketLauncher
-Ракетомёт
-@GrenadeLauncher
-Гранатомёт
-@Robot
-Робот
-@BuyAmmo
-Купить боеприпасы
-@SinglePlayer
+@Menu_SinglePlayer
 Одиночный режим
-@MultyPlayer
+@Menu_MultyPlayer
 Мультиплеер (пока не работает)
-@Show_Shop
-SPACE - показать магазин
-@Show_Inv
-SPACE - показать инвентарь
-@Getin_Shop
-TAB - выбрать своё оружие
-@Getin_Test
-TAB - заценить своё оружие
-@Getin_Start
-ENTER - начать истребление
+@Game_Shop
+Магазин
+@Game_Inventory
+Инвентарь
+@Game_Ammunition
+Вооружение
+@Game_MachineGun
+Пулемёт
+@Game_PlasmaGun
+Плазмомёт
+@Game_RocketLauncher
+Ракетомёт
+@Game_GrenadeLauncher
+Гранатомёт
+@Game_Robot
+Робот
+@Game_BuyAmmo
+Купить боеприпасы
+@Game_Arkanoid
+Арканоид
+@Game_Galaxian
+Галаксиан
 
 @Horrible
 Ужасный

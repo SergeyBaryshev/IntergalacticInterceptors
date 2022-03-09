@@ -11,6 +11,8 @@ namespace IntergalacticInterceptors
 		internal static readonly Random Randomizer = new Random();
 		///<summary>Корневая папка "Content".</summary>
 		internal static readonly string RootPath = "Content";
+		private static readonly System.IO.FileInfo[] LanguagePath = new System.IO.DirectoryInfo(System.IO.Path.Combine(RootPath, "Languages")).GetFiles("*.txt", System.IO.SearchOption.AllDirectories);
+		private static readonly System.IO.FileInfo[] MusicPath = new System.IO.DirectoryInfo(System.IO.Path.Combine(RootPath, "Music")).GetFiles("*.mp3", System.IO.SearchOption.AllDirectories);
 		private static readonly Action DelegateFramework = new Action(Framework);
 		private static (DateTime, int, int) FPS_Counter;
 		internal readonly Font FontTitle = new Font("Arial", 24, FontStyle.Bold);
@@ -19,21 +21,56 @@ namespace IntergalacticInterceptors
 		internal static float Game_CameraDistance = 500.0F;
 		internal static int Game_RoundCount;
 		private static Point Game_MenuPosition;
-		private static Gameplay gameplayReference;
+		private static readonly Converter<System.IO.FileInfo, String> DelegateFileNameWithoutExtension = new Converter<System.IO.FileInfo, String>(FileNameWithoutExtension);
+
+		private static string FileNameWithoutExtension(System.IO.FileInfo fileInfo)
+		{
+			return System.IO.Path.GetFileNameWithoutExtension(fileInfo.Name);
+		}
+
+		private static Gameplay GameplayReference;
 		internal static Gameplay Gameplay
 		{
 			get
 			{
-				return gameplayReference;
+				return GameplayReference;
 			}
 			set
 			{
-				if (gameplayReference != null)
-					gameplayReference.Dispose();
-				gameplayReference = value;
+				if (GameplayReference != null)
+					GameplayReference.Dispose();
+				GameplayReference = value;
 			}
 		}
 
+		private Variants.Imitator.Scene.Camera MainCameraReference;
+		internal Variants.Imitator.Scene.Camera MainCamera
+		{
+			get
+			{
+				if ((this.MainCameraReference == null) || !this.MainCameraReference.Actual)
+				{
+					this.MainCameraReference = Variants.Imitator.Scene.Camera.Default;
+				}
+				return this.MainCameraReference;
+			}
+		}
+
+		internal static string CurrentMusic;
+		private static bool _Music;
+		///<summary>Фоновая музыка во время игры.</summary>
+		public static bool Music
+		{
+			get
+			{
+				return _Music;
+			}
+			set
+			{
+				_Music = value;
+				My.Settings.Sound_Music = value;
+			}
+		}
 
 		public InterInter()
 		{
@@ -52,6 +89,7 @@ namespace IntergalacticInterceptors
 			this.Text = $"{Application.ProductName} - {Application.CompanyName}";
 			Variants.Imitator.Sound.DistanceScaler = Game_CameraDistance;
 			Variants.Imitator.Physics.Gravity = Vector3.Zero;
+			_Music = My.Settings.Sound_Music;
 			CreateMenuBackground();
 		}
 
@@ -68,7 +106,9 @@ namespace IntergalacticInterceptors
 				}
 				FPS_Counter.Item2 = 1 + FPS_Counter.Item2;
 				string fps = $"FPS {FPS_Counter.Item3}";
-				mainForm.MainCamera.DrawString(fps, new Point(mainForm.MainCamera.Width - (int)(fps.Length * mainForm.Font.Height /1.5), 0), mainForm.Font, Color.LawnGreen);
+				mainForm.MainCamera.DrawString(fps, new Point(mainForm.MainCamera.Width - (int)(fps.Length * mainForm.Font.Height / 1.5), 0), mainForm.Font, Color.LawnGreen);
+
+				UpdateMusic();
 
 				if (MenuState != MenuEntries.Gameplay)
 				{
@@ -109,17 +149,35 @@ namespace IntergalacticInterceptors
 			}
 		}
 
-		private Variants.Imitator.Scene.Camera MainCameraReference;
-		internal Variants.Imitator.Scene.Camera MainCamera
+		private static void UpdateMusic()
 		{
-			get
+			if (Music)
 			{
-				if ((this.MainCameraReference == null) || !this.MainCameraReference.Actual)
+				Variants.Imitator.Media.Player mediaPlayer = null;
+				if (!String.IsNullOrEmpty(CurrentMusic))
 				{
-					this.MainCameraReference = Variants.Imitator.Scene.Camera.Default;
+					mediaPlayer = Variants.Imitator.Media.get_Item(CurrentMusic);
+					if (mediaPlayer != null)
+					{
+						if (mediaPlayer.Paused && mediaPlayer.Duration != TimeSpan.Zero && mediaPlayer.Position == mediaPlayer.Duration)
+							Variants.Imitator.Media.Remove(CurrentMusic);
+						else
+							return;
+					}
 				}
-				return this.MainCameraReference;
+				CurrentMusic = MusicPath[InterInter.Randomizer.Next(MusicPath.Length)].FullName;
+				if (mediaPlayer != null)
+				{
+					while (String.Equals(mediaPlayer.Name, CurrentMusic, StringComparison.OrdinalIgnoreCase))
+					{
+						CurrentMusic = MusicPath[InterInter.Randomizer.Next(MusicPath.Length)].FullName;
+					}
+				}
+				Variants.Imitator.Media.Add(CurrentMusic);
+				Variants.Imitator.Media.get_Item(CurrentMusic).Play(false);
 			}
+			else if (!String.IsNullOrEmpty(CurrentMusic) && Variants.Imitator.Media.get_Item(CurrentMusic) != null)
+				Variants.Imitator.Media.Remove(CurrentMusic);
 		}
 
 		private static void CreateMenuBackground()
@@ -184,7 +242,7 @@ namespace IntergalacticInterceptors
 
 		private static void Menu_Main(InterInter mainForm)
 		{
-			int result = Imitator.Common.UserInterface.List(mainForm.MainCamera, Game_MenuPosition, mainForm.FontTitle, Color.White, Color.Empty, 0, System.Windows.Forms.VisualStyles.ContentAlignment.Left, InterInter.Gameplay != null ? Localizator.Phrase[Localizator.EnumPhrases.Continue] : Localizator.Phrase[Localizator.EnumPhrases.New_game], Localizator.Phrase[Localizator.EnumPhrases.Options], Localizator.Phrase[Localizator.EnumPhrases.Exit]);
+			int result = Imitator.Common.UserInterface.List(mainForm.MainCamera, Game_MenuPosition, mainForm.FontTitle, Color.White, Color.Empty, 0, System.Windows.Forms.VisualStyles.ContentAlignment.Left, InterInter.Gameplay != null ? Localizator.Text[Localizator.Keys.Menu_Continue] : Localizator.Text[Localizator.Keys.Menu_NewGame], Localizator.Text[Localizator.Keys.Menu_Options], Localizator.Text[Localizator.Keys.Menu_Exit]);
 
 			if (result == 1 || result == -1)
 			{
@@ -209,7 +267,7 @@ namespace IntergalacticInterceptors
 
 		private static void Menu_Start(InterInter mainForm)
 		{
-			int result = Imitator.Common.UserInterface.List(mainForm.MainCamera, Game_MenuPosition, mainForm.FontTitle, Color.White, Color.Empty, 0, System.Windows.Forms.VisualStyles.ContentAlignment.Left, Localizator.Phrase[Localizator.EnumPhrases.SinglePlayer], Localizator.Phrase[Localizator.EnumPhrases.MultyPlayer]);
+			int result = Imitator.Common.UserInterface.List(mainForm.MainCamera, Game_MenuPosition, mainForm.FontTitle, Color.White, Color.Empty, 0, System.Windows.Forms.VisualStyles.ContentAlignment.Left, Localizator.Text[Localizator.Keys.Menu_SinglePlayer], Localizator.Text[Localizator.Keys.Menu_MultyPlayer]);
 
 			if (result == -1)
 				MenuState = MenuEntries.Main;
@@ -234,7 +292,7 @@ namespace IntergalacticInterceptors
 
 		private static void Menu_Options(InterInter mainForm)
 		{
-			int result = Imitator.Common.UserInterface.List(mainForm.MainCamera, Game_MenuPosition, mainForm.FontTitle, Color.White, Color.Empty, 0, System.Windows.Forms.VisualStyles.ContentAlignment.Left, Localizator.Phrase[Localizator.EnumPhrases.Controls], Localizator.Phrase[Localizator.EnumPhrases.Graphics], Localizator.Phrase[Localizator.EnumPhrases.Sound], Localizator.Phrase[Localizator.EnumPhrases.Language]);
+			int result = Imitator.Common.UserInterface.List(mainForm.MainCamera, Game_MenuPosition, mainForm.FontTitle, Color.White, Color.Empty, 0, System.Windows.Forms.VisualStyles.ContentAlignment.Left, Localizator.Text[Localizator.Keys.Menu_Controls], Localizator.Text[Localizator.Keys.Menu_Graphics], Localizator.Text[Localizator.Keys.Menu_Sound], Localizator.Text[Localizator.Keys.Menu_Language]);
 
 			if (result == -1)
 				MenuState = MenuEntries.Main;
@@ -254,15 +312,22 @@ namespace IntergalacticInterceptors
 
 		private static void Menu_Controls(InterInter mainForm)
 		{
-			int result = Imitator.Common.UserInterface.List(mainForm.MainCamera, Game_MenuPosition, mainForm.FontTitle, Color.White, Color.Empty, 0, System.Windows.Forms.VisualStyles.ContentAlignment.Left, Localizator.Phrase[Localizator.EnumPhrases.Controls]);
+			int result = Imitator.Common.UserInterface.List(mainForm.MainCamera, Game_MenuPosition, mainForm.FontTitle, Color.White, Color.Empty, 0, System.Windows.Forms.VisualStyles.ContentAlignment.Left, My.Settings.ControlType == 0 ? Localizator.Text[Localizator.Keys.Menu_KeyboardMove_MouseAim] : Localizator.Text[Localizator.Keys.Menu_MouseMove_KeyboardAim]);
 
-			if (result == -1)
-				MenuState = MenuEntries.Options;
+			switch (result)
+			{
+				case 1:
+					My.Settings.ControlType = (My.Settings.ControlType + 1) % 2;
+					break;
+				case -1:
+					MenuState = MenuEntries.Options;
+					break;
+			}
 		}
 
 		private static void Menu_Graphics(InterInter mainForm)
 		{
-			int result = Imitator.Common.UserInterface.List(mainForm.MainCamera, Game_MenuPosition, mainForm.FontTitle, Color.White, Color.Empty, 0, System.Windows.Forms.VisualStyles.ContentAlignment.Left, Localizator.Phrase[Localizator.EnumPhrases.Graphics]);
+			int result = Imitator.Common.UserInterface.List(mainForm.MainCamera, Game_MenuPosition, mainForm.FontTitle, Color.White, Color.Empty, 0, System.Windows.Forms.VisualStyles.ContentAlignment.Left, Localizator.Text[Localizator.Keys.Menu_Graphics]);
 
 			if (result == -1)
 				MenuState = MenuEntries.Options;
@@ -270,18 +335,31 @@ namespace IntergalacticInterceptors
 
 		private static void Menu_Sound(InterInter mainForm)
 		{
-			int result = Imitator.Common.UserInterface.List(mainForm.MainCamera, Game_MenuPosition, mainForm.FontTitle, Color.White, Color.Empty, 0, System.Windows.Forms.VisualStyles.ContentAlignment.Left, Localizator.Phrase[Localizator.EnumPhrases.Sound]);
+			int result = Imitator.Common.UserInterface.List(mainForm.MainCamera, Game_MenuPosition, mainForm.FontTitle, Color.White, Color.Empty, 0, System.Windows.Forms.VisualStyles.ContentAlignment.Left, $"{Localizator.Text[Localizator.Keys.Menu_Music]} {(Music ? Localizator.Text[Localizator.Keys.Menu_Yes] : Localizator.Text[Localizator.Keys.Menu_No])}");
 
-			if (result == -1)
-				MenuState = MenuEntries.Options;
+			switch (result)
+			{
+				case 1:
+					Music = !Music;
+					break;
+				case -1:
+					MenuState = MenuEntries.Options;
+					break;
+			}
 		}
 
 		private static void Menu_Language(InterInter mainForm)
 		{
-			int result = Imitator.Common.UserInterface.List(mainForm.MainCamera, Game_MenuPosition, mainForm.FontTitle, Color.White, Color.Empty, 0, System.Windows.Forms.VisualStyles.ContentAlignment.Left, Localizator.Phrase[Localizator.EnumPhrases.Language]);
+			string[] languages = Array.ConvertAll(LanguagePath, DelegateFileNameWithoutExtension);
+			int result = Imitator.Common.UserInterface.List(mainForm.MainCamera, Game_MenuPosition, mainForm.FontTitle, Color.White, Color.Empty, 0, System.Windows.Forms.VisualStyles.ContentAlignment.Left, languages);
 
 			if (result == -1)
 				MenuState = MenuEntries.Options;
+			else if (result >= 1 && result <= languages.Length)
+			{
+				Localizator.Index = result - 1;
+				MenuState = MenuEntries.Main;
+			}
 		}
 	}
 }

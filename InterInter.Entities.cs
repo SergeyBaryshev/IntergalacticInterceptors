@@ -181,7 +181,7 @@ namespace IntergalacticInterceptors
 					mainForm.MainCamera.DrawString(position3D.ToString() + System.Environment.NewLine + position2D.ToString(), new System.Drawing.Point(mainForm.MainCamera.Width / 2, 0), mainForm.Font, System.Drawing.Color.White);
 			}
 
-			internal static Vector3 Position2D
+			public static Vector3 Position2D
 			{
 				get
 				{
@@ -200,7 +200,7 @@ namespace IntergalacticInterceptors
 				}
 			}
 
-			internal static Vector3 Position3D
+			public static Vector3 Position3D
 			{
 				get
 				{

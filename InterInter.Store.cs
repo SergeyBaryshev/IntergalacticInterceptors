@@ -47,19 +47,19 @@ namespace IntergalacticInterceptors
 				base.CommonBehavior(mainForm);
 				Shopping(mainForm, true, new System.Drawing.Point(mainForm.MainCamera.Width / 7, mainForm.MainCamera.Height / 2));
 				Shopping(mainForm, false, new System.Drawing.Point(mainForm.MainCamera.Width / 7, 0));
-				if (Variants.Imitator.Input.MouseButtons.Left == Imitator.Common.UserInterface.Button(mainForm.MainCamera, Localizator.Phrase[Localizator.EnumPhrases.Exit], new System.Drawing.Point(mainForm.MainCamera.Width / 32, mainForm.MainCamera.Height / 2), mainForm.Font, System.Drawing.Color.Yellow, System.Drawing.Color.Black))
+				if (Variants.Imitator.Input.MouseButtons.Left == Imitator.Common.UserInterface.Button(mainForm.MainCamera, Localizator.Text[Localizator.Keys.Menu_Exit], new System.Drawing.Point(mainForm.MainCamera.Width / 32, mainForm.MainCamera.Height / 2), mainForm.Font, System.Drawing.Color.Yellow, System.Drawing.Color.Black))
 				{
 					Buyer.StateSave();
 					InterInter.MenuState = InterInter.MenuEntries.Main;
 				}
-				if (Variants.Imitator.Input.MouseButtons.Left == Imitator.Common.UserInterface.Button(mainForm.MainCamera, nameof(Galaxian), new System.Drawing.Point(mainForm.MainCamera.Width - mainForm.MainCamera.Width / 8, mainForm.MainCamera.Height / 2), mainForm.Font, System.Drawing.Color.Yellow, System.Drawing.Color.Black))
+				if (Variants.Imitator.Input.MouseButtons.Left == Imitator.Common.UserInterface.Button(mainForm.MainCamera, Localizator.Text[Localizator.Keys.Game_Galaxian], new System.Drawing.Point(mainForm.MainCamera.Width - mainForm.MainCamera.Width / 8, mainForm.MainCamera.Height / 2), mainForm.Font, System.Drawing.Color.Yellow, System.Drawing.Color.Black))
 				{
 					Buyer.StateSave();
 					InterInter.MenuState = InterInter.MenuEntries.Gameplay;
 					InterInter.Gameplay = new Gameplay.Galaxian();
 					InterInter.CursorControl();
 				}
-				if (Variants.Imitator.Input.MouseButtons.Left == Imitator.Common.UserInterface.Button(mainForm.MainCamera, nameof(Arkanoid), new System.Drawing.Point(mainForm.MainCamera.Width - mainForm.MainCamera.Width / 8, mainForm.MainCamera.Height / 2 + mainForm.Font.Height * 3), mainForm.Font, System.Drawing.Color.Yellow, System.Drawing.Color.Black))
+				if (Variants.Imitator.Input.MouseButtons.Left == Imitator.Common.UserInterface.Button(mainForm.MainCamera, Localizator.Text[Localizator.Keys.Game_Arkanoid], new System.Drawing.Point(mainForm.MainCamera.Width - mainForm.MainCamera.Width / 8, mainForm.MainCamera.Height / 2 + mainForm.Font.Height * 3), mainForm.Font, System.Drawing.Color.Yellow, System.Drawing.Color.Black))
 				{
 					Buyer.StateSave();
 					InterInter.MenuState = InterInter.MenuEntries.Gameplay;
@@ -70,14 +70,14 @@ namespace IntergalacticInterceptors
 
 			private void Shopping(InterInter mainForm, bool inInventory, System.Drawing.Point position)
 			{
-				mainForm.MainCamera.DrawString(Localizator.Phrase[inInventory ? Localizator.EnumPhrases.Inventory : Localizator.EnumPhrases.Shop], position, mainForm.FontTitle, System.Drawing.Color.Green);
+				mainForm.MainCamera.DrawString(Localizator.Text[inInventory ? Localizator.Keys.Game_Inventory : Localizator.Keys.Game_Shop], position, mainForm.FontTitle, System.Drawing.Color.Green);
 				for (Weapons.Arsenal eachClass = Weapons.Arsenal.Robot; eachClass >= Weapons.Arsenal.MachineGun; eachClass -= 1)
 				{
 					System.Collections.Generic.List<Weapons> stockByClass = inInventory ?
 						Buyer.Weaponry.Where((Weapons current) => current.GetSpecifications.Class == eachClass).ToList() :
 						Storage.Where((Weapons current) => current.GetSpecifications.Class == eachClass).ToList();
 					System.Drawing.Point scrollPos = new System.Drawing.Point(position.X + ((int)eachClass - 1) * mainForm.MainCamera.Width / 7, position.Y + mainForm.FontTitle.Height);
-					mainForm.MainCamera.DrawString(Localizator.Phrase[(Localizator.EnumPhrases)System.Enum.Parse(typeof(Localizator.EnumPhrases), System.Enum.GetName(typeof(Weapons.Arsenal), eachClass), true)], scrollPos, mainForm.Font, System.Drawing.Color.White);
+					mainForm.MainCamera.DrawString(Localizator.Text[(Localizator.Keys)System.Enum.Parse(typeof(Localizator.Keys), $"Game_{System.Enum.GetName(typeof(Weapons.Arsenal), eachClass)}", true)], scrollPos, mainForm.Font, System.Drawing.Color.White);
 					scrollPos.Offset(0, mainForm.Font.Height);
 					System.ValueTuple<Variants.Imitator.Input.MouseButtons, int> clickResult = UserInterface.Scroll(mainForm, (int)(inInventory ? eachClass + 10 : eachClass), scrollPos, 0, System.Drawing.Color.White, System.Drawing.Color.Black, stockByClass);
 					if (inInventory)

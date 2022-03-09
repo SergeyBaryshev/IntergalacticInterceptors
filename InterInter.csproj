@@ -82,6 +82,9 @@
     <Compile Include="..\Common\Common.Localizator.cs">
       <Link>Common.Localizator.cs</Link>
     </Compile>
+    <Compile Include="..\Common\Common.Particle.cs">
+      <Link>Common.Particle.cs</Link>
+    </Compile>
     <Compile Include="..\Common\Common.UserInterface.cs">
       <Link>Common.UserInterface.cs</Link>
     </Compile>

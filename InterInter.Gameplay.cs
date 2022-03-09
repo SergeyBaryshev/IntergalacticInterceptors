@@ -7,8 +7,11 @@ namespace IntergalacticInterceptors
 	///<summary>Базовый супер-класс для различных режимов игры.</summary>
 	internal abstract partial class Gameplay : IDisposable
 	{
+		///<summary>Количество сбитых кораблей противника.</summary>
 		internal static int FragsCount = 0;
+		///<summary>Количество сыгранных раундов.</summary>
 		internal static int RoundCount = 0;
+		///<summary>Количество времени в данном раунде.</summary>
 		internal static float TimeCount = 0;
 		///<summary>Рекорды: Item1 - frags, Item2 - time.</summary>
 		internal static System.ValueTuple<int, float> LocalRecord;
@@ -22,6 +25,7 @@ namespace IntergalacticInterceptors
 			RoundCount += 1;
 			TimeCount = 0;
 			StarField = true;
+			//InterInter.CurrentMusic = string.Empty;
 		}
 
 		public bool StarField
@@ -68,6 +72,13 @@ namespace IntergalacticInterceptors
 
 			if (Variants.Imitator.Input.KeyboardButton(System.Windows.Forms.Keys.F4, -1))
 				Players.Robot.List.Where((Players player) => player.Fraction == Players.Fractions.Aliens).FirstOrDefault()?.Dispose();
+
+			if (Variants.Imitator.Console.Debug)
+			{
+				System.Text.StringBuilder sb = new System.Text.StringBuilder();
+				sb.AppendLine($"Bullets: {Imitator.Common.Bullet.Count(System.IO.Path.Combine(InterInter.RootPath, "Particles", "Bullet.bmp"))}");
+				Imitator.Common.UserInterface.DrawString(mainForm.MainCamera, sb.ToString(), new System.Drawing.Point(mainForm.MainCamera.Width / 2, mainForm.MainCamera.Height - mainForm.Font.Height * sb.ToString().Split(Environment.NewLine.ToCharArray()).Length), mainForm.Font, System.Drawing.Color.Blue);
+			}
 		}
 
 		public abstract void Dispose();

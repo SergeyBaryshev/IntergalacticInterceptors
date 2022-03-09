@@ -17,19 +17,19 @@ namespace IntergalacticInterceptors
 				this.ReloadAmmunition(Weapons.Arsenal.None);
 			}
 
-			public override void Interact(Imitator.Common.Entity agent, params object[] args) 
+			public override void Interact(Imitator.Common.Entity agent, params object[] args)
 			{
 				InterInter.Game_CameraShaking = new Vector3(InterInter.Randomizer.Next(2) == 0 ? -10 : +10, InterInter.Randomizer.Next(2) == 0 ? -10 : +10, 0);
 			}
 
 			public override void Update()
 			{
-				if (this.Ship != null && !this.Ship.Dead && Ships.Collection.Contains(this.Ship))
+				if (InterInter.Gameplay is Gameplay.Galaxian && this.Ship != null && !this.Ship.Dead && Ships.Collection.Contains(this.Ship))
 				{
-					if (My.Settings.ControlType == 1)
-						Control_MouseMove_KeyboardRotate();
-					else
+					if (My.Settings.ControlType == 0)
 						Control_KeyboardMove_MouseAim();
+					else
+						Control_MouseMove_KeyboardRotate();
 
 					if (Variants.Imitator.Input.MouseWheel() == 1) this.MachineGun_PlasmaGun = !this.MachineGun_PlasmaGun;
 					if (Variants.Imitator.Input.MouseWheel() == -1) this.RocketLauncher_GrenadeLauncher = !this.RocketLauncher_GrenadeLauncher;
@@ -45,16 +45,19 @@ namespace IntergalacticInterceptors
 				Vector2 mouse = Variants.Imitator.Input.MouseVelocity() * My.Settings.MouseSensitivity;
 				this.Ship.Physic.Node.Velocity.X = mouse.X;
 				this.Ship.Physic.Node.Velocity.Z = mouse.Y;
+
 				if (Variants.Imitator.Input.KeyboardButton(System.Windows.Forms.Keys.A))
 					this.Ship.Physic.Node.Rotation.Y = 1f;
 				else if (Variants.Imitator.Input.KeyboardButton(System.Windows.Forms.Keys.D))
 					this.Ship.Physic.Node.Rotation.Y = -1f;
 				else
-					this.Ship.Physic.Node.Rotation.Y *= 1.0F - (float)Variants.Imitator.Physics.ElapsedTime.TotalSeconds * My.Settings.MouseSensitivity / 2.0F;
+					this.Ship.Physic.Node.Rotation.Y = 0.0F;
+
 				if (Variants.Imitator.Input.KeyboardButton(System.Windows.Forms.Keys.W))
 					Entities.Sight.Distance = System.Math.Min(200, Entities.Sight.Distance + 5.0F);
 				if (Variants.Imitator.Input.KeyboardButton(System.Windows.Forms.Keys.S))
 					Entities.Sight.Distance = System.Math.Max(20, Entities.Sight.Distance - 5.0F);
+
 				Vector3 viewNormal = Vector3.Transform(-Vector3.UnitZ, this.Ship.Physic.Node.Orientation);
 				this.Ship.Physic.Node.Orientation = Quaternion.CreateFromAxisAngle(Vector3.UnitY, (float)System.Math.Atan2(-viewNormal.X, -viewNormal.Z)) *
 					Quaternion.CreateFromAxisAngle(Vector3.UnitX, System.Math.Max(-1, System.Math.Min(+1, -this.Ship.Physic.Node.Velocity.Z / (My.Settings.MouseSensitivity * 10)))) *
@@ -67,20 +70,22 @@ namespace IntergalacticInterceptors
 			private void Control_KeyboardMove_MouseAim()
 			{
 				Vector2 mouse = Variants.Imitator.Input.MouseVelocity() * My.Settings.MouseSensitivity;
-				if (Variants.Imitator.Input.KeyboardButton(System.Windows.Forms.Keys.A))
-					this.Ship.Physic.Node.Velocity.X = -My.Settings.MouseSensitivity;
-				else if (Variants.Imitator.Input.KeyboardButton(System.Windows.Forms.Keys.D))
-					this.Ship.Physic.Node.Velocity.X = My.Settings.MouseSensitivity;
-				else
-					this.Ship.Physic.Node.Velocity.X = this.Ship.Physic.Node.Velocity.X * (1.0F - (float)Variants.Imitator.Physics.ElapsedTime.TotalSeconds * My.Settings.MouseSensitivity / 2.0F);
-				if (Variants.Imitator.Input.KeyboardButton(System.Windows.Forms.Keys.W))
-					this.Ship.Physic.Node.Velocity.Z = -My.Settings.MouseSensitivity;
-				else if (Variants.Imitator.Input.KeyboardButton(System.Windows.Forms.Keys.S))
-					this.Ship.Physic.Node.Velocity.Z = My.Settings.MouseSensitivity;
-				else
-					this.Ship.Physic.Node.Velocity.Z = this.Ship.Physic.Node.Velocity.Z * (1.0F - (float)Variants.Imitator.Physics.ElapsedTime.TotalSeconds * My.Settings.MouseSensitivity / 2.0F);
+				Entities.Sight.Position2D = new Vector3(mouse.X * 5, mouse.Y * 5, 0f) * (float)Variants.Imitator.Physics.ElapsedTime.TotalSeconds;
 
-				Entities.Sight.Position2D = new Vector3(mouse.X, mouse.Y, 0) * (float)Variants.Imitator.Physics.ElapsedTime.TotalSeconds;
+				if (Variants.Imitator.Input.KeyboardButton(System.Windows.Forms.Keys.A))
+					this.Ship.Physic.Node.Velocity.X = -100;
+				else if (Variants.Imitator.Input.KeyboardButton(System.Windows.Forms.Keys.D))
+					this.Ship.Physic.Node.Velocity.X = 100;
+				else
+					this.Ship.Physic.Node.Velocity.X = 0f;
+
+				if (Variants.Imitator.Input.KeyboardButton(System.Windows.Forms.Keys.W))
+					this.Ship.Physic.Node.Velocity.Z = -100;
+				else if (Variants.Imitator.Input.KeyboardButton(System.Windows.Forms.Keys.S))
+					this.Ship.Physic.Node.Velocity.Z = 100;
+				else
+					this.Ship.Physic.Node.Velocity.Z = 0f;
+
 				Vector3 viewNormal = this.Ship.Physic.Node.Position - Entities.Sight.Position3D;
 				this.Ship.Physic.Node.Orientation = Quaternion.CreateFromAxisAngle(Vector3.UnitY, (float)System.Math.Atan2(-viewNormal.X, -viewNormal.Z));
 			}

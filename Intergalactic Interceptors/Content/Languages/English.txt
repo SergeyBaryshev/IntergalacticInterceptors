@@ -1,51 +1,57 @@
-@new_game
-NEW GAME
-@continue
-CONTINUE
-@options
-OPTIONS
-@exit
-EXIT
-@graphics
-GRAPHICS
-@sound
-SOUND
-@Controls
-CONTROLS
-@Language
-LANGUAGE
-@shop
-SHOP
-@inventory
-Inventory
-@Ammunition
-Ammunition
-@MachineGun
-Machines
-@PlasmaGun
-Plasmoids
-@RocketLauncher
-Rockets
-@GrenadeLauncher
-Grenades
-@Robot
-Robots
-@BuyAmmo
-Buy ammo
-@SinglePlayer
+@Menu_Yes
+Yes
+@Menu_No
+No
+@Menu_NewGame
+New game
+@Menu_Continue
+Continue
+@Menu_Options
+Options
+@Menu_Exit
+Exit
+@Menu_Graphics
+Graphics
+@Menu_Sound
+Sound
+@Menu_Music
+Music
+@Menu_Controls
+Controls
+@Menu_KeyboardMove_MouseAim
+Keyboard - Move
+Mouse - Aim
+@Menu_MouseMove_KeyboardAim
+Mouse - Move
+Keyboard - Aim
+@Menu_Language
+Language
+@Menu_SinglePlayer
 Single mode
-@MultyPlayer
+@Menu_MultyPlayer
 Multyplayer Mode (not working yet)
-@Show_Shop
-SPACE - show shop
-@Show_Inv
-SPACE - show inventory
-@Getin_Shop
-TAB - choose your weapon
-@Getin_Test
-TAB - test your weapon
-@Getin_Start
-ENTER - start the battle
+@Game_Shop
+Shop
+@Game_Inventory
+Inventory
+@Game_Ammunition
+Ammunition
+@Game_MachineGun
+Machines
+@Game_PlasmaGun
+Plasmoids
+@Game_RocketLauncher
+Rockets
+@Game_GrenadeLauncher
+Grenades
+@Game_Robot
+Robots
+@Game_BuyAmmo
+Buy ammo
+@Game_Arkanoid
+Arkanoid
+@Game_Galaxian
+Galaxian
 
 @Horrible
 Horrible
