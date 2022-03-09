@@ -113,7 +113,7 @@
     <Compile Include="InterInter.Ships.Enemy.cs" />
     <Compile Include="InterInter.Ships.Stinger.cs" />
     <Compile Include="InterInter.Skills.cs" />
-    <Compile Include="InterInter.Store.cs" />
+    <Compile Include="InterInter.Gameplay.Store.cs" />
     <Compile Include="InterInter.UserInterface.cs" />
     <Compile Include="InterInter.Weapons.cs" />
     <Compile Include="InterInter.Weapons.Enemy.cs" />
