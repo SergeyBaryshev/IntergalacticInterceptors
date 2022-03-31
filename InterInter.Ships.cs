@@ -75,5 +75,8 @@ namespace IntergalacticInterceptors
 				this.SetObject<Variants.Imitator.Scene.Body>(nameof(Attach), value);
 			}
 		}
+
+		///<summary>Возвращает список кораблей врага.</summary>
+		public static System.Collections.Generic.List<Ships> List => Imitator.Common.Entity.Collection.OfType<Ships>().ToList();
 	}
 }

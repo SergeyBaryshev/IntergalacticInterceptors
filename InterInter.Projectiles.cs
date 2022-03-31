@@ -88,6 +88,6 @@ namespace IntergalacticInterceptors
 		}
 
 		///<summary>Возвращает список снарядов.</summary>
-		public static System.Collections.Generic.List<Projectiles> List => Imitator.Common.Entity.Collection.Where((Imitator.Common.Entity currentProjectile) => currentProjectile is Projectiles).ToList().ConvertAll((Imitator.Common.Entity currentProjectile) => (Projectiles)currentProjectile);
+		public static System.Collections.Generic.List<Projectiles> List => Imitator.Common.Entity.Collection.OfType<Projectiles>().ToList();
 	}
 }

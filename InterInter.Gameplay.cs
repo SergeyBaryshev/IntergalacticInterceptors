@@ -20,12 +20,11 @@ namespace IntergalacticInterceptors
 		{
 			Imitator.Common.Entity.Clear();
 			Variants.Imitator.Scene.Clear(true);
-			//Variants.Imitator.Scene.Trigger.Add("Explosion", System.IO.Path.Combine(InterInter.RootPath, "Scripts", "Explosions.vb"), "Explosion", Quaternion.Identity, System.Numerics.Vector3.Zero);
+			Variants.Imitator.Scene.Trigger.Add("Explosion", System.IO.Path.Combine(InterInter.RootPath, "Scripts", "Explosions.cs"), "Explosion", Quaternion.Identity, Vector3.Zero);
 			FragsCount = 0;
 			RoundCount += 1;
 			TimeCount = 0;
 			StarField = true;
-			//InterInter.CurrentMusic = string.Empty;
 		}
 
 		public bool StarField

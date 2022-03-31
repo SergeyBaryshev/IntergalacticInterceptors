@@ -3234,7 +3234,7 @@ the given deviceCombo
 <summary>Обновление физикой узла источника.</summary>
 </member>
 <member name="M:Variants.Imitator.Scene.Trigger.Execute(System.String,System.Object[])">
- <summary>Invokes the specified member, using the specified argument list.</summary>
+ <summary>Invokes the specified member, using the specified array of arguments.</summary>
  <param name="functionName">The <see cref="T:System.String">String</see> containing the name of the method member to invoke.</param>
  <param name="arguments">An <see cref="T:System.Array">Array</see> containing the arguments to pass to the member to invoke.</param>
  <returns>An <see cref="T:System.Object">Object</see> representing the return value of the invoked member.</returns>

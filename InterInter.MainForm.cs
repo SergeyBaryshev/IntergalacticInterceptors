@@ -7,7 +7,7 @@ namespace IntergalacticInterceptors
 {
 	internal sealed partial class InterInter : Form
 	{
-		///<summary>Генератор псевдослучайных целых чисел.</summary>
+		///<summary>Генератор псевдослучайных чисел.</summary>
 		internal static readonly Random Randomizer = new Random();
 		///<summary>Корневая папка "Content".</summary>
 		internal static readonly string RootPath = "Content";

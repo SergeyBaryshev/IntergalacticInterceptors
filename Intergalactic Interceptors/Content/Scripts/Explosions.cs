@@ -1,71 +1,140 @@
-Module Common
-    '''<summary>Clamps Integer to range 0-255.</summary>
-    '''<param name="b">Integer.</param>
-    '''<returns>Byte.</returns>
-    Function ClampToByte(ByVal b As Integer) As Integer
-        Return System.Math.Min(System.Math.Max(b, Byte.MinValue), Byte.MaxValue)
-    End Function
+//using System.Linq;
+//using System.Drawing;
+// these "usings" is not supported in script files!
 
-    '''<summary>Sets the speed of animation.</summary>
-    '''<param name="s">Speed.</param>
-    '''<returns>Interval.</returns>
-    Function Interval(ByVal s As Single) As Single
-        Return s * Imitator.Maths.Timer.Interval
-    End Function
+public static class Common
+{
+	///<summary>Генератор псевдослучайных чисел.</summary>
+	public static readonly System.Random Randomizer = new System.Random();
+
+	///<summary>Percentage of age.</summary>
+	///<param name="lt">Total life time in seconds.</param>
+	///<param name="p">Current particle.</param>
+	///<returns>Scale from 0F (born) to 1F (death) of particle.</returns>
+	public static float Age(float lt, Variants.Imitator.Engine.Particle p)
+	{
+		return System.Math.Min(System.Math.Max(((float)Variants.Imitator.Physics.CurrentTime.TotalSeconds - p.Age) / lt, 0F), 1.0F);
+	}
+
+	///<summary>Clamps Int32 to range 0-255.</summary>
+	///<param name="b">Int32.</param>
+	///<returns>Byte as Int32.</returns>
+	public static int ClampToByte(int b)
+	{
+		return System.Math.Min(System.Math.Max(b, byte.MinValue), byte.MaxValue);
+	}
+
+	///<summary>Sets the speed of animation.</summary>
+	///<param name="s">Speed.</param>
+	///<returns>Interval.</returns>
+	public static float Interval(float s)
+	{
+		return s * (float)Variants.Imitator.Physics.ElapsedTime.TotalSeconds;
+	}
+}
+
+public static class Explosion
+{
+	internal static int sngProgression = 10;
+	public static bool Create(ref Variants.Imitator.Engine.Particle particle)
+	{
+		//if (particle.index == 0) sngProgression = (sngProgression + 10) % 100;
+		float r = (particle.Index / 80F) * (float)System.Math.Exp(particle.Index / sngProgression % 3);
+
+		particle.Position.X += (r * (float)System.Math.Cos((particle.Index)));
+		particle.Position.Z += (r * (float)System.Math.Sin((particle.Index)));
+
+		if (r < 10)
+			particle.Color = System.Drawing.Color.FromArgb(byte.MaxValue, byte.MaxValue, (int)(.6 * byte.MaxValue), (int)(.3 * byte.MaxValue)).ToArgb();
+		else
+			particle.Color = System.Drawing.Color.Gray.ToArgb();
+
+		particle.Scale = 7;
+		return true;
+	}
+
+	public static int Update(ref Variants.Imitator.Engine.Particle particle)
+	{
+		System.Drawing.Color diffuse = System.Drawing.Color.FromArgb(particle.Color);
+		particle.Color = System.Drawing.Color.FromArgb(System.Math.Max(0, (int)(diffuse.A - Common.Interval(200 + 10 * (float)Common.Randomizer.NextDouble()))), diffuse).ToArgb();
+		return 0;
+	}
+
+	public static bool Delete(ref Variants.Imitator.Engine.Particle particle)
+	{
+		return System.Drawing.Color.FromArgb(particle.Color).A == 0;
+	}
+}
+
+/* Примеры из версии для VB.NET
+Module Common
+	'''<summary>Clamps Integer to range 0-255.</summary>
+	'''<param name="b">Integer.</param>
+	'''<returns>Byte.</returns>
+	Function ClampToByte(ByVal b As Integer) As Integer
+		Return System.Math.Min(System.Math.Max(b, Byte.MinValue), Byte.MaxValue)
+	End Function
+
+	'''<summary>Sets the speed of animation.</summary>
+	'''<param name="s">Speed.</param>
+	'''<returns>Interval.</returns>
+	Function Interval(ByVal s As Single) As Single
+		Return s * Imitator.Maths.Timer.Interval
+	End Function
 End Module
 
 Module Idle
-    Function Create(ByRef particle As Imitator.Engine.Particle) As Boolean
-        Return True
-    End Function
+	Function Create(ByRef particle As Imitator.Engine.Particle) As Boolean
+		Return True
+	End Function
 
-    Function Update(ByRef particle As Imitator.Engine.Particle) As Integer
-        Return 0
-    End Function
+	Function Update(ByRef particle As Imitator.Engine.Particle) As Integer
+		Return 0
+	End Function
 
-    Function Delete(ByRef particle As Imitator.Engine.Particle) As Boolean
-        Return True
-    End Function
+	Function Delete(ByRef particle As Imitator.Engine.Particle) As Boolean
+		Return True
+	End Function
 
-    Sub MAIN(ByVal act As Integer)
+	Sub MAIN(ByVal act As Integer)
 
-    End Sub
+	End Sub
 End Module
 
 Module Explosion
-    Const lifetime As Single = 3.0F
+	Const lifetime As Single = 3.0F
 
-    Function Create(ByRef particle As Imitator.Engine.Particle) As Boolean
-        particle.Position.X += Microsoft.VisualBasic.VBMath.Rnd * 40 - 20
-        particle.Position.Y += Microsoft.VisualBasic.VBMath.Rnd * 40 - 20
-        particle.Position.Z += Microsoft.VisualBasic.VBMath.Rnd * 40 - 20
-        particle.Rotation = Microsoft.VisualBasic.VBMath.Rnd * 7
-        particle.Scale = 10
-        Return True
-    End Function
+	Function Create(ByRef particle As Imitator.Engine.Particle) As Boolean
+		particle.Position.X += Microsoft.VisualBasic.VBMath.Rnd * 40 - 20
+		particle.Position.Y += Microsoft.VisualBasic.VBMath.Rnd * 40 - 20
+		particle.Position.Z += Microsoft.VisualBasic.VBMath.Rnd * 40 - 20
+		particle.Rotation = Microsoft.VisualBasic.VBMath.Rnd * 7
+		particle.Scale = 10
+		Return True
+	End Function
 
-    Function Update(ByRef particle As Imitator.Engine.Particle) As Integer
-        Dim linear As Color = Color.FromArgb(particle.Color)
-        Dim fader As Single = (lifetime - particle.Age) / lifetime
-        Dim a As Integer = ClampToByte(Byte.MaxValue * fader)
-        'particle.Position.X += System.Math.Sign(particle.Position.X) * Interval(10)
-        'particle.Position.Y += System.Math.Sign(particle.Position.Y) * Interval(10)
-        'particle.Position.Z += System.Math.Sign(particle.Position.Z) * Interval(10)
+	Function Update(ByRef particle As Imitator.Engine.Particle) As Integer
+		Dim linear As Color = Color.FromArgb(particle.Color)
+		Dim fader As Single = (lifetime - particle.Age) / lifetime
+		Dim a As Integer = ClampToByte(Byte.MaxValue * fader)
+		'particle.Position.X += System.Math.Sign(particle.Position.X) * Interval(10)
+		'particle.Position.Y += System.Math.Sign(particle.Position.Y) * Interval(10)
+		'particle.Position.Z += System.Math.Sign(particle.Position.Z) * Interval(10)
 
-        'Dim r As Integer = ClampToByte(Byte.MaxValue - (linear.R + (Byte.MaxValue - linear.R) * fader))
-        'Dim g As Integer = ClampToByte(Byte.MaxValue - (linear.G + (Byte.MaxValue - linear.G) * fader))
-        'Dim b As Integer = ClampToByte(Byte.MaxValue - (linear.B + (Byte.MaxValue - linear.B) * fader))
-        particle.Color = Color.FromArgb(a, linear).ToArgb
-        Return 0
-    End Function
+		'Dim r As Integer = ClampToByte(Byte.MaxValue - (linear.R + (Byte.MaxValue - linear.R) * fader))
+		'Dim g As Integer = ClampToByte(Byte.MaxValue - (linear.G + (Byte.MaxValue - linear.G) * fader))
+		'Dim b As Integer = ClampToByte(Byte.MaxValue - (linear.B + (Byte.MaxValue - linear.B) * fader))
+		particle.Color = Color.FromArgb(a, linear).ToArgb
+		Return 0
+	End Function
 
-    Function Delete(ByRef particle As Imitator.Engine.Particle) As Boolean
-        Return particle.Age > lifetime
-    End Function
+	Function Delete(ByRef particle As Imitator.Engine.Particle) As Boolean
+		Return particle.Age > lifetime
+	End Function
 
-    Sub MAIN(ByVal act As Integer)
+	Sub MAIN(ByVal act As Integer)
 
-    End Sub
+	End Sub
 End Module
 
 'Module Thrust 'SmokeFX
@@ -207,3 +276,4 @@ End Module
 
 '    End Sub
 'End Module
+*/

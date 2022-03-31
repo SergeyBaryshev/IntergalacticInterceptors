@@ -109,7 +109,7 @@ namespace IntergalacticInterceptors
 			}
 
 			///<summary>Возвращает список кораблей врага.</summary>
-			public static System.Collections.Generic.List<Enemy> List => Imitator.Common.Entity.Collection.Where((Imitator.Common.Entity currentEntity) => currentEntity is Enemy).ToList().ConvertAll((Imitator.Common.Entity currentEntity) => (Enemy)currentEntity);
+			public new static System.Collections.Generic.List<Enemy> List => Imitator.Common.Entity.Collection.OfType<Enemy>().ToList();
 		}
 	}
 }

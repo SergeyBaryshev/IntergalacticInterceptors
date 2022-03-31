@@ -4,6 +4,7 @@ using System.Linq;
 using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.CSharp;
 
 namespace IntergalacticInterceptors
 {
@@ -65,6 +66,12 @@ namespace IntergalacticInterceptors
 						this.Render.Node.Velocity = new Vector3((float)InterInter.Randomizer.NextDouble() * 2 - 1, (float)InterInter.Randomizer.NextDouble() * 2 - 1, (float)InterInter.Randomizer.NextDouble() * 2 - 1) * 100;
 						Imitator.Common.Intelligence.SetNoClipAndNullGravity(this.Render, false);
 						this.Render.TotalMass = this.Physic.TotalMass;
+						{// some tests...
+							Variants.Imitator.Scene.Trigger tr = Variants.Imitator.Scene.Trigger.Item("Explosion");
+							Variants.Imitator.Engine.Particle p = new Variants.Imitator.Engine.Particle() { Index = 10 };
+							tr.Execute("Create", p);
+							p.ToString();
+						}
 					}
 				}
 			}
@@ -127,7 +134,7 @@ namespace IntergalacticInterceptors
 			}
 
 			///<summary>Возвращает список кораблей игрока.</summary>
-			public static System.Collections.Generic.List<Stinger> List => Imitator.Common.Entity.Collection.Where((Imitator.Common.Entity currentEntity) => currentEntity is Stinger).ToList().ConvertAll((Imitator.Common.Entity currentEntity) => (Stinger)currentEntity);
+			public new static System.Collections.Generic.List<Stinger> List => Imitator.Common.Entity.Collection.OfType<Stinger>().ToList();
 		}
 	}
 }
