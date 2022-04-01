@@ -108,7 +108,7 @@
 		public bool CheckAmmunition(Weapons.Arsenal weapClass)
 		{
 			Weapons instance = this[weapClass];
-			if (instance.Capacity > 0 && instance.Recovery < (float)Variants.Imitator.Physics.CurrentTime.TotalSeconds - 1.0F / instance.GetSpecifications.Rate)
+			if (instance != null && instance.Capacity > 0 && instance.Recovery < (float)Variants.Imitator.Physics.CurrentTime.TotalSeconds - 1.0F / instance.GetSpecifications.Rate)
 			{
 				instance.Capacity -= 1;
 				instance.Recovery = (float)Variants.Imitator.Physics.CurrentTime.TotalSeconds;

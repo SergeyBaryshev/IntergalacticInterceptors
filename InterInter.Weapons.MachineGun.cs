@@ -21,9 +21,9 @@ namespace IntergalacticInterceptors
 
 			public static void Shoot(Ships ship)
 			{
-				Enum_MachineGun machine = (Enum_MachineGun)ship.Player[Arsenal.MachineGun].GetSpecifications.Type;
-				if (machine != Enum_MachineGun.None && ship.Player.CheckAmmunition(Arsenal.MachineGun))
+				if (ship.Player.CheckAmmunition(Arsenal.MachineGun))
 				{
+					Enum_MachineGun machine = (Enum_MachineGun)ship.Player[Arsenal.MachineGun].GetSpecifications.Type;
 					ship.Emitter.SoundPlay(System.IO.Path.Combine(InterInter.RootPath, nameof(Projectiles), machine.ToString("G"), "Shot.wav"));
 					Imitator.Common.Bullet.Create(System.IO.Path.Combine(InterInter.RootPath, "Particles", "Bullet.bmp"), ship.Physic.Node.Position, Entities.Sight.Position3D, 1000, 1);
 
